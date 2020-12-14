@@ -1,0 +1,13 @@
+* [目录](README.md)
+    * 第20期Pandas组队学习
+        * [Task01 预备知识](pandas20/task01.md)
+        * [Task02 Pandas基础](pandas20/task02.md)
+        * [Task03 索引](pandas20/task03.md)
+        * [Task04 分组](pandas20/task04.md)
+        * [Task05 变形](pandas20/task05.md)
+        * [Task06 连接](pandas20/task06.md)
+        * [Task07 缺失数据](pandas20/task07.md)
+        * [Task08 文本数据](pandas20/task08.md)
+        * [Task09 分类数据](pandas20/task09.md)
+        * [Task10 时序数据](pandas20/task10.md)
+        * [Task11 综合练习](pandas20/task11.md)
