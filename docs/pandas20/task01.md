@@ -114,7 +114,11 @@ res = [[sum([M1[i][k]* M2[k][j] for k in range(M1.shape[1])]) for j in range(M2.
 
 ### 2.2 Ex2：更新矩阵
 设矩阵 $A_{m×n}$ ，现在对 $A$ 中的每一个元素进行更新生成矩阵 $B$ ，更新方法是 $B_{ij}=A_{ij}\sum_{k=1}^n\frac{1}{A_{ik}}$ ，例如下面的矩阵为 $A$ ，则 $B_{2,2}=5\times(\frac{1}{4}+\frac{1}{5}+\frac{1}{6})=\frac{37}{12}$ ，请利用 `Numpy` 高效实现。
-$$\begin{split}A=\left[ \begin{matrix} 1 & 2 &3\\4&5&6\\7&8&9 \end{matrix} \right]\end{split}$$
+$$A=\left[ \begin{array}{ccc} 
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9 
+\end{array}\right]$$
 
 **我的解答：**
 
