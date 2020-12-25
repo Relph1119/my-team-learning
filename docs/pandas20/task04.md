@@ -114,7 +114,7 @@ df[['School', 'Gender']].drop_duplicates()
         text-align: right;
     }
 </style>
-<table border="0" class="dataframe">
+<table border="0 class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -200,7 +200,7 @@ pd.DataFrame(data={'School':school_list, 'Gender':gender_list}, index=index_list
         text-align: right;
     }
 </style>
-<table border="0" class="dataframe">
+<table border="0 class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -287,7 +287,7 @@ df_ex3
         text-align: right;
     }
 </style>
-<table border="0" class="dataframe">
+<table border="0 class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -376,7 +376,7 @@ df_ex3.groupby(['a', 'b']).all()
         text-align: right;
     }
 </style>
-<table border="0" class="dataframe">
+<table border="0 class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -443,7 +443,7 @@ df_ex3.groupby(['a', 'b']).any()
         text-align: right;
     }
 </style>
-<table border="0" class="dataframe">
+<table border="0 class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -510,7 +510,7 @@ df_ex3.groupby(['a', 'b']).mad()
         text-align: right;
     }
 </style>
-<table border="0" class="dataframe">
+<table border="0 class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -572,7 +572,7 @@ df_ex3.groupby(['a', 'b']).skew()
         text-align: right;
     }
 </style>
-<table border="0" class="dataframe">
+<table border="0 class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -634,7 +634,7 @@ df_ex3.groupby(['a', 'b']).sem()
         text-align: right;
     }
 </style>
-<table border="0" class="dataframe">
+<table border="0 class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -696,7 +696,7 @@ df_ex3.groupby(['a', 'b']).prod()
         text-align: right;
     }
 </style>
-<table border="0" class="dataframe">
+<table border="0 class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -768,7 +768,7 @@ gb.agg(['sum', 'idxmax', 'skew'])
         text-align: right;
     }
 </style>
-<table border="0" class="dataframe">
+<table border="0 class="dataframe">
   <thead>
     <tr>
       <th></th>
@@ -849,7 +849,7 @@ gb.agg({'Height':methods, 'Weight':methods})
         text-align: right;
     }
 </style>
-<table border="0" class="dataframe">
+<table border="0 class="dataframe">
   <thead>
     <tr>
       <th></th>
@@ -932,7 +932,7 @@ gb.describe()
         text-align: right;
     }
 </style>
-<table border="0" class="dataframe">
+<table border="0 class="dataframe">
   <thead>
     <tr>
       <th></th>
@@ -1061,7 +1061,7 @@ res
         text-align: right;
     }
 </style>
-<table border="0" class="dataframe">
+<table border="0 class="dataframe">
   <thead>
     <tr>
       <th></th>
@@ -1191,7 +1191,7 @@ df_ex6
         text-align: right;
     }
 </style>
-<table border="0" class="dataframe">
+<table border="0 class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -1277,7 +1277,7 @@ gb.rank(method='first')
         text-align: right;
     }
 </style>
-<table border="0" class="dataframe">
+<table border="0 class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -1371,7 +1371,7 @@ gb.transform(my_func({'Height':'standardized', 'Weight':'max'})).head()
         text-align: right;
     }
 </style>
-<table border="0" class="dataframe">
+<table border="0 class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -1438,7 +1438,7 @@ df_demo.loc[['Qiang Sun','Quan Zhao'], ['School','Gender']]
         text-align: right;
     }
 </style>
-<table border="0" class="dataframe">
+<table border="0 class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -1513,7 +1513,7 @@ res
         text-align: right;
     }
 </style>
-<table border="0" class="dataframe">
+<table border="0 class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -1577,7 +1577,7 @@ gb.count()
         text-align: right;
     }
 </style>
-<table border="0" class="dataframe">
+<table border="0 class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -1677,7 +1677,7 @@ gb.count()
         text-align: right;
     }
 </style>
-<table border="0" class="dataframe">
+<table border="0 class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -1749,7 +1749,7 @@ gb.apply(my_func_ex10)
         text-align: right;
     }
 </style>
-<table border="0" class="dataframe">
+<table border="0 class="dataframe">
   <thead>
     <tr>
       <th></th>
@@ -1853,7 +1853,7 @@ gb.apply(my_func_ex10)
         text-align: right;
     }
 </style>
-<table border="0" class="dataframe">
+<table border="0 class="dataframe">
   <thead>
     <tr>
       <th></th>
@@ -1944,7 +1944,7 @@ gb.cov()
         text-align: right;
     }
 </style>
-<table border="0" class="dataframe">
+<table border="0 class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -2068,7 +2068,7 @@ gb.apply(my_cov)
         text-align: right;
     }
 </style>
-<table border="0" class="dataframe">
+<table border="0 class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -2167,7 +2167,7 @@ gb.apply(my_cov)
 %timeit -n 30 gb.cov()
 ```
 
-    30 loops, best of 5: 6.62 ms per loop
+    30 loops, best of 5: 4.9 ms per loop
     
 
 
@@ -2175,7 +2175,7 @@ gb.apply(my_cov)
 %timeit -n 30 gb.apply(my_cov)
 ```
 
-    30 loops, best of 5: 13.7 ms per loop
+    30 loops, best of 5: 13.9 ms per loop
     
 
 性能测试分析：my_cov的程序比groupby.cov()慢了一倍，应该是计算Series.cov()时间慢
@@ -2208,7 +2208,7 @@ df.head(3)
         text-align: right;
     }
 </style>
-<table border="0" class="dataframe">
+<table border="0 class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -2300,7 +2300,7 @@ df_1.head()
         text-align: right;
     }
 </style>
-<table border="0" class="dataframe">
+<table border="0 class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -2404,7 +2404,7 @@ df_1.groupby('Country')['Price'].agg(['mean', ('CoV', lambda x : x.std()/x.mean(
         text-align: right;
     }
 </style>
-<table border="0" class="dataframe">
+<table border="0 class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -2499,7 +2499,7 @@ df_2
         text-align: right;
     }
 </style>
-<table border="0" class="dataframe">
+<table border="0 class="dataframe">
   <thead>
     <tr>
       <th></th>
@@ -2577,7 +2577,7 @@ df_2
         text-align: right;
     }
 </style>
-<table border="0" class="dataframe">
+<table border="0 class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -2680,5 +2680,241 @@ gb.apply(lambda x: np.corrcoef(x['Disp.'], x['HP'])[0,1])
 
 
 ```python
+class my_groupby:
+    def __init__(self, df: pd.DataFrame, group_cols):
+        # 原始数据集，进行复制
+        self._df = df.copy()
+        # 得到分组类别，返回Series类型
+        self._groups = self._df[group_cols].drop_duplicates()
+        # 如果取出为Series，需要转换为DataFrame
+        if isinstance(self._groups, pd.Series):
+            self._group_category_df = self._groups.to_frame()
+        else:
+            self._group_category_df = self._groups.copy()
 
+    def __getitem__(self, col):
+        # 由于要满足[col]/[[col1, col2, ...]]，故需要getitem方法
+        # 为保证head()方法的使用，需要返回DataFrame或Series类型
+        self._pr_col = [col] if isinstance(col, str) else list(col)
+        return self
+
+    def transform(self, my_func) -> pd.Series:
+        # 定义两个空数组，用于存储索引和数据
+        index_array = np.array([])
+        value_array = np.array([])
+        for group_df in self.__iter_group():
+            # 进行分组遍历
+            if self._pr_col:
+                group_df = group_df[self._pr_col]
+            if group_df.shape[1] == 1:
+                group_df = group_df.iloc[:, 0]
+            # 执行自定义函数
+            group_res = my_func(group_df)
+            # 转换为Series，用于进行数据拼接
+            if not isinstance(group_res, pd.Series):
+                group_res = pd.Series(group_res, index=group_df.index, name=group_df.name)
+
+            # 存储索引和数据
+            index_array = np.r_[index_array, group_res.index]
+            value_array = np.r_[value_array, group_res.values]
+
+        # 将分组之后得到的数据，再进行重排，按照正常索引之后的数据
+        values = pd.Series(data=value_array, index=index_array).sort_index().values
+        # 结合原始数据集的索引，构建Series
+        result_series = pd.Series(data=values, index=self._df.reset_index().index, name=my_func.__name__)
+        return result_series
+
+    def head(self, n=5) -> pd.DataFrame:
+        '''
+        该功能是每个分组取前n个
+        :param n:
+        :return:
+        '''
+        # 取每个分组的前n个数据
+        res_df = pd.DataFrame()
+        for group_df in self.__iter_group():
+            res_df = pd.concat([res_df, group_df.head(n)], ignore_index=True)
+
+        # 删除索引列，重新指定索引数据
+        index_values = res_df['index'].values
+        res_df = res_df.drop(axis=0, columns=['index'])
+        res_df.index = index_values
+
+        if self._pr_col:
+            return res_df[self._pr_col]
+        return res_df
+
+    def __iter_group(self):
+        # 进行分组
+        for index, groups in self._group_category_df.iterrows():
+            group_df = self._df.reset_index().copy()
+            for col_name, target in groups.to_dict().items():
+                group_df = group_df[group_df[col_name] == target]
+            yield group_df
 ```
+
+
+```python
+df = pd.read_csv('../data/car.csv')
+df.head()
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="0 class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Brand</th>
+      <th>Price</th>
+      <th>Country</th>
+      <th>Reliability</th>
+      <th>Mileage</th>
+      <th>Type</th>
+      <th>Weight</th>
+      <th>Disp.</th>
+      <th>HP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Eagle Summit 4</td>
+      <td>8895</td>
+      <td>USA</td>
+      <td>4.0</td>
+      <td>33</td>
+      <td>Small</td>
+      <td>2560</td>
+      <td>97</td>
+      <td>113</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Ford Escort   4</td>
+      <td>7402</td>
+      <td>USA</td>
+      <td>2.0</td>
+      <td>33</td>
+      <td>Small</td>
+      <td>2345</td>
+      <td>114</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Ford Festiva 4</td>
+      <td>6319</td>
+      <td>Korea</td>
+      <td>4.0</td>
+      <td>37</td>
+      <td>Small</td>
+      <td>1845</td>
+      <td>81</td>
+      <td>63</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Honda Civic 4</td>
+      <td>6635</td>
+      <td>Japan/USA</td>
+      <td>5.0</td>
+      <td>32</td>
+      <td>Small</td>
+      <td>2260</td>
+      <td>91</td>
+      <td>92</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Mazda Protege 4</td>
+      <td>6599</td>
+      <td>Japan</td>
+      <td>5.0</td>
+      <td>32</td>
+      <td>Small</td>
+      <td>2440</td>
+      <td>113</td>
+      <td>103</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+def test1():
+    # head()方法测试
+    res = my_groupby(df, ['Type', 'Country'])['Disp.', 'HP'].head(1)
+    res_df = df.groupby(['Type', 'Country'])[['Disp.', 'HP']].head(1)
+    assert res.equals(res_df)
+
+
+def f(s):
+    # 自定义函数
+    res = (s - s.min()) / (s.max() - s.min())
+    return res
+
+
+def test2():
+    # 单列分组
+    res = my_groupby(df, 'Type')['Price'].transform(f).head()
+    res_df = df.groupby('Type')['Price'].transform(f).head()
+    assert res.equals(res_df)
+
+
+def test3():
+    # 多列分组
+    res = my_groupby(df, ['Type', 'Country'])['Price'].transform(f).head()
+    res_df = df.groupby(['Type', 'Country'])['Price'].transform(f).head()
+    assert res.equals(res_df)
+
+
+def test4():
+    # 标量广播
+    res = my_groupby(df, 'Type')['Price'].transform(lambda x: x.mean()).head()
+    res_df = df.groupby('Type')['Price'].transform(lambda x: x.mean()).head()
+    assert res.equals(res_df)
+
+
+def test5():
+    # 跨列计算
+    res = my_groupby(df, 'Type')[['Disp.', 'HP']].transform(lambda x: x['Disp.'] / x.HP).head()
+    print("\n跨列计算：\n", res)
+```
+
+
+```python
+test1()
+test2()
+test3()
+test4()
+test5()
+```
+
+    
+    跨列计算：
+     0    0.858407
+    1    1.266667
+    2    1.285714
+    3    0.989130
+    4    1.097087
+    Name: <lambda>, dtype: float64
+    
