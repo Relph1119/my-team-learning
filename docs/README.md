@@ -5,7 +5,7 @@
 在线阅读地址：https://relph1119.github.io/my-team-learning
 
 ## 目录
-- [第20期Pandas组队学习]
+- 第20期Pandas组队学习
     - [Task01 预备知识](https://relph1119.github.io/my-team-learning/#/pandas20/task01)
     - [Task02 Pandas基础](https://relph1119.github.io/my-team-learning/#/pandas20/task02)
     - [Task03 索引](https://relph1119.github.io/my-team-learning/#/pandas20/task03)

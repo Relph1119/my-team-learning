@@ -296,7 +296,7 @@ df.head()
       <td>N</td>
       <td>1</td>
       <td>2019/10/5</td>
-      <td>0:04:34</td>
+      <td>0&#58;04&#58;34</td>
     </tr>
     <tr>
       <th>1</th>
@@ -309,7 +309,7 @@ df.head()
       <td>N</td>
       <td>1</td>
       <td>2019/9/4</td>
-      <td>0:04:20</td>
+      <td>0&#58;04&#58;20</td>
     </tr>
     <tr>
       <th>2</th>
@@ -322,7 +322,7 @@ df.head()
       <td>N</td>
       <td>2</td>
       <td>2019/9/12</td>
-      <td>0:05:22</td>
+      <td>0&#58;05&#58;22</td>
     </tr>
     <tr>
       <th>3</th>
@@ -335,7 +335,7 @@ df.head()
       <td>N</td>
       <td>2</td>
       <td>2020/1/3</td>
-      <td>0:04:08</td>
+      <td>0&#58;04&#58;08</td>
     </tr>
     <tr>
       <th>4</th>
@@ -348,7 +348,7 @@ df.head()
       <td>N</td>
       <td>2</td>
       <td>2019/11/6</td>
-      <td>0:05:22</td>
+      <td>0&#58;05&#58;22</td>
     </tr>
   </tbody>
 </table>
@@ -464,7 +464,7 @@ df.head(3)
 
 1. 将数据转为如下的形式：
 
-<img src="../source/_static/Ex5_1.png" width="35%">
+    <img src="./pandas20/images/Ex5_1.png" width="35%">
 
 2. 将第1问中的结果恢复为原表。
 3. 按`State`分别统计每年的报告数量总和，其中`State, YYYY`分别为列索引和行索引，要求分别使用`pivot_table`函数与`groupby+unstack`两种不同的策略实现，并体会它们之间的联系。
