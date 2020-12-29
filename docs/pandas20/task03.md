@@ -1,7 +1,5 @@
 # Task03 索引
 
-notebook地址：https://github.com/Relph1119/my-team-learning/blob/master/notebook/pandas20/my_homework/task03_exercise.ipynb
-
 ## 1 知识梳理（重点记忆）
 
 ### 1.1 索引器

@@ -1,7 +1,5 @@
 # Task5 变形
 
-notebook地址：https://github.com/Relph1119/my-team-learning/blob/master/notebook/pandas20/my_homework/task05_exercise.ipynb
-
 ## 1 知识梳理（重点记忆）
 
 ### 1.1 长宽表变形

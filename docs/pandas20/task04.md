@@ -1,7 +1,5 @@
 # Task4 分组
 
-notebook地址：https://github.com/Relph1119/my-team-learning/blob/master/notebook/pandas20/my_homework/task04_exercise.ipynb
-
 ## 1 知识梳理（重点记忆）
 
 ### 1.1 分组模式及其对象
