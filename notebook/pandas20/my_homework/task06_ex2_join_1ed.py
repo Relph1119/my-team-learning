@@ -12,6 +12,15 @@ import numpy as np
 import pandas as pd
 
 
+def sort_index_and_values(res_df, df1, df2, how):
+    res_df.sort_index(inplace=True)
+    if how == 'left':
+        res_df.sort_values(by=df1.columns.values.tolist(), inplace=True)
+    if how == 'right':
+        res_df.sort_values(by=df2.columns.values.tolist(), inplace=True)
+    return res_df
+
+
 def join(df1: pd.DataFrame, df2: pd.DataFrame, how='left') -> pd.DataFrame:
     # 得到所有要连接的列
     res_col = df1.columns.tolist() + df2.columns.tolist()
@@ -23,44 +32,45 @@ def join(df1: pd.DataFrame, df2: pd.DataFrame, how='left') -> pd.DataFrame:
     # 构造笛卡尔积的DataFrame
     for label in index_dup:
         # 防止单个str字符串被list()函数拆成单个字符列表
-        df1_values = df1.loc[label].values.reshape(-1, 1)
-        df2_values = df2.loc[label].values.reshape(-1, 1)
+        df1_values = validate_dataframe(df1, label)
+        df2_values = validate_dataframe(df2, label)
 
         # 计算笛卡尔积
         cartesian = [list(i) + list(j) for i in df1_values for j in df2_values]
         # 构造笛卡尔积的DataFrame
         res_df = create_dateframe(cartesian, label, res_col, res_df)
-
     if how in ['left', 'outer']:
         # 遍历df1，进行连接
         for label in df1.index.unique().difference(index_dup):
-            df_lable = validate_dataframe(df1, label)
-            cat = [list(i) + [np.nan] * df2.shape[1] for i in df_lable.values]
+            df_values = validate_dataframe(df1, label)
+            cat = [list(i) + [np.nan] * df2.shape[1] for i in df_values]
             # 构建DataFrame
             res_df = create_dateframe(cat, label, res_col, res_df)
     if how in ['right', 'outer']:
         # 遍历df2，进行连接
         for label in df2.index.unique().difference(index_dup):
-            df_lable = validate_dataframe(df2, label)
-            cat = [[np.nan] * df1.shape[1] + list(i) for i in df_lable.values]
+            df_values = validate_dataframe(df2, label)
+            cat = [[np.nan] * df1.shape[1] + list(i) for i in df_values]
             # 构建DataFrame
             res_df = create_dateframe(cat, label, res_col, res_df)
 
     res_df = columns_dtype_convert(res_df, df1, df2)
+    res_df = sort_index_and_values(res_df, df1, df2, how)
+
     return res_df
 
 
-def validate_dataframe(df: pd.DataFrame, label) -> pd.DataFrame:
+def validate_dataframe(df: pd.DataFrame, label):
     '''
     判断df.loc[lable]是否为DataFrame，如果不是将其转换为DataFrame
     :param df:
     :param label:
     :return:
     '''
-    df_lable = df.loc[label]
-    if not isinstance(df_lable, pd.DataFrame):
-        df_lable = df.loc[label].to_frame()
-    return df_lable
+    df_values = df.loc[label].values
+    if isinstance(df.loc[label], pd.Series):
+        df_values = df.loc[label].values.reshape(1, -1)
+    return df_values
 
 
 def create_dateframe(data, label, res_col, res_df: pd.DataFrame) -> pd.DataFrame:
@@ -98,12 +108,18 @@ if __name__ == '__main__':
         assert res.equals(df)
 
 
-    df1 = pd.DataFrame(columns=['Name'], data=['LiSi', 'ZhangSan', 'WangWu', 'XiaoLiu'],
-                       index=['A', 'B', 'B', 'C'])
-    df2 = pd.DataFrame(columns=['Grade'], data=[92, 64, 73, 80],
-                       index=['A', 'A', 'B', 'D'])
+    # df1 = pd.DataFrame(columns=['Name'], data=['LiSi', 'ZhangSan', 'WangWu', 'XiaoLiu'],
+    #                    index=['A', 'B', 'B', 'C'])
+    # df2 = pd.DataFrame(columns=['Grade'], data=[92, 64, 73, 80],
+    #                    index=['A', 'A', 'B', 'D'])
+    df1 = pd.DataFrame({'col_1': [*'123456'],
+                        'col_2': ['one', 'two', 'three', 'four', 'five', 'six']},
+                       index=[*'abcbcd'])
+    df2 = pd.DataFrame({'col_3': [*'567890'],
+                        'col_4': ['いち', 'に', 'さん', 'よん', 'ご', 'ろく']},
+                       index=[*'dcecfe'])
 
-    test(df1, df2, 'left')
+    # test(df1, df2, 'left')
     test(df1, df2, 'right')
-    test(df1, df2, 'inner')
-    test(df1, df2, 'outer')
+    # test(df1, df2, 'inner')
+    # test(df1, df2, 'outer')
