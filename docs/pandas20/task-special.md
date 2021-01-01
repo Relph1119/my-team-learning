@@ -43,7 +43,7 @@ company.head()
         text-align: right;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -109,7 +109,7 @@ company_data.head()
         text-align: right;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -194,7 +194,7 @@ company_data.head()
         text-align: right;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -257,13 +257,7 @@ company_data['Px'] = company_data.groupby(['Code', 'Date'])['Amount'].apply(lamb
 # 根据公式计算I值
 company_data_tmp = company_data.groupby(['Code', 'Date'])['Px'].agg(lambda x: -sum([p * np.log(p)  for p in x.tolist()])).to_frame()
 ```
-
-    E:\Learning_Projects\MyPythonProjects\my-team-learning\venv\lib\site-packages\ipykernel_launcher.py:2: RuntimeWarning: divide by zero encountered in log
-      
-    E:\Learning_Projects\MyPythonProjects\my-team-learning\venv\lib\site-packages\ipykernel_launcher.py:2: RuntimeWarning: invalid value encountered in double_scalars
-      
     
-
 
 ```python
 # 去掉索引，将Code格式化
@@ -289,7 +283,7 @@ company_data_tmp.head()
         text-align: right;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -361,7 +355,7 @@ res.head()
         text-align: right;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -413,12 +407,12 @@ res.head()
 res.to_csv('../data/task_special/task01/task01_result.csv', index=False)
 ```
 
-## 任务二组队学习信息表的变换
+## 任务二 组队学习信息表的变换
 
 【题目描述】  
 请把组队学习的队伍信息表变换为如下形态，其中“是否队长”一列取1表示队长，否则为0
 
-<img src="../source/_static/ch_special.png" width="40%">
+<img src="./pandas20/images/ch_special.png" width="40%">
 
 【数据下载】   
 链接：https://pan.baidu.com/s/1ses24cTwUCbMx3rvYXaz-Q  
@@ -428,42 +422,192 @@ res.to_csv('../data/task_special/task01/task01_result.csv', index=False)
 
 
 ```python
-team_data = pd.read_excel('../data/task_special/task02/组队信息汇总表（Pandas）.xls')
-team_data.info()
+team_data = pd.read_excel('../data/task_special/task02/组队信息汇总表（Pandas）.xlsx', engine='openpyxl')
 ```
 
-    <class 'pandas.core.frame.DataFrame'>
-    RangeIndex: 21 entries, 0 to 20
-    Data columns (total 24 columns):
-     #   Column    Non-Null Count  Dtype  
-    ---  ------    --------------  -----  
-     0   所在群       21 non-null     object 
-     1   队伍名称      21 non-null     object 
-     2   队长编号      21 non-null     int64  
-     3   队长_群昵称    21 non-null     object 
-     4   队员1 编号    21 non-null     int64  
-     5   队员_群昵称    21 non-null     object 
-     6   队员2 编号    20 non-null     float64
-     7   队员_群昵称.1  20 non-null     object 
-     8   队员3 编号    18 non-null     float64
-     9   队员_群昵称.2  18 non-null     object 
-     10  队员4 编号    16 non-null     float64
-     11  队员_群昵称.3  16 non-null     object 
-     12  队员5 编号    14 non-null     float64
-     13  队员_群昵称.4  14 non-null     object 
-     14  队员6 编号    13 non-null     float64
-     15  队员_群昵称.5  13 non-null     object 
-     16  队员7 编号    10 non-null     float64
-     17  队员_群昵称.6  10 non-null     object 
-     18  队员8 编号    8 non-null      float64
-     19  队员_群昵称.7  8 non-null      object 
-     20  队员9 编号    4 non-null      float64
-     21  队员_群昵称.8  4 non-null      object 
-     22  队员10编号    1 non-null      float64
-     23  队员_群昵称.9  1 non-null      object 
-    dtypes: float64(9), int64(2), object(13)
-    memory usage: 4.1+ KB
-    
+
+```python
+# 通过列索引变换，得到能使用wide_to_long方法的列索引格式
+def columns_convert(x: str):
+    if x.find('队员') >= 0 and x.find('群昵称') >= 0 and x.find('.') >= 0:
+        return x.split('_')[0] + str(int(x.split('.')[1]) + 1) + '_' + x.split('_')[1].split('.')[0]
+    elif x.find('队员') >= 0 and x.find('群昵称') >= 0:
+        return x.split('_')[0] + '1_' + x.split('_')[1]
+    elif x.find(' 编号') >= 0:
+        return x.replace(' 编号', '_编号')
+    elif x.find('编号') >= 0 > x.find(' '):
+        return x.replace('编号', '_编号')
+    else:
+        return x
+
+def columns_reverse(x):
+    if x.find('_') >= 0:
+        return x.split('_')[1] + '_' + x.split('_')[0]
+    else:
+        return x
+        
+team_data.columns = team_data.columns.map(columns_convert).map(columns_reverse)
+```
+
+
+```python
+team_data.columns
+```
+
+
+
+
+    Index(['所在群', '队伍名称', '编号_队长', '群昵称_队长', '编号_队员1', '群昵称_队员1', '编号_队员2',
+           '群昵称_队员2', '编号_队员3', '群昵称_队员3', '编号_队员4', '群昵称_队员4', '编号_队员5',
+           '群昵称_队员5', '编号_队员6', '群昵称_队员6', '编号_队员7', '群昵称_队员7', '编号_队员8',
+           '群昵称_队员8', '编号_队员9', '群昵称_队员9', '编号_队员10', '群昵称_队员10'],
+          dtype='object')
+
+
+
+
+```python
+# 使用wide_to_long方法
+res = pd.wide_to_long(team_data,
+                stubnames=['群昵称', '编号'],
+                i = ['队伍名称', '所在群'],
+                j='是否队长',
+                sep='_',
+                suffix='.+')
+# 删除NaN数据
+res.dropna(inplace=True)
+```
+
+
+```python
+# 删除"所在群”列
+res = res.droplevel(level=1).reset_index()
+```
+
+
+```python
+# 调整“是否队长”列的数据
+res['是否队长'] = res['是否队长'].mask(res['是否队长']=='队长', 1).where(res['是否队长']=='队长', 0)
+# 并将“编号”列的数据类型设置为int64
+res['编号'] = res['编号'].astype(np.int64)
+```
+
+
+```python
+res
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>队伍名称</th>
+      <th>是否队长</th>
+      <th>群昵称</th>
+      <th>编号</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>你说的都对队</td>
+      <td>1</td>
+      <td>山枫叶纷飞</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>你说的都对队</td>
+      <td>0</td>
+      <td>蔡</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>你说的都对队</td>
+      <td>0</td>
+      <td>安慕希</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>你说的都对队</td>
+      <td>0</td>
+      <td>信仰</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>你说的都对队</td>
+      <td>0</td>
+      <td>biubiu🙈🙈</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>141</th>
+      <td>七星联盟</td>
+      <td>0</td>
+      <td>Daisy</td>
+      <td>63</td>
+    </tr>
+    <tr>
+      <th>142</th>
+      <td>七星联盟</td>
+      <td>0</td>
+      <td>One Better</td>
+      <td>131</td>
+    </tr>
+    <tr>
+      <th>143</th>
+      <td>七星联盟</td>
+      <td>0</td>
+      <td>rain</td>
+      <td>112</td>
+    </tr>
+    <tr>
+      <th>144</th>
+      <td>应如是</td>
+      <td>1</td>
+      <td>思无邪</td>
+      <td>54</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>应如是</td>
+      <td>0</td>
+      <td>Justzer0</td>
+      <td>58</td>
+    </tr>
+  </tbody>
+</table>
+<p>146 rows × 4 columns</p>
+</div>
+
+
 
 ## 任务三 美国大选投票情况
 
@@ -501,12 +645,6 @@ county_population = county_population.drop(columns='US County')
 county_population.head()
 ```
 
-    E:\Learning_Projects\MyPythonProjects\my-team-learning\venv\lib\site-packages\ipykernel_launcher.py:4: FutureWarning: Columnar iteration over characters will be deprecated in future releases.
-      after removing the cwd from sys.path.
-    
-
-
-
 
 <div>
 <style scoped>
@@ -522,7 +660,7 @@ county_population.head()
         text-align: right;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -571,7 +709,8 @@ county_population.head()
 
 ```python
 # 读取president_county_candidate.csv
-president_county_candidate = pd.read_csv('../data/task_special/task03/president_county_candidate.csv')
+president_county_candidate = pd.read_csv('../data/task_special/task03/president_county_candidate.csv', 
+                                         usecols=['state', 'county', 'candidate', 'total_votes'])
 president_county_candidate.head()
 ```
 
@@ -592,16 +731,14 @@ president_county_candidate.head()
         text-align: right;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
       <th>state</th>
       <th>county</th>
       <th>candidate</th>
-      <th>party</th>
       <th>total_votes</th>
-      <th>won</th>
     </tr>
   </thead>
   <tbody>
@@ -610,45 +747,35 @@ president_county_candidate.head()
       <td>Delaware</td>
       <td>Kent County</td>
       <td>Joe Biden</td>
-      <td>DEM</td>
       <td>44552</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>1</th>
       <td>Delaware</td>
       <td>Kent County</td>
       <td>Donald Trump</td>
-      <td>REP</td>
       <td>41009</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2</th>
       <td>Delaware</td>
       <td>Kent County</td>
       <td>Jo Jorgensen</td>
-      <td>LIB</td>
       <td>1044</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>3</th>
       <td>Delaware</td>
       <td>Kent County</td>
       <td>Howie Hawkins</td>
-      <td>GRN</td>
       <td>420</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>4</th>
       <td>Delaware</td>
       <td>New Castle County</td>
       <td>Joe Biden</td>
-      <td>DEM</td>
       <td>195034</td>
-      <td>True</td>
     </tr>
   </tbody>
 </table>
@@ -658,11 +785,13 @@ president_county_candidate.head()
 
 
 ```python
+# 求出每州县的投票数
 president_county_total_votes = president_county_candidate.groupby(['state', 'county'])['total_votes'].sum().to_frame()
 ```
 
 
 ```python
+# 将投票数与人口数连接
 county = county_population.merge(president_county_total_votes, on=['state', 'county'], how='left')
 county.head()
 ```
@@ -684,7 +813,7 @@ county.head()
         text-align: right;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -738,6 +867,7 @@ county.head()
 
 
 ```python
+# 求满足总投票数超过县人口数的一半的县个数
 county[county['total_votes'] * 2 > county['Population']].shape[0]
 ```
 
@@ -755,13 +885,14 @@ county[county['total_votes'] * 2 > county['Population']].shape[0]
 
 ```python
 # 计算候选人在各州的总票数
-candidate_votes = president_county_candidate.pivot_table(index = 'state', columns = 'candidate', values = 'total_votes', aggfunc = 'sum', margins=True)
+candidate_votes = president_county_candidate.pivot_table(index = 'state', columns = 'candidate', values = 'total_votes', 
+                                                         aggfunc = 'sum', margins=True)
 ```
 
 
 ```python
 # 候选人在全美的总票数排序
-candidate_votes = candidate_votes.T.sort_values(['All'], ascending=False).T
+candidate_votes = candidate_votes.sort_values('All', ascending=False, axis=1)
 ```
 
 
@@ -805,7 +936,7 @@ candidate_votes
         text-align: right;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -2092,5 +2223,114 @@ candidate_votes
 
 
 ```python
-
+# 找到Joe Biden和Donald Trump的得票数据
+biden_trump_state = president_county_candidate.loc[(president_county_candidate.candidate == 'Joe Biden') | 
+                               (president_county_candidate.candidate == 'Donald Trump')]
+biden_trump_state.head()
 ```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>state</th>
+      <th>county</th>
+      <th>candidate</th>
+      <th>total_votes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Delaware</td>
+      <td>Kent County</td>
+      <td>Joe Biden</td>
+      <td>44552</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Delaware</td>
+      <td>Kent County</td>
+      <td>Donald Trump</td>
+      <td>41009</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Delaware</td>
+      <td>New Castle County</td>
+      <td>Joe Biden</td>
+      <td>195034</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Delaware</td>
+      <td>New Castle County</td>
+      <td>Donald Trump</td>
+      <td>88364</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Delaware</td>
+      <td>Sussex County</td>
+      <td>Donald Trump</td>
+      <td>71230</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+# 进行宽表变形
+biden_trump_state = biden_trump_state.pivot(index=['state', 'county'], columns='candidate', values='total_votes')
+# 然后将投票总数进行左连接
+biden_trump_state = biden_trump_state.join(president_county_total_votes, how='left')
+```
+
+
+```python
+# 计算BT值
+biden_trump_state['BT'] = (biden_trump_state['Joe Biden'] - biden_trump_state['Donald Trump'])/biden_trump_state['total_votes']
+biden_trump_state.reset_index(inplace=True)
+```
+
+
+```python
+# 得到Biden State
+biden_state_series = biden_trump_state.groupby(['state'])['BT'].median()
+biden_state_series[biden_state_series > 0].index.tolist()
+```
+
+
+
+
+    ['California',
+     'Connecticut',
+     'Delaware',
+     'District of Columbia',
+     'Hawaii',
+     'Massachusetts',
+     'New Jersey',
+     'Rhode Island',
+     'Vermont']
+
+
