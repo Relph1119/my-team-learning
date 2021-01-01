@@ -12,6 +12,7 @@
     - [Task04 分组](https://relph1119.github.io/my-team-learning/#/pandas20/task04)
     - [Task05 变形](https://relph1119.github.io/my-team-learning/#/pandas20/task05)
     - [Task06 连接](https://relph1119.github.io/my-team-learning/#/pandas20/task06)
+    - [Task Special](https://relph1119.github.io/my-team-learning/#/pandas20/task-special)
     - [Task07 缺失数据](https://relph1119.github.io/my-team-learning/#/pandas20/task07)
     - [Task08 文本数据](https://relph1119.github.io/my-team-learning/#/pandas20/task08)
     - [Task09 分类数据](https://relph1119.github.io/my-team-learning/#/pandas20/task09)

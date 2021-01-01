@@ -6,6 +6,7 @@
         * [Task04 分组](pandas20/task04.md)
         * [Task05 变形](pandas20/task05.md)
         * [Task06 连接](pandas20/task06.md)
+        * [Task Special](pandas20/task-special.md)
         * [Task07 缺失数据](pandas20/task07.md)
         * [Task08 文本数据](pandas20/task08.md)
         * [Task09 分类数据](pandas20/task09.md)
