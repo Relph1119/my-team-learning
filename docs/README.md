@@ -21,7 +21,7 @@
 
 ## 学习资料
 【1】[第20期组队学习-Pandas](http://datawhale.club/t/topic/580)
-
+【2】[joyful-pandas](https://datawhalechina.github.io/joyful-pandas/build/html/%E7%9B%AE%E5%BD%95/index.html)
 
 ## Notebook运行环境配置
 安装相关的依赖包
