@@ -52,7 +52,7 @@
   * 基于流水线（pipeline）实现：如下图 1 所示，基于流水线实现的问答系统有四大核心模块，分别由自然语言理解（NLU）、对话状态跟踪器（DST）、对话策略（DPL）和自然语言生成（NLG）依次串联构成的一条流水线，各模块可独立设计，模块间协作完成任务。
   * 基于端到端（end-to-end）实现：基于端到端实现的问答系统，主要是结合深度学习技术，通过海量数据训练，挖掘出从用户自然语言输入到系统自然语言输出的整体映射关系，而忽略中间过程的一种方法。但就目前工业界整体应用而言，工业界的问答系统目前大多采用的还是基于流水线实现的方式。
 
-![](https://upload-images.jianshu.io/upload_images/10798244-16aa357b7be5a646.png?imageMogr2/auto-orient/strip|imageView2/2/w/816/format/webp)
+![](images/task04/01.png)
 > 图 1 基于流水线（pipeline）实现
 
 * 问答系统从答案来源划分：
@@ -61,7 +61,7 @@
   * 「新闻问答」；
   * 「网际网路问答」；
 
-![](https://upload-images.jianshu.io/upload_images/10798244-afb41aa23fee13c7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](images/task04/02.png)
 > 图 2 知识库问答
 
 ### 2.2 Query理解
@@ -90,7 +90,7 @@ Query理解 (QU，Query Understanding)，简单来说就是从词法、句法、
   - 传统的机器学习模型（文本特征工程+分类器）
   - 深度学习模型（Fasttext、TextCNN、BiLSTM + Self-Attention、BERT等）
 
-![](https://upload-images.jianshu.io/upload_images/10798244-467c5be884303091.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](images/task04/03.png)
 > 图 3 意图识别
   
 #### 2.2.3 槽值填充
@@ -98,7 +98,7 @@ Query理解 (QU，Query Understanding)，简单来说就是从词法、句法、
 - 介绍：槽值填充就是根据我们既定的一些结构化字段，将用户输入的信息中与其对应的部分提取出来。因此，槽值填充经常被建模为序列标注的任务。
 - 举例介绍：例如下图所示的 Query "北京飞成都的机票"，通过意图分类模型可以识别出 Query 的整体意图是订机票，在此基础上进一步语义解析出对应的出发地 Depart="北京"，到达地 Arrive="成都"，所以生成的形式化表达可以是：Ticket=Order(Depart,Arrive)，Depart={北京}，Arrive={成都}。
 
-![](https://upload-images.jianshu.io/upload_images/10798244-25aa5d0560dfee1a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](images/task04/04.png)
 > 图 4 槽值填充
 
 - 序列标注的任务常用的模型有：【注：这部分内容，第二期知识图谱组队学习将进行介绍】
@@ -109,12 +109,12 @@ Query理解 (QU，Query Understanding)，简单来说就是从词法、句法、
 
 ## 三、任务实践
 
-![](https://upload-images.jianshu.io/upload_images/10798244-322785573485895d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](images/task04/05.png)
 > 图 5 基于知识图谱的问答系统框架
 
-### 四、 主体类 EntityExtractor 框架介绍
+## 四、 主体类 EntityExtractor 框架介绍
 
-```s
+```python
 #!/usr/bin/env python3
 # coding: utf-8
 import os
@@ -228,7 +228,7 @@ class EntityExtractor:
 - step 3：然后将每一个词都去与疾病词库、疾病别名词库、并发症词库和症状词库中的词计算相似度得分（overlap score、余弦相似度分数和编辑距离分数），如果相似度得分超过0.7，则认为该词是这一类实体；
 - step 4：最后排序选取最相关的词作为实体（项目所有的实体类型如下图所示，但实体识别时仅使用了疾病、别名、并发症和症状四种实体）
 
-![](https://upload-images.jianshu.io/upload_images/10798244-b593dcc06d95bb35.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](images/task04/06.png)
 > 图 6 实体介绍
 
 本部分所有的代码都来自 entity_extractor.py 中的 EntityExtractor 类，为了方便讲解，对类内的内容进行重新组织注释
@@ -241,7 +241,7 @@ class EntityExtractor:
 先通过 entity_extractor.py 中 类 EntityExtractor 的 build_actree 函数构建AC Tree
 
 - 函数模块
-```s
+```python
     def build_actree(self, wordlist):
         """
         构造actree，加速过滤
@@ -257,7 +257,7 @@ class EntityExtractor:
 ```
 
 - 函数调用模块
-```s
+```python
     def __init__(self):
         ...
         self.disease_path = cur_dir + 'disease_vocab.txt'
@@ -283,7 +283,7 @@ class EntityExtractor:
 #### 5.2.2 使用AC Tree进行问句过滤
 
 - 函数模块
-```s
+```python
     def entity_reg(self, question):
         """
         模式匹配, 得到匹配的词和类型。如疾病，疾病别名，并发症，症状
@@ -323,7 +323,7 @@ class EntityExtractor:
         return self.result
 ```
 - 函数调用模块
-```s
+```python
     def extractor(self, question):
         self.entity_reg(question)
         ...
@@ -333,7 +333,7 @@ class EntityExtractor:
 
 当AC Tree的匹配都没有匹配到实体时，使用查找相似词的方式进行实体匹配
 
-```s
+```python
 def find_sim_words(self, question):
     """
     当全匹配失败时，就采用相似度计算来找相似的词
@@ -427,7 +427,7 @@ def simCal(self, word, entities, flag):
 - step 2：训练朴素贝叶斯模型进行意图识别任务；
 - step 3：使用实体信息进行意图的纠正和补充。
 
-![](https://upload-images.jianshu.io/upload_images/10798244-6113c647b881e4aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](images/task04/07.png)
 > 图 7 意图识别整体举例介绍
 
 该项目通过手工标记210条意图分类训练数据，并采用朴素贝叶斯算法训练得到意图分类模型。其最佳测试效果的F1值达到了96.68%。
@@ -437,7 +437,7 @@ def simCal(self, word, entities, flag):
 #### 6.2.1 特征构建
 
 1. TF-IDF特征
-```s
+```python
 # 提取问题的TF-IDF特征
 def tfidf_features(self, text, vectorizer):
     """
@@ -454,7 +454,7 @@ def tfidf_features(self, text, vectorizer):
     return tfidf
 ```
 2. 人工特征
-```s	    
+```python
 self.symptom_qwds = ['什么症状', '哪些症状', '症状有哪些', '症状是什么', '什么表征', '哪些表征', '表征是什么',
                      '什么现象', '哪些现象', '现象有哪些', '症候', '什么表现', '哪些表现', '表现有哪些',
                      '什么行为', '哪些行为', '行为有哪些', '什么状况', '哪些状况', '状况有哪些', '现象是什么',
@@ -524,7 +524,7 @@ def other_features(self, text):
 
 #### 6.2.2 使用朴素贝叶斯进行文本分类
 - 项目没有给出训练过程，可参考下面sklearn的例子
-```s
+```python
     # 项目没有给出训练过程，可参考下面sklearn的例子
     from sklearn.naive_bayes import MultinomialNB 
 
@@ -550,64 +550,63 @@ def other_features(self, text):
 ```
 
 - 根据所识别的实体进行补充和纠正意图
-```s
-# 已知疾病，查询症状
-if self.check_words(self.symptom_qwds, question) and ('Disease' in types or 'Alia' in types):
-    intention = "query_symptom"
-    if intention not in intentions:
-        intentions.append(intention)
-# 已知疾病或症状，查询治疗方法
-if self.check_words(self.cureway_qwds, question) and \
-        ('Disease' in types or 'Symptom' in types or 'Alias' in types or 'Complication' in types):
-    intention = "query_cureway"
-    if intention not in intentions:
-        intentions.append(intention)
-# 已知疾病或症状，查询治疗周期
-if self.check_words(self.lasttime_qwds, question) and ('Disease' in types or 'Alia' in types):
-    intention = "query_period"
-    if intention not in intentions:
-        intentions.append(intention)
-# 已知疾病，查询治愈率
-if self.check_words(self.cureprob_qwds, question) and ('Disease' in types or 'Alias' in types):
-    intention = "query_rate"
-    if intention not in intentions:
-        intentions.append(intention)
-# 已知疾病，查询检查项目
-if self.check_words(self.check_qwds, question) and ('Disease' in types or 'Alias' in types):
-    intention = "query_checklist"
-    if intention not in intentions:
-        intentions.append(intention)
-# 查询科室
-if self.check_words(self.belong_qwds, question) and \
-        ('Disease' in types or 'Symptom' in types or 'Alias' in types or 'Complication' in types):
-    intention = "query_department"
-    if intention not in intentions:
-        intentions.append(intention)
-# 已知症状，查询疾病
-if self.check_words(self.disase_qwds, question) and ("Symptom" in types or "Complication" in types):
-    intention = "query_disease"
-    if intention not in intentions:
-        intentions.append(intention)
-
-# 若没有检测到意图，且已知疾病，则返回疾病的描述
-if not intentions and ('Disease' in types or 'Alias' in types):
-    intention = "disease_describe"
-    if intention not in intentions:
-        intentions.append(intention)
-# 若是疾病和症状同时出现，且出现了查询疾病的特征词，则意图为查询疾病
-if self.check_words(self.disase_qwds, question) and ('Disease' in types or 'Alias' in types) \
-        and ("Symptom" in types or "Complication" in types):
-    intention = "query_disease"
-    if intention not in intentions:
-        intentions.append(intention)
-# 若没有识别出实体或意图则调用其它方法
-if not intentions or not types:
-    intention = "QA_matching"
-    if intention not in intentions:
-        intentions.append(intention)
-
-self.result["intentions"] = intentions
-
+```python
+    # 已知疾病，查询症状
+    if self.check_words(self.symptom_qwds, question) and ('Disease' in types or 'Alia' in types):
+        intention = "query_symptom"
+        if intention not in intentions:
+            intentions.append(intention)
+    # 已知疾病或症状，查询治疗方法
+    if self.check_words(self.cureway_qwds, question) and \
+            ('Disease' in types or 'Symptom' in types or 'Alias' in types or 'Complication' in types):
+        intention = "query_cureway"
+        if intention not in intentions:
+            intentions.append(intention)
+    # 已知疾病或症状，查询治疗周期
+    if self.check_words(self.lasttime_qwds, question) and ('Disease' in types or 'Alia' in types):
+        intention = "query_period"
+        if intention not in intentions:
+            intentions.append(intention)
+    # 已知疾病，查询治愈率
+    if self.check_words(self.cureprob_qwds, question) and ('Disease' in types or 'Alias' in types):
+        intention = "query_rate"
+        if intention not in intentions:
+            intentions.append(intention)
+    # 已知疾病，查询检查项目
+    if self.check_words(self.check_qwds, question) and ('Disease' in types or 'Alias' in types):
+        intention = "query_checklist"
+        if intention not in intentions:
+            intentions.append(intention)
+    # 查询科室
+    if self.check_words(self.belong_qwds, question) and \
+            ('Disease' in types or 'Symptom' in types or 'Alias' in types or 'Complication' in types):
+        intention = "query_department"
+        if intention not in intentions:
+            intentions.append(intention)
+    # 已知症状，查询疾病
+    if self.check_words(self.disase_qwds, question) and ("Symptom" in types or "Complication" in types):
+        intention = "query_disease"
+        if intention not in intentions:
+            intentions.append(intention)
+    
+    # 若没有检测到意图，且已知疾病，则返回疾病的描述
+    if not intentions and ('Disease' in types or 'Alias' in types):
+        intention = "disease_describe"
+        if intention not in intentions:
+            intentions.append(intention)
+    # 若是疾病和症状同时出现，且出现了查询疾病的特征词，则意图为查询疾病
+    if self.check_words(self.disase_qwds, question) and ('Disease' in types or 'Alias' in types) \
+            and ("Symptom" in types or "Complication" in types):
+        intention = "query_disease"
+        if intention not in intentions:
+            intentions.append(intention)
+    # 若没有识别出实体或意图则调用其它方法
+    if not intentions or not types:
+        intention = "QA_matching"
+        if intention not in intentions:
+            intentions.append(intention)
+    
+    self.result["intentions"] = intentions
 ```
 
 后续就是通过上述得到的意图信息和实体信息选择对应的模版，并将实体信息填充入组成查询语句进行数据库查询。

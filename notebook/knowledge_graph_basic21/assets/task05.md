@@ -10,10 +10,10 @@
   - [目录](#目录)
   - [一、 Neo4介绍](#一-neo4介绍)
   - [二、 Neo4j 介绍](#二-neo4j-介绍)
-    - [3.1 Cypher 介绍](#31-cypher-介绍)
-    - [3.2 Neo4j 图数据库 查询](#32-neo4j-图数据库-查询)
-  - [四、 基于知识图谱的问题系统 主体类 AnswerSearching 框架介绍](#四-基于知识图谱的问题系统-主体类-answersearching-框架介绍)
-  - [五、 代码分模块介绍](#五-代码分模块介绍)
+    - [2.1 Cypher 介绍](#31-cypher-介绍)
+    - [2.2 Neo4j 图数据库 查询](#32-neo4j-图数据库-查询)
+  - [三、 基于知识图谱的问题系统 主体类 AnswerSearching 框架介绍](#四-基于知识图谱的问题系统-主体类-answersearching-框架介绍)
+  - [四、 代码分模块介绍](#五-代码分模块介绍)
   - [参考资料](#参考资料)
 
 ## 一、 Neo4介绍
@@ -65,7 +65,7 @@
 
 ## 四、 基于知识图谱的问题系统 主体类 AnswerSearching 框架介绍
 
-```s
+```python
 class AnswerSearching:
     def __init__(self):
         pass
@@ -113,12 +113,12 @@ class AnswerSearching:
 1. 在Python中我们使用py2neo进行查询
 2. 首先安装py2neo,pip install py2neo
 3. 连接上neo4j数据库
-```s 
+```python
     from py2neo import Graph 
     graph = Graph("http://localhost:7474", username="neo4j", password="neo4j")
 ```
 4. 根据不同的实体和意图构造cypher查询语句
-```s
+```python
     def question_parser(data):
         """
         主要是根据不同的实体和意图构造cypher查询语句

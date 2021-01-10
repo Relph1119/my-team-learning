@@ -7,10 +7,10 @@
 
 - [Datawhale 知识图谱组队学习 之 Task 1 知识图谱介绍](#datawhale-知识图谱组队学习-之-task-1-知识图谱介绍)
   - [目录](#目录)
-  - [一、知识图谱简介](#一知识图谱简介)
-    - [1.1 引言](#11-引言)
-    - [1.2 什么是知识图谱呢？](#12-什么是知识图谱呢)
-      - [1.2.1 什么是图（Graph）呢？](#121-什么是图graph呢)
+  - [一、知识图谱简介](#一、知识图谱简介)
+    - [1.1 引言](#1.1-引言)
+    - [1.2 什么是知识图谱呢？](#1.2-什么是知识图谱呢)
+      - [1.2.1 什么是图（Graph）呢？](#1.2.1-什么是图graph呢)
       - [1.2.2 什么是 Schema 呢？](#122-什么是-schema-呢)
     - [1.3 知识图谱的价值在哪呢？](#13-知识图谱的价值在哪呢)
   - [二、怎么构建知识图谱呢？](#二怎么构建知识图谱呢)
@@ -195,12 +195,12 @@
 
 - 在Mac或者Linux中，安装好jdk后，直接解压下载好的Neo4J包，运行命令
 
-```s
+```shell
   bin/neo4j start
 ```
 
 - windows系统下载好neo4j和jdk 1.8.0后，输入以下命令启动后neo4j
-```s
+```shell
   neo4j.bat console
 ```
 
@@ -449,7 +449,7 @@ Neo4J提供了一个用户友好的 Web 界面，可以进行各项配置、写�
 
 ### 6.1 neo4j模块：执行CQL ( cypher ) 语句
 
-```s
+```python
   # step 1：导入 Neo4j 驱动包
   from neo4j import GraphDatabase
   # step 2：连接 Neo4j 图数据库
@@ -483,21 +483,21 @@ Neo4J提供了一个用户友好的 Web 界面，可以进行各项配置、写�
 ```
 ### 6.2 py2neo模块：通过操作python变量，达到操作neo4j的目的
 
-```s 
-  # step 1：导包
-  from py2neo import Graph, Node, Relationship
-  # step 2：构建图
-  g = Graph()
-  # step 3：创建节点
-  tx = g.begin()
-  a = Node("Person", name="Alice")
-  tx.create(a)
-  b = Node("Person", name="Bob")
-  # step 4：创建边
-  ab = Relationship(a, "KNOWS", b)
-  # step 5：运行
-  tx.create(ab)
-  tx.commit()
+```python
+    # step 1：导包
+    from py2neo import Graph, Node, Relationship
+    # step 2：构建图
+    g = Graph()
+    # step 3：创建节点
+    tx = g.begin()
+    a = Node("Person", name="Alice")
+    tx.create(a)
+    b = Node("Person", name="Bob")
+    # step 4：创建边
+    ab = Relationship(a, "KNOWS", b)
+    # step 5：运行
+    tx.create(ab)
+    tx.commit()
 ```
 py2neo模块符合python的习惯，写着感觉顺畅，其实可以完全不会CQL也能写
 
@@ -508,7 +508,7 @@ py2neo模块符合python的习惯，写着感觉顺畅，其实可以完全不�
 
 csv分为两个nodes.csv和relations.csv，注意关系里的起始节点必须是在nodes.csv里能找到的：
 
-```s
+```python
   # nodes.csv需要指定唯一ID和nam,
   headers = [
   'unique_id:ID', # 图数据库中节点存储的唯一标识
@@ -518,7 +518,7 @@ csv分为两个nodes.csv和relations.csv，注意关系里的起始节点必须�
   ]
 ```
 
-```s
+```python
   # relations.csv
   headers = [
   'unique_id', # 图数据库中关系存储的唯一标识
