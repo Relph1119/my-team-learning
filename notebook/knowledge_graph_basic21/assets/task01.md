@@ -425,7 +425,7 @@ Neo4J提供了一个用户友好的 Web 界面，可以进行各项配置、写�
   MATCH (a:Person {name:'John'}) SET a.age=44
   MATCH (a:Person {name:'Mike'}) SET a.age=25
 ```
-这里，SET表示修改操作
+这里，SET表示修改操作  
 
 2. 删除节点的属性
 
@@ -433,13 +433,13 @@ Neo4J提供了一个用户友好的 Web 界面，可以进行各项配置、写�
   MATCH (a:Person {name:'Mike'}) SET a.test='test'
   MATCH (a:Person {name:'Mike'}) REMOVE a.test
 ```
-删除属性操作主要通过REMOVE
+删除属性操作主要通过REMOVE  
 3. 删除节点
 
 ```s
   MATCH (a:Location {city:'Portland'}) DELETE a
 ```
-删除节点操作是DELETE
+删除节点操作是DELETE  
 4. 删除有关系的节点
 
 ```s
