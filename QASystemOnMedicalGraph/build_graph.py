@@ -4,7 +4,7 @@ import os
 import re
 
 import pandas as pd
-from py2neo import Graph, Node
+from py2neo import Graph, Node, Subgraph
 
 
 class MedicalGraph:
@@ -12,6 +12,11 @@ class MedicalGraph:
         cur_dir = '/'.join(os.path.abspath(__file__).split('/')[:-1])
         self.data_path = os.path.join(cur_dir, 'data/disease.csv')
         self.graph = Graph("http://localhost:7474", username="neo4j", password="hun1988")
+        self._diseases, self._symptoms, self._aliases, self._parts, self._departments, \
+        self._complications, self._drugs, \
+        self._rel_alias, self._rel_symptom, self._rel_part, self._rel_department, \
+        self._rel_complication, self._rel_drug, self._diseases_infos \
+            = self.read_file()
 
     def read_file(self):
         """
@@ -113,12 +118,18 @@ class MedicalGraph:
         :param nodes: 节点
         :return:
         """
+        tx = self.graph.begin()
         count = 0
+        nodes_tmp = []
         for node_name in nodes:
             node = Node(label, name=node_name)
-            self.graph.create(node)
+            nodes_tmp.append(node)
             count += 1
             print(count, len(nodes))
+
+        nodes_tmp = Subgraph(nodes_tmp)
+        tx.create(nodes_tmp)
+        tx.commit()
         return
 
     def create_diseases_nodes(self, disease_info):
@@ -127,6 +138,8 @@ class MedicalGraph:
         :param disease_info: list(Dict)
         :return:
         """
+        tx = self.graph.begin()
+        nodes = []
         count = 0
         for disease_dict in disease_info:
             node = Node("Disease", name=disease_dict['name'], age=disease_dict['age'],
@@ -134,9 +147,12 @@ class MedicalGraph:
                         treatment=disease_dict['treatment'], checklist=disease_dict['checklist'],
                         period=disease_dict['period'], rate=disease_dict['rate'],
                         money=disease_dict['money'])
-            self.graph.create(node)
+            nodes.append(node)
             count += 1
             print(count)
+        nodes = Subgraph(nodes)
+        tx.create(nodes)
+        tx.commit()
         return
 
     def create_graphNodes(self):
@@ -144,28 +160,23 @@ class MedicalGraph:
         创建知识图谱实体
         :return:
         """
-        disease, symptom, alias, part, department, complication, drug, rel_alias, rel_symptom, rel_part, \
-        rel_department, rel_complication, rel_drug, rel_infos = self.read_file()
-        self.create_diseases_nodes(rel_infos)
-        self.create_node("Symptom", symptom)
-        self.create_node("Alias", alias)
-        self.create_node("Part", part)
-        self.create_node("Department", department)
-        self.create_node("Complication", complication)
-        self.create_node("Drug", drug)
+        self.create_diseases_nodes(self._diseases_infos)
+        self.create_node("Symptom", self._symptoms)
+        self.create_node("Alias", self._aliases)
+        self.create_node("Part", self._parts)
+        self.create_node("Department", self._departments)
+        self.create_node("Complication", self._complications)
+        self.create_node("Drug", self._drugs)
 
         return
 
     def create_graphRels(self):
-        disease, symptom, alias, part, department, complication, drug, rel_alias, rel_symptom, rel_part, \
-        rel_department, rel_complication, rel_drug, rel_infos = self.read_file()
-
-        self.create_relationship("Disease", "Alias", rel_alias, "ALIAS_IS", "别名")
-        self.create_relationship("Disease", "Symptom", rel_symptom, "HAS_SYMPTOM", "症状")
-        self.create_relationship("Disease", "Part", rel_part, "PART_IS", "发病部位")
-        self.create_relationship("Disease", "Department", rel_department, "DEPARTMENT_IS", "所属科室")
-        self.create_relationship("Disease", "Complication", rel_complication, "HAS_COMPLICATION", "并发症")
-        self.create_relationship("Disease", "Drug", rel_drug, "HAS_DRUG", "药品")
+        self.create_relationship("Disease", "Alias", self._rel_alias, "ALIAS_IS", "别名")
+        self.create_relationship("Disease", "Symptom", self._rel_symptom, "HAS_SYMPTOM", "症状")
+        self.create_relationship("Disease", "Part", self._rel_part, "PART_IS", "发病部位")
+        self.create_relationship("Disease", "Department", self._rel_department, "DEPARTMENT_IS", "所属科室")
+        self.create_relationship("Disease", "Complication", self._rel_complication, "HAS_COMPLICATION", "并发症")
+        self.create_relationship("Disease", "Drug", self._rel_drug, "HAS_DRUG", "药品")
 
     def create_relationship(self, start_node, end_node, edges, rel_type, rel_name):
         """
