@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 # coding: utf-8
+import datetime
 import os
 import re
 
 import pandas as pd
 from py2neo import Graph, Node, Subgraph
+from tqdm import tqdm
 
 
 class MedicalGraph:
@@ -13,9 +15,9 @@ class MedicalGraph:
         self.data_path = os.path.join(cur_dir, 'data/disease.csv')
         self.graph = Graph("http://localhost:7474", username="neo4j", password="hun1988")
         self._diseases, self._symptoms, self._aliases, self._parts, self._departments, \
-        self._complications, self._drugs, \
-        self._rel_alias, self._rel_symptom, self._rel_part, self._rel_department, \
-        self._rel_complication, self._rel_drug, self._diseases_infos \
+            self._complications, self._drugs, \
+            self._rel_alias, self._rel_symptom, self._rel_part, self._rel_department, \
+            self._rel_complication, self._rel_drug, self._diseases_infos \
             = self.read_file()
 
     def read_file(self):
@@ -118,14 +120,12 @@ class MedicalGraph:
         :param nodes: 节点
         :return:
         """
+        print("\ncreate {0} nodes, total {1}".format(label, len(nodes)))
         tx = self.graph.begin()
-        count = 0
         nodes_tmp = []
-        for node_name in nodes:
+        for node_name in tqdm(nodes):
             node = Node(label, name=node_name)
             nodes_tmp.append(node)
-            count += 1
-            print(count, len(nodes))
 
         nodes_tmp = Subgraph(nodes_tmp)
         tx.create(nodes_tmp)
@@ -138,24 +138,23 @@ class MedicalGraph:
         :param disease_info: list(Dict)
         :return:
         """
+        print("\ncreate diseases nodes, total {0}".format(len(disease_info)))
         tx = self.graph.begin()
         nodes = []
-        count = 0
-        for disease_dict in disease_info:
+        for disease_dict in tqdm(disease_info):
             node = Node("Disease", name=disease_dict['name'], age=disease_dict['age'],
                         infection=disease_dict['infection'], insurance=disease_dict['insurance'],
                         treatment=disease_dict['treatment'], checklist=disease_dict['checklist'],
                         period=disease_dict['period'], rate=disease_dict['rate'],
                         money=disease_dict['money'])
             nodes.append(node)
-            count += 1
-            print(count)
+
         nodes = Subgraph(nodes)
         tx.create(nodes)
         tx.commit()
         return
 
-    def create_graphNodes(self):
+    def create_graph_nodes(self):
         """
         创建知识图谱实体
         :return:
@@ -170,7 +169,7 @@ class MedicalGraph:
 
         return
 
-    def create_graphRels(self):
+    def create_graph_rels(self):
         self.create_relationship("Disease", "Alias", self._rel_alias, "ALIAS_IS", "别名")
         self.create_relationship("Disease", "Symptom", self._rel_symptom, "HAS_SYMPTOM", "症状")
         self.create_relationship("Disease", "Part", self._rel_part, "PART_IS", "发病部位")
@@ -188,28 +187,31 @@ class MedicalGraph:
         :param rel_name:
         :return:
         """
-        count = 0
         # 去重处理
         set_edges = []
         for edge in edges:
             set_edges.append('###'.join(edge))
-        all = len(set(set_edges))
-        for edge in set(set_edges):
+        all_edges_count = len(set(set_edges))
+        print("\ncreate {0} relationship，total {1}".format(rel_type, all_edges_count))
+        for edge in tqdm(set(set_edges)):
             edge = edge.split('###')
             p = edge[0]
             q = edge[1]
-            query = "match(p:%s),(q:%s) where p.name='%s'and q.name='%s' create (p)-[rel:%s{name:'%s'}]->(q)" % (
+            query = "match(p:%s),(q:%s) where p.name=%r and q.name=%r create (p)-[rel:%s{name: %r}]->(q)" % (
                 start_node, end_node, p, q, rel_type, rel_name)
             try:
                 self.graph.run(query)
-                count += 1
-                print(rel_type, count, all)
             except Exception as e:
                 print(e)
         return
 
 
 if __name__ == "__main__":
+    start_t = datetime.datetime.now()
+
     handler = MedicalGraph()
-    handler.create_graphNodes()
-    handler.create_graphRels()
+    handler.create_graph_nodes()
+    handler.create_graph_rels()
+
+    end_t = datetime.datetime.now()
+    print("used time:", str(end_t - start_t))
