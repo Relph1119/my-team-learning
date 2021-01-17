@@ -48,6 +48,8 @@ class MedicalGraph:
 
         all_data = pd.read_csv(self.data_path, encoding='gb18030').loc[:, :].values
         for data in all_data:
+            # 使得数据中的nan都转换为空字符串
+            data[pd.isna(data)] = ""
             disease_dict = {}  # 疾病信息
             # 疾病
             disease = str(data[0]).replace("...", " ").strip()

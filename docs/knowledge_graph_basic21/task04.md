@@ -21,7 +21,7 @@
 ![](images/task04/01.png)
 
 ## 2 代码详解
-主要详解主体类`EntityExtractor`代码，主要用于命名实体识别、意图识别以及意图补充和纠正
+主要详解主体类`EntityExtractor`代码（entity_extractor.py），主要用于命名实体识别、意图识别以及意图补充和纠正
 
 ### 2.1 命名实体识别
 整体思路：

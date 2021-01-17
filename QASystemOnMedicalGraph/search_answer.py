@@ -17,11 +17,10 @@ class AnswerSearching:
         sqls = []
         if data:
             for intent in data["intentions"]:
-                sql_ = {}
-                sql_["intention"] = intent
+                sql_ = dict(intention=intent)
                 sql = []
                 if data.get("Disease"):
-                   sql = self.transfor_to_sql("Disease", data["Disease"], intent)
+                    sql = self.transfor_to_sql("Disease", data["Disease"], intent)
                 elif data.get("Alias"):
                     sql = self.transfor_to_sql("Alias", data["Alias"], intent)
                 elif data.get("Symptom"):
@@ -199,7 +198,7 @@ class AnswerSearching:
             n = len(disease_freq.keys())
             freq = sorted(disease_freq.items(), key=lambda x: x[1], reverse=True)
             for d, v in freq[:10]:
-                final_answer += "疾病为 {0} 的概率为：{1}\n".format(d, v/10)
+                final_answer += "疾病为 {0} 的概率为：{1}\n".format(d, v / 10)
         # 查询治疗方法
         if intent == "query_cureway":
             disease_dic = {}
