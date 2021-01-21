@@ -1,4 +1,10 @@
 * [目录](README.md)
+    * 第21期数据挖掘实战（异常检测）
+        * [Task01 异常检测介绍](anomaly_detection21/task01.md)
+        * [Task02 基于统计学的方法](anomaly_detection21/task02.md)
+        * [Task03 线性模型](anomaly_detection21/task03.md)
+        * [Task04 基于相似度的方法](anomaly_detection21/task04.md)
+        * [Task05 高维异常检测](anomaly_detection21/task05.md)
     * 第21期自然语言处理实践（知识图谱）
         * [Task01 知识图谱介绍](knowledge_graph_basic21/task01.md)
         * [Task02 基于医疗知识图谱的问答系统操作介绍](knowledge_graph_basic21/task02.md)
