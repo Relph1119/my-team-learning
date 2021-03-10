@@ -1,4 +1,4 @@
-# Task05 Neo4j 图数据库查询
+# Task05 Neo4j 图数据库查询 {docsify-ignore-all}
 
 ## 1 知识梳理
 - `Neo4j`图数据库由`Java`编写，数据保存形式为节点及节点的关系，节点和边都能够包含保存值的属性

@@ -1,1 +1,1 @@
-# Task04 基于相似度的方法
+# Task04 基于相似度的方法 {docsify-ignore-all}

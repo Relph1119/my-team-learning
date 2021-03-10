@@ -1,4 +1,4 @@
-# Task03 索引
+# Task03 索引 {docsify-ignore-all}
 
 ## 1 知识梳理（重点记忆）
 

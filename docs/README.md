@@ -1,4 +1,4 @@
-# 我的组队学习
+# 我的组队学习 {docsify-ignore-all}
 &emsp;&emsp;记录我参加的Datawhale组队学习，包括笔记和习题解答。
 
 ## 在线阅读地址

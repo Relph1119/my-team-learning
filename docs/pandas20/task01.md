@@ -1,4 +1,4 @@
-# Task01 预备知识
+# Task01 预备知识 {docsify-ignore-all}
 
 ## 1 知识梳理（重点记忆）
 

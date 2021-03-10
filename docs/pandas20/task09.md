@@ -1,4 +1,4 @@
-# Task9 分类数据
+# Task9 分类数据 {docsify-ignore-all}
 
 ## 1 知识梳理（重点记忆）
 

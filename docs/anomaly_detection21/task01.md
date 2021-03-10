@@ -1,4 +1,4 @@
-# Task01 异常检测概述
+# Task01 异常检测概述{docsify-ignore-all}
 
 ## 1 知识梳理
 

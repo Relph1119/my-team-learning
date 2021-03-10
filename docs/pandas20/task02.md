@@ -1,4 +1,4 @@
-# Task02 Pandas基础
+# Task02 Pandas基础 {docsify-ignore-all}
 
 ## 1 知识梳理（重点记忆）
 

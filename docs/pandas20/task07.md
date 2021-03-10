@@ -1,4 +1,4 @@
-# Task7 缺失数据
+# Task7 缺失数据 {docsify-ignore-all}
 
 ## 1 知识梳理（重点记忆）
 

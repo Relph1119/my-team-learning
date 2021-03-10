@@ -1,4 +1,4 @@
-# Task6 连接
+# Task6 连接 {docsify-ignore-all}
 
 ## 1 知识梳理（重点记忆）
 

@@ -1,4 +1,4 @@
-# Task02 基于统计学的方法
+# Task02 基于统计学的方法 {docsify-ignore-all}
 
 ## 1 知识梳理
 

@@ -1,4 +1,4 @@
-# Task5 变形
+# Task5 变形 {docsify-ignore-all}
 
 ## 1 知识梳理（重点记忆）
 

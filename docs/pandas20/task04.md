@@ -1,4 +1,4 @@
-# Task4 分组
+# Task4 分组 {docsify-ignore-all}
 
 ## 1 知识梳理（重点记忆）
 

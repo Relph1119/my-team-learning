@@ -1,4 +1,4 @@
-# Task01 知识图谱介绍
+# Task01 知识图谱介绍 {docsify-ignore-all}
 
 ## 1 知识梳理
 
