@@ -26,6 +26,7 @@ requirements.txt---------------------------运行环境依赖包
 【3】[第21期组队学习-自然语言处理实践（知识图谱）](http://datawhale.club/t/topic/1010)   
 【4】[KnowledgeGraph_Basic](https://github.com/datawhalechina/team-learning-nlp/tree/master/KnowledgeGraph_Basic)  
 【5】[基于医疗领域知识图谱的问答系统](https://github.com/zhihao-chen/QASystemOnMedicalGraph)
+【6】[第23期组队学习-集成学习](https://github.com/datawhalechina/team-learning-data-mining/tree/master/IntegratedLearning)
 
 ## 环境安装
 ### Notebook运行环境配置
