@@ -191,7 +191,7 @@ diabetes_data.head()
 - s1、s2、s3、s4、s5、s6：六次血清测量值
 - disease_progression：一年疾病进展的测量值
 
-## 2.2 线性回归模型 
+### 2.2 线性回归模型 
 
 
 ```python
