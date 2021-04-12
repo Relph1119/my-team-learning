@@ -18,7 +18,10 @@ notebook-----------------------------------JupyterNotebook格式笔记
 |   +---my_homework------------------------我的笔记
 +---integrated_learning23------------------第23期集成学习
 |   +---asserts----------------------------集成学习组队学习教材
-|   +---my_homework------------------------我的笔记    
+|   +---my_homework------------------------我的笔记  
++---ensemble_learning24--------------------第24期集成学习
+|   +---asserts----------------------------集成学习组队学习教材
+|   +---my_homework------------------------我的笔记
 QASystemOnMedicalGraph---------------------基于医疗领域知识图谱的问答系统源码
 requirements.txt---------------------------运行环境依赖包
 </pre>
@@ -29,7 +32,7 @@ requirements.txt---------------------------运行环境依赖包
 【3】[第21期组队学习-自然语言处理实践（知识图谱）](http://datawhale.club/t/topic/1010)   
 【4】[KnowledgeGraph_Basic](https://github.com/datawhalechina/team-learning-nlp/tree/master/KnowledgeGraph_Basic)  
 【5】[基于医疗领域知识图谱的问答系统](https://github.com/zhihao-chen/QASystemOnMedicalGraph)  
-【6】[第23期组队学习-集成学习](https://github.com/datawhalechina/team-learning-data-mining/tree/master/IntegratedLearning)
+【6】[第23/24/25期组队学习-集成学习](https://github.com/datawhalechina/team-learning-data-mining/tree/master/EnsembleLearning)
 
 ## 环境安装
 ### Notebook运行环境配置
