@@ -75,7 +75,7 @@ cv = RepeatedStratifiedKFold(n_splits=10, n_repeats=3, random_state=1)
 n_scores = cross_val_score(model, X, y, scoring='accuracy', cv=cv, 
                            n_jobs=-1, error_score='raise')
 
-print('模型准确率: %.3f，模型方差：%.3f' % (np.mean(n_scores), np.std(n_scores)))
+print('模型准确率: %.3f，模型标准差：%.3f' % (np.mean(n_scores), np.std(n_scores)))
 ```
 
     模型准确率: 0.902，模型方差：0.033
