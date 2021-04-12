@@ -1,4 +1,10 @@
 * [目录](README.md)
+    * 第24期集成学习
+        * [Task07 投票法的原理和案例分析](ensemble_learning24/task07.md)
+        * [Task08 Bagging的原理和案例分析](ensemble_learning24/task08.md)
+        * [Task09 Boosting的思路与Adaboost算法](ensemble_learning24/task09.md)
+        * [Task10 前向分步算法与梯度提升决策树](ensemble_learning24/task10.md)
+        * [Task11 XGBoost算法分析与案例调参实例](ensemble_learning24/task11.md)
     * 第23期集成学习
         * [Task01 熟悉机器学习的三大主要任务](integrated_learning23/task01.md)
         * [Task02 掌握基本的回归模型](integrated_learning23/task02.md)
