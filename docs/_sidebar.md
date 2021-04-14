@@ -6,12 +6,12 @@
         * [Task10 前向分步算法与梯度提升决策树](ensemble_learning24/task10.md)
         * [Task11 XGBoost算法分析与案例调参实例](ensemble_learning24/task11.md)
     * 第23期集成学习
-        * [Task01 熟悉机器学习的三大主要任务](integrated_learning23/task01.md)
-        * [Task02 掌握基本的回归模型](integrated_learning23/task02.md)
-        * [Task03 掌握偏差与方差理论](integrated_learning23/task03.md)
-        * [Task04 掌握回归模型的评估及超参数调优](integrated_learning23/task04.md)
-        * [Task05 掌握基本的分类模型](integrated_learning23/task05.md)
-        * [Task06 掌握分类问题的评估及超参数调优](integrated_learning23/task06.md)
+        * [Task01 熟悉机器学习的三大主要任务](ensemble_learning23/task01.md)
+        * [Task02 掌握基本的回归模型](ensemble_learning23/task02.md)
+        * [Task03 掌握偏差与方差理论](ensemble_learning23/task03.md)
+        * [Task04 掌握回归模型的评估及超参数调优](ensemble_learning23/task04.md)
+        * [Task05 掌握基本的分类模型](ensemble_learning23/task05.md)
+        * [Task06 掌握分类问题的评估及超参数调优](ensemble_learning23/task06.md)
     * 第21期自然语言处理实践（知识图谱）
         * [Task01 知识图谱介绍](knowledge_graph_basic21/task01.md)
         * [Task02 基于医疗知识图谱的问答系统操作介绍](knowledge_graph_basic21/task02.md)
