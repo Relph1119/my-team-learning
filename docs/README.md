@@ -7,9 +7,9 @@
 ## 目录
 - 第25期集成学习
     - Task12 Blending集成学习算法
-    - Task13 Bagging的原理和案例分析
-    - Task14 Boosting的思路与Adaboost算法
-    - Task15 前向分步算法与梯度提升决策树
+    - Task13 Stacking集成学习算法（2天）
+    - Task14 集成学习案例一 （幸福感预测）
+    - Task15 集成学习案例二 （蒸汽量预测）
 - 第24期集成学习
     - Task07 投票法的原理和案例分析
     - Task08 Bagging的原理和案例分析

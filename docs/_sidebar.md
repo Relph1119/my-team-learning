@@ -1,9 +1,9 @@
 * [目录](README.md)
     * 第25期集成学习
         * [Task12 Blending集成学习算法](ensemble_learning25/task12.md)
-        * [Task13 Bagging的原理和案例分析](ensemble_learning25/task13.md)
-        * [Task14 Boosting的思路与Adaboost算法](ensemble_learning25/task14.md)
-        * [Task15 前向分步算法与梯度提升决策树](ensemble_learning25/task15.md)
+        * [Task13 Stacking集成学习算法（2天）](ensemble_learning25/task13.md)
+        * [Task14 集成学习案例一 （幸福感预测）](ensemble_learning25/task14.md)
+        * [Task15 集成学习案例二 （蒸汽量预测）](ensemble_learning25/task15.md)
     * 第24期集成学习
         * [Task07 投票法的原理和案例分析](ensemble_learning24/task07.md)
         * [Task08 Bagging的原理和案例分析](ensemble_learning24/task08.md)
