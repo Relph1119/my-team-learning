@@ -5,6 +5,11 @@
 在线阅读地址：https://relph1119.github.io/my-team-learning
 
 ## 目录
+- 第25期集成学习
+    - Task12 Blending集成学习算法
+    - Task13 Bagging的原理和案例分析
+    - Task14 Boosting的思路与Adaboost算法
+    - Task15 前向分步算法与梯度提升决策树
 - 第24期集成学习
     - Task07 投票法的原理和案例分析
     - Task08 Bagging的原理和案例分析
