@@ -38,6 +38,9 @@ requirements.txt---------------------------运行环境依赖包
 【6】[第23/24/25期组队学习-集成学习](https://github.com/datawhalechina/team-learning-data-mining/tree/master/EnsembleLearning)
 
 ## 环境安装
+### Python版本
+Python 3.7.9
+
 ### Notebook运行环境配置
 安装相关的依赖包
 ```shell
