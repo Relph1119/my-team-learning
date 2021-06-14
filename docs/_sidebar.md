@@ -1,4 +1,13 @@
 * [目录](README.md)
+    * 第26期图神经网络
+        * [Task01 简单图论、环境配置与PyG库](gnn_learning26/task01.md)
+        * [Task02 消息传递范式](gnn_learning26/task02.md)
+        * [Task03 基于图神经网络的节点表征学习](gnn_learning26/task03.md)
+        * [Task04 数据完整存储与内存的数据集类+节点预测与边预测任务实践](gnn_learning26/task04.md)
+        * [Task05 超大图上的节点表征学习](gnn_learning26/task05.md)
+        * [Task06 基于图神经网络的图表示学习](gnn_learning26/task06.md)
+        * [Task07 图预测任务实践](gnn_learning26/task07.md)
+        * [Task08 总结](gnn_learning26/task08.md)
     * 第25期集成学习
         * [Task12 Blending集成学习算法](ensemble_learning25/task12.md)
         * [Task13 Stacking集成学习算法](ensemble_learning25/task13.md)

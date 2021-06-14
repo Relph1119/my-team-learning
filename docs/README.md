@@ -1,10 +1,19 @@
 # 我的组队学习 {docsify-ignore-all}
-&emsp;&emsp;记录我参加的Datawhale组队学习，包括笔记和习题解答。
+记录我参加的Datawhale组队学习，包括笔记和习题解答。
 
 ## 在线阅读地址
 在线阅读地址：https://relph1119.github.io/my-team-learning
 
 ## 目录
+- 第26期图神经网络
+    - Task01 简单图论、环境配置与PyG库
+    - Task02 消息传递范式
+    - Task03 基于图神经网络的节点表征学习
+    - Task04 数据完整存储与内存的数据集类+节点预测与边预测任务实践
+    - Task05 超大图上的节点表征学习
+    - Task06 基于图神经网络的图表示学习
+    - Task07 图预测任务实践
+    - Task08 总结
 - 第25期集成学习
     - Task12 Blending集成学习算法
     - Task13 Stacking集成学习算法
@@ -64,3 +73,6 @@ pip install -r requirements.txt
 ### Neo4j安装
 - [Windows10下安装Neo4j参考文档](https://blog.csdn.net/lihuaqinqwe/article/details/80314895)  
 - 如果是JDK1.8，可下载[Neo4j V3.5.26版本](https://go.neo4j.com/download-thanks.html?edition=community&release=3.5.26&flavour=winzip&_gl=1*cfbj98*_ga*MjIzOTA4ODkzLjE2MTAyOTEzODU.*_ga_DL38Q8KGQC*MTYxMDI5MTM4NS4xLjEuMTYxMDI5NDI0NS4w&_ga=2.141402866.1342715293.1610291386-223908893.1610291385)
+
+## 关注我们
+<div align=center><img src="res/qrcode.jpeg" width="250" height="270" alt="Datawhale，一个专注于AI领域的学习圈子。初衷是for the learner，和学习者一起成长。目前加入学习社群的人数已经数千人，组织了机器学习，深度学习，数据分析，数据挖掘，爬虫，编程，统计学，Mysql，数据竞赛等多个领域的内容学习，微信搜索公众号Datawhale可以加入我们。"></div>
