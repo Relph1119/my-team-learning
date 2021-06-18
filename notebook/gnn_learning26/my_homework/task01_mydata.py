@@ -19,6 +19,8 @@ import numpy as np
 import pandas as pd
 import torch
 from torch_geometric.data import Data
+import networkx as nx
+import matplotlib.pyplot as plt
 
 
 @unique
@@ -27,6 +29,9 @@ class MyLabel(Enum):
     paper = 1
     author = 2
 
+    @staticmethod
+    def get_name(val):
+        return MyLabel(val).name
 
 class MyDataset(Data):
     def __init__(self, input_data, **kwargs):
@@ -105,7 +110,7 @@ class MyDataset(Data):
 if __name__ == '__main__':
     print("有2个作者，分别写了2个论文，来自同一个机构")
     # 有2个作者，分别写了2个论文，来自同一个机构
-    input_data = pd.DataFrame([[1, 1, 1], [1, 2, 2]], columns=['dept', 'paper', 'author'])
+    input_data = pd.DataFrame([[1, 1, 1], [2, 2, 2]], columns=['dept', 'paper', 'author'])
 
     data = MyDataset(input_data)
     print("Number of dept nodes:", data.dept_nums)
@@ -121,3 +126,20 @@ if __name__ == '__main__':
     print("Contains self-loops:", data.contains_self_loops())
     # 此图是否是无向图
     print("Is undirected:", data.is_undirected())
+
+    plt.figure(figsize=(6, 6))
+    G = nx.Graph()
+    index = 0
+    x = data.x.tolist()
+    y = data.y.tolist()
+    for x_name, y_label in zip(x, y):
+        G.add_node(index, label=MyLabel.get_name(y_label[0])+'-'+str(x_name[0]))
+        index += 1
+
+    edge_index = [(i, j) for i, j in zip(data.edge_index.tolist()[0], data.edge_index.tolist()[1])]
+    G.add_edges_from(edge_index)
+    pos = nx.spring_layout(G, iterations=20)
+    nx.draw(G, pos, edge_color="grey", node_size=500)  # 画图，设置节点大小
+    node_labels = nx.get_node_attributes(G, 'label')
+    nx.draw_networkx_labels(G, pos=pos, labels=node_labels, font_size=10)
+    plt.show()
