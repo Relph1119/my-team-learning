@@ -112,6 +112,100 @@ print(conv.lin.weight)
 ### 2.2 习题2
 请复现一个一层的图神经网络的构造，总结通过继承`MessagePassing`基类来构造自己的图神经网络类的规范。
 
+**解答：**  
+自定义一层图神经网络的数学公式如下：
+$$\mathbf{x}^{\prime}_i = \mathbf{x}_i \cdot \mathbf{\Theta}_1 +
+        \sum_{j \in \mathcal{N}(i)} e_{j,i} \cdot
+        (\mathbf{\Theta}_2 \mathbf{x}_i - \mathbf{\Theta}_3 \mathbf{x}_j)$$
+
+
+```python
+import torch
+from torch.nn import functional as F
+from torch_geometric.nn import MessagePassing
+from torch_geometric.datasets import Planetoid
+
+
+class MyGNN(MessagePassing):
+    """
+    .. math::
+        \mathbf{x}^{\prime}_i = \mathbf{x}_i \cdot \mathbf{\Theta}_1 +
+        \sum_{j \in \mathcal{N}(i)} e_{j,i} \cdot
+        (\mathbf{\Theta}_2 \mathbf{x}_i - \mathbf{\Theta}_3 \mathbf{x}_j)
+    """
+
+    def __init__(self, in_channels, out_channels, device):
+        super(MyGNN, self).__init__(aggr='add')
+        self.in_channels = in_channels
+        self.out_channels = out_channels
+
+        self.lin1 = torch.nn.Linear(in_channels, out_channels).to(device)
+        self.lin2 = torch.nn.Linear(in_channels, out_channels).to(device)
+        self.lin3 = torch.nn.Linear(in_channels, out_channels).to(device)
+
+    def forward(self, x, edge_index):
+        a = self.lin1(x)
+        b = self.lin2(x)
+        out = self.propagate(edge_index, a=a, b=b)
+        return self.lin3(x) + out
+
+    def message(self, a_i, b_j):
+        out = a_i - b_j
+        return out
+
+    def __repr__(self):
+        return '{}({}, {})'.format(self.__class__.__name__, self.in_channels,
+                                   self.out_channels)
+```
+
+
+```python
+device = torch.device('cuda:0')
+
+dataset = Planetoid(root='dataset/Cora', name='Cora')
+model = MyGNN(in_channels=dataset.num_features, out_channels=dataset.num_classes, device=device)
+print(model)
+
+data = dataset[0].to(device)
+optimizer = torch.optim.Adam(model.parameters(), lr=0.01, weight_decay=5e-4)
+
+model.train()
+for epoch in range(200):
+    optimizer.zero_grad()
+    out = model(data.x, data.edge_index).to(device)
+    pred = out.argmax(dim=1)
+    accuracy = int((pred[data.test_mask] == data.y[data.test_mask]).sum()) / data.test_mask.sum()
+    loss = F.nll_loss(out[data.train_mask], data.y[data.train_mask])
+    loss.backward()
+    optimizer.step()
+    
+    if epoch % 10 == 0:
+        print("Train Epoch: {:3} Accuracy: {:.2f}%".format(epoch, accuracy.item() * 100.0))
+```
+
+    MyGNN(1433, 7)
+    Train Epoch:   0 Accuracy: 11.80%
+    Train Epoch:  10 Accuracy: 57.80%
+    Train Epoch:  20 Accuracy: 59.00%
+    Train Epoch:  30 Accuracy: 59.40%
+    Train Epoch:  40 Accuracy: 59.20%
+    Train Epoch:  50 Accuracy: 59.10%
+    Train Epoch:  60 Accuracy: 59.20%
+    Train Epoch:  70 Accuracy: 59.50%
+    Train Epoch:  80 Accuracy: 59.70%
+    Train Epoch:  90 Accuracy: 59.80%
+    Train Epoch: 100 Accuracy: 59.90%
+    Train Epoch: 110 Accuracy: 59.90%
+    Train Epoch: 120 Accuracy: 59.90%
+    Train Epoch: 130 Accuracy: 59.90%
+    Train Epoch: 140 Accuracy: 59.90%
+    Train Epoch: 150 Accuracy: 59.80%
+    Train Epoch: 160 Accuracy: 59.90%
+    Train Epoch: 170 Accuracy: 60.00%
+    Train Epoch: 180 Accuracy: 59.90%
+    Train Epoch: 190 Accuracy: 59.90%
+    
+
 ## 3 参考文章
 
 【1】理解GCN的整个算法流程：https://blog.csdn.net/qq_41987033/article/details/103377561
