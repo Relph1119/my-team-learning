@@ -38,7 +38,8 @@ requirements.txt---------------------------运行环境依赖包
 【3】[第21期组队学习-自然语言处理实践（知识图谱）](http://datawhale.club/t/topic/1010)   
 【4】[KnowledgeGraph_Basic](https://github.com/datawhalechina/team-learning-nlp/tree/master/KnowledgeGraph_Basic)  
 【5】[基于医疗领域知识图谱的问答系统](https://github.com/zhihao-chen/QASystemOnMedicalGraph)  
-【6】[第23/24/25期组队学习-集成学习](https://github.com/datawhalechina/team-learning-data-mining/tree/master/EnsembleLearning)
+【6】[第23/24/25期组队学习-集成学习](https://github.com/datawhalechina/team-learning-data-mining/tree/master/EnsembleLearning)  
+【7】[第26期组队学习-图神经网络](https://github.com/datawhalechina/team-learning-nlp/tree/master/GNN)
 
 ## 环境安装
 ### Python版本
@@ -49,6 +50,10 @@ Python 3.7.9
 ```shell
 pip install -r requirements.txt
 ```
+
+### Neo4j安装
+- [Windows10下安装Neo4j参考文档](https://blog.csdn.net/lihuaqinqwe/article/details/80314895)  
+- 如果是JDK1.8，可下载[Neo4j V3.5.26版本](https://go.neo4j.com/download-thanks.html?edition=community&release=3.5.26&flavour=winzip&_gl=1*cfbj98*_ga*MjIzOTA4ODkzLjE2MTAyOTEzODU.*_ga_DL38Q8KGQC*MTYxMDI5MTM4NS4xLjEuMTYxMDI5NDI0NS4w&_ga=2.141402866.1342715293.1610291386-223908893.1610291385)
 
 ### pytorch安装
 执行以下命令安装pytorch
@@ -65,7 +70,3 @@ pip install torch-cluster -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111
 pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html
 pip install torch-geometric
 ```
-
-### Neo4j安装
-- [Windows10下安装Neo4j参考文档](https://blog.csdn.net/lihuaqinqwe/article/details/80314895)  
-- 如果是JDK1.8，可下载[Neo4j V3.5.26版本](https://go.neo4j.com/download-thanks.html?edition=community&release=3.5.26&flavour=winzip&_gl=1*cfbj98*_ga*MjIzOTA4ODkzLjE2MTAyOTEzODU.*_ga_DL38Q8KGQC*MTYxMDI5MTM4NS4xLjEuMTYxMDI5NDI0NS4w&_ga=2.141402866.1342715293.1610291386-223908893.1610291385)

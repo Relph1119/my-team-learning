@@ -58,7 +58,8 @@
 【3】[第21期组队学习-自然语言处理实践（知识图谱）](http://datawhale.club/t/topic/1010)   
 【4】[KnowledgeGraph_Basic](https://github.com/datawhalechina/team-learning-nlp/tree/master/KnowledgeGraph_Basic)  
 【5】[基于医疗领域知识图谱的问答系统](https://github.com/zhihao-chen/QASystemOnMedicalGraph)  
-【6】[第23/24/25期组队学习-集成学习](https://github.com/datawhalechina/team-learning-data-mining/tree/master/EnsembleLearning)
+【6】[第23/24/25期组队学习-集成学习](https://github.com/datawhalechina/team-learning-data-mining/tree/master/EnsembleLearning)  
+【7】[第26期组队学习-图神经网络](https://github.com/datawhalechina/team-learning-nlp/tree/master/GNN)  
 
 ## 环境安装
 ### Python版本
@@ -73,6 +74,22 @@ pip install -r requirements.txt
 ### Neo4j安装
 - [Windows10下安装Neo4j参考文档](https://blog.csdn.net/lihuaqinqwe/article/details/80314895)  
 - 如果是JDK1.8，可下载[Neo4j V3.5.26版本](https://go.neo4j.com/download-thanks.html?edition=community&release=3.5.26&flavour=winzip&_gl=1*cfbj98*_ga*MjIzOTA4ODkzLjE2MTAyOTEzODU.*_ga_DL38Q8KGQC*MTYxMDI5MTM4NS4xLjEuMTYxMDI5NDI0NS4w&_ga=2.141402866.1342715293.1610291386-223908893.1610291385)
+
+### pytorch安装
+执行以下命令安装pytorch
+```shell
+pip3 install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio===0.8.1 -f https://download.pytorch.org/whl/torch_stable.html
+```
+
+### pytorch geometric安装
+执行以下命令安装pytorch geometric
+```shell
+pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html
+pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html
+pip install torch-cluster -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html
+pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html
+pip install torch-geometric
+```
 
 ## 关注我们
 <div align=center><img src="res/qrcode.jpeg" width="250" height="270" alt="Datawhale，一个专注于AI领域的学习圈子。初衷是for the learner，和学习者一起成长。目前加入学习社群的人数已经数千人，组织了机器学习，深度学习，数据分析，数据挖掘，爬虫，编程，统计学，Mysql，数据竞赛等多个领域的内容学习，微信搜索公众号Datawhale可以加入我们。"></div>
