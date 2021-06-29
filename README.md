@@ -48,7 +48,7 @@ Mini-Conda Python 3.8
 ### Notebook运行环境配置
 安装相关的依赖包
 ```shell
-pip install -r requirements.txt
+conda install --yes --file requirements.txt
 ```
 
 ### Neo4j安装
@@ -65,4 +65,9 @@ conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch -c cond
 执行以下命令安装pytorch geometric
 ```shell
 conda install pytorch-geometric -c rusty1s -c conda-forge
+```
+
+### Conda批量导出环境中所有组件
+```shell
+conda list -e > requirements.txt
 ```
