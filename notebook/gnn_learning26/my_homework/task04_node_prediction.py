@@ -20,7 +20,8 @@ class PlanetoidPubMed(InMemoryDataset):
         pre_transform (callable, optional): 数据转换函数，数据保存到文件前被调用。
     """
 
-    url = 'https://github.com/kimiyoung/planetoid/raw/master/data'
+    # url = 'https://github.com/kimiyoung/planetoid/raw/master/data'
+    url = 'https://gitee.com/rongqinchen/planetoid/raw/master/data'
 
     def __init__(self, root, split="public", num_train_per_class=20,
                  num_val=500, num_test=1000, transform=None,

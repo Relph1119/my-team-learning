@@ -43,7 +43,7 @@ requirements.txt---------------------------运行环境依赖包
 
 ## 环境安装
 ### Python版本
-Python 3.7.9
+Mini-Conda Python 3.8
 
 ### Notebook运行环境配置
 安装相关的依赖包
@@ -58,15 +58,11 @@ pip install -r requirements.txt
 ### pytorch安装
 执行以下命令安装pytorch
 ```shell
-pip3 install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio===0.8.1 -f https://download.pytorch.org/whl/torch_stable.html
+conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch -c conda-forge
 ```
 
 ### pytorch geometric安装
 执行以下命令安装pytorch geometric
 ```shell
-pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html
-pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html
-pip install torch-cluster -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html
-pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html
-pip install torch-geometric
+conda install pytorch-geometric -c rusty1s -c conda-forge
 ```

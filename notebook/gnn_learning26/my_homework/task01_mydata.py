@@ -33,6 +33,7 @@ class MyLabel(Enum):
     def get_name(val):
         return MyLabel(val).name
 
+
 class MyDataset(Data):
     def __init__(self, input_data, **kwargs):
         self.data = input_data
@@ -133,7 +134,7 @@ if __name__ == '__main__':
     x = data.x.tolist()
     y = data.y.tolist()
     for x_name, y_label in zip(x, y):
-        G.add_node(index, label=MyLabel.get_name(y_label[0])+'-'+str(x_name[0]))
+        G.add_node(index, label=MyLabel.get_name(y_label[0]) + '-' + str(x_name[0]))
         index += 1
 
     edge_index = [(i, j) for i, j in zip(data.edge_index.tolist()[0], data.edge_index.tolist()[1])]
