@@ -9,11 +9,10 @@
 """
 import torch
 from torch.nn import ModuleList
-from torch_geometric.datasets import Reddit
-from torch_geometric.data import ClusterData, ClusterLoader, NeighborSampler
-from torch_geometric.nn import SAGEConv
 from torch.nn import functional as F
-from torch_geometric.utils import train_test_split_edges
+from torch_geometric.data import ClusterData, ClusterLoader, NeighborSampler
+from torch_geometric.datasets import Reddit
+from torch_geometric.nn import SAGEConv
 from tqdm import tqdm
 
 
