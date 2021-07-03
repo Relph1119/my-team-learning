@@ -6,11 +6,10 @@ from gin_node import GINNodeEmbedding
 
 class GINGraphPooling(nn.Module):
 
-    def __init__(self, num_tasks=1, num_layers=5, emb_dim=300, residual=False, drop_ratio=0, JK="last", graph_pooling="sum"):
+    def __init__(self, num_tasks=1, num_layers=5, emb_dim=300, residual=False, drop_ratio=0, JK="last",
+                 graph_pooling="sum"):
         """GIN Graph Pooling Module
-
         此模块首先采用GINNodeEmbedding模块对图上每一个节点做嵌入，然后对节点嵌入做池化得到图的嵌入，最后用一层线性变换得到图的最终的表示（graph representation）。
-
         Args:
             num_tasks (int, optional): number of labels to be predicted. Defaults to 1 (控制了图表示的维度，dimension of graph representation).
             num_layers (int, optional): number of GINConv layers. Defaults to 5.
@@ -52,7 +51,7 @@ class GINGraphPooling(nn.Module):
             raise ValueError("Invalid graph pooling type.")
 
         if graph_pooling == "set2set":
-            self.graph_pred_linear = nn.Linear(2*self.emb_dim, self.num_tasks)
+            self.graph_pred_linear = nn.Linear(2 * self.emb_dim, self.num_tasks)
         else:
             self.graph_pred_linear = nn.Linear(self.emb_dim, self.num_tasks)
 

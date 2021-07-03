@@ -64,4 +64,3 @@ class GINNodeEmbedding(torch.nn.Module):
                 node_representation += h_list[layer]
 
         return node_representation
-
