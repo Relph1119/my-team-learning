@@ -241,11 +241,11 @@ dataloader = DataLoader(dataset, batch_size=256, shuffle=True, num_workers=16)
 #     pass
 ```
 
-![png](images/task07_pcqm4m_data_result.png)
+![png](images/ch07/01.png)
 
 ### 2.5 图预测任务实践
 
-![png](images/task07_gin_regression_result.png)
+![png](images/ch07/02.png)
 
 使用教程中的代码需要注意：
 1. 虚拟内存需要128G，需要GPU运行
