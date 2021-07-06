@@ -43,7 +43,7 @@ requirements.txt---------------------------运行环境依赖包
 
 ## 环境安装
 ### Python版本
-Mini-Conda Python 3.8
+Mini-Conda Python 3.8 Windows环境
 
 ### Notebook运行环境配置
 安装相关的依赖包

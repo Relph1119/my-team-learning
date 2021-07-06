@@ -40,8 +40,8 @@ class MyPCQM4MDataset(Dataset):
     def get(self, idx):
         smiles, homolumogap = self.smiles_list[idx], self.homolumogap_list[idx]
         graph = smiles2graph(smiles)
-        assert(len(graph['edge_feat']) == graph['edge_index'].shape[1])
-        assert(len(graph['node_feat']) == graph['num_nodes'])
+        assert (len(graph['edge_feat']) == graph['edge_index'].shape[1])
+        assert (len(graph['node_feat']) == graph['num_nodes'])
 
         x = torch.from_numpy(graph['node_feat']).to(torch.int64)
         edge_index = torch.from_numpy(graph['edge_index']).to(torch.int64)
@@ -60,6 +60,7 @@ if __name__ == "__main__":
     dataset = MyPCQM4MDataset('dataset')
     from torch_geometric.data import DataLoader
     from tqdm import tqdm
-    dataloader = DataLoader(dataset, batch_size=256, shuffle=True, num_workers=4)
+
+    dataloader = DataLoader(dataset, batch_size=256, shuffle=True, num_workers=16)
     for batch in tqdm(dataloader):
         pass
