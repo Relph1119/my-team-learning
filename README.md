@@ -28,6 +28,7 @@ notebook-----------------------------------JupyterNotebook格式笔记
 +---gnn_learning26-------------------------第26期图神经网络  
 |   +---asserts----------------------------图神经网络组队学习教材  
 |   +---my_homework------------------------我的笔记  
++---pumpkin_learning27---------------------第27期吃瓜课程（西瓜书+南瓜书）
 QASystemOnMedicalGraph---------------------基于医疗领域知识图谱的问答系统源码
 requirements.txt---------------------------运行环境依赖包
 </pre>
@@ -39,7 +40,8 @@ requirements.txt---------------------------运行环境依赖包
 【4】[KnowledgeGraph_Basic](https://github.com/datawhalechina/team-learning-nlp/tree/master/KnowledgeGraph_Basic)  
 【5】[基于医疗领域知识图谱的问答系统](https://github.com/zhihao-chen/QASystemOnMedicalGraph)  
 【6】[第23/24/25期组队学习-集成学习](https://github.com/datawhalechina/team-learning-data-mining/tree/master/EnsembleLearning)  
-【7】[第26期组队学习-图神经网络](https://github.com/datawhalechina/team-learning-nlp/tree/master/GNN)
+【7】[第26期组队学习-图神经网络](https://github.com/datawhalechina/team-learning-nlp/tree/master/GNN)  
+【8】[第27期组队学习-吃瓜教程](https://www.bilibili.com/video/BV1Mh411e7VU)
 
 ## 环境安装
 ### Python版本
