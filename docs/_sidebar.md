@@ -1,4 +1,10 @@
 * [目录](README.md)
+    * 第27期吃瓜课程
+        * [Task01 概览西瓜书+南瓜书第1、2章](pumpkin_learning27/task01.md)
+        * [Task02 详读西瓜书+南瓜书第3章](pumpkin_learning27/task02.md)
+        * [Task03 详读西瓜书+南瓜书第4章](pumpkin_learning27/task03.md)
+        * [Task04 详读西瓜书+南瓜书第5章](pumpkin_learning27/task04.md)
+        * [Task05 详读西瓜书+南瓜书第6章](pumpkin_learning27/task05.md)
     * 第26期图神经网络
         * [Task01 简单图论、环境配置与PyG库](gnn_learning26/task01.md)
         * [Task02 消息传递范式](gnn_learning26/task02.md)
