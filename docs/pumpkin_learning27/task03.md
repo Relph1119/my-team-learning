@@ -48,7 +48,9 @@ $$\text{Gain}(D, \alpha)=\text{Ent}(D)-\sum_{v=1}^{V} \frac{|D^{v}|}{|D|} \text{
 
 ### 2.2 增益率
 - 作用：用于解决属性信息熵为0，或远高于其他属性的信息熵问题
-- 定义：$$\text{Gain_ratio}(D, \alpha)=\frac{\text{Gain}(D, \alpha)}{\text{IV}(\alpha)}$$其中$$
+- 定义：
+  $$\text{Gain\_ratio}(D, \alpha) = \frac{\text{Gain}(D, \alpha)} { \text{IV} (\alpha) }$$
+  其中$$
 \text{IV}(\alpha)=-\sum_{v=1}^V \frac{|D^v|}{|D|} \log_2 \frac{|D^v|}{|D|}$$当$\alpha$属性的取值越多时，$\text{IV}(\alpha)$值越大
 - C4.5算法是以增益率为准则
 
@@ -61,4 +63,4 @@ $$\text{Gain}(D, \alpha)=\text{Ent}(D)-\sum_{v=1}^{V} \frac{|D^{v}|}{|D|} \text{
 \end{aligned}$$
 - 属性选择：  
 使用属性$\alpha$划分后的基尼指数为：
-$$\text { Gini_index }(D, \alpha)=\sum_{v=1}^V \frac{|D^v|}{|D|} \text{Gini}(D^v)$$故选择基尼指数最小的划分属性。
+$$\text { Gini\_index }(D, \alpha)=\sum_{v=1}^V \frac{|D^v|}{|D|} \text{Gini}(D^v)$$故选择基尼指数最小的划分属性。
