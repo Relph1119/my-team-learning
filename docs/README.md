@@ -5,6 +5,12 @@
 在线阅读地址：https://relph1119.github.io/my-team-learning
 
 ## 目录
+- 第27期吃瓜教程
+    - Task01 概览西瓜书+南瓜书第1、2章
+    - Task02 详读西瓜书+南瓜书第3章‘
+    - Task03 详读西瓜书+南瓜书第4章
+    - Task04 详读西瓜书+南瓜书第5章
+    - Task05 详读西瓜书+南瓜书第6章
 - 第26期图神经网络
     - Task01 简单图论、环境配置与PyG库
     - Task02 消息传递范式
@@ -59,16 +65,17 @@
 【4】[KnowledgeGraph_Basic](https://github.com/datawhalechina/team-learning-nlp/tree/master/KnowledgeGraph_Basic)  
 【5】[基于医疗领域知识图谱的问答系统](https://github.com/zhihao-chen/QASystemOnMedicalGraph)  
 【6】[第23/24/25期组队学习-集成学习](https://github.com/datawhalechina/team-learning-data-mining/tree/master/EnsembleLearning)  
-【7】[第26期组队学习-图神经网络](https://github.com/datawhalechina/team-learning-nlp/tree/master/GNN)  
+【7】[第26期组队学习-图神经网络](https://github.com/datawhalechina/team-learning-nlp/tree/master/GNN)    
+【8】[第27期组队学习-吃瓜教程](https://www.bilibili.com/video/BV1Mh411e7VU)  
 
 ## 环境安装
 ### Python版本
-Python 3.7.9
+Mini-Conda Python 3.8 Windows环境
 
 ### Notebook运行环境配置
 安装相关的依赖包
 ```shell
-pip install -r requirements.txt
+conda install --yes --file requirements.txt
 ```
 
 ### Neo4j安装
@@ -78,17 +85,18 @@ pip install -r requirements.txt
 ### pytorch安装
 执行以下命令安装pytorch
 ```shell
-pip3 install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio===0.8.1 -f https://download.pytorch.org/whl/torch_stable.html
+conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch -c conda-forge
 ```
 
 ### pytorch geometric安装
 执行以下命令安装pytorch geometric
 ```shell
-pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html
-pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html
-pip install torch-cluster -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html
-pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html
-pip install torch-geometric
+conda install pytorch-geometric -c rusty1s -c conda-forge
+```
+
+### Conda批量导出环境中所有组件
+```shell
+conda list -e > requirements.txt
 ```
 
 ## 关注我们
