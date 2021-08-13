@@ -155,4 +155,4 @@ if __name__ == '__main__':
     score = clf.score(X, y)
     print("\n原始输出:", y)
     print("预测输出:", y_predict)
-    print("预测正确率：{:.2%}".format(score))
+    print("预测准确率：{:.2%}".format(score))
