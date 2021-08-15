@@ -5,9 +5,19 @@
 在线阅读地址：https://relph1119.github.io/my-team-learning
 
 ## 目录
+- 第28期基于Transformers的自然语言处理
+    - Task01 学习概览
+    - Task02 学习Attention和Transformer
+    - Task03 学习BERT和GPT
+    - Task04 编写BERT模型
+    - Task05 BERT应用到下游任务、训练和优化
+    - Task06 Transformers解决文本分类任务、超参搜索
+    - Task07 Transformers解析序列标注任务
+    - Task08 Transformers解决抽取式问答任务
+    - Task09 Transformers解决机器翻译任务
 - 第27期吃瓜教程
     - Task01 概览西瓜书+南瓜书第1、2章
-    - Task02 详读西瓜书+南瓜书第3章‘
+    - Task02 详读西瓜书+南瓜书第3章
     - Task03 详读西瓜书+南瓜书第4章
     - Task04 详读西瓜书+南瓜书第5章
     - Task05 详读西瓜书+南瓜书第6章

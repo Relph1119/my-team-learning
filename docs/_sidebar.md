@@ -1,4 +1,14 @@
 * [目录](README.md)
+    * 第28期基于Transformers的自然语言处理
+        * [Task01 学习概览](transformers_nlp28/task01.md)
+        * [Task02 学习Attention和Transformer](transformers_nlp28/task02.md)
+        * [Task03 学习BERT和GPT](transformers_nlp28/task03.md)
+        * [Task04 编写BERT模型](transformers_nlp28/task04.md)
+        * [Task05 BERT应用到下游任务、训练和优化](transformers_nlp28/task05.md)
+        * [Task06 Transformers解决文本分类任务、超参搜索](transformers_nlp28/task06.md)
+        * [Task07 Transformers解析序列标注任务](transformers_nlp28/task07.md)
+        * [Task08 Transformers解决抽取式问答任务](transformers_nlp28/task08.md)
+        * [Task09 Transformers解决机器翻译任务](transformers_nlp28/task09.md)
     * 第27期吃瓜课程
         * [Task01 概览西瓜书+南瓜书第1、2章](pumpkin_learning27/task01.md)
         * [Task02 详读西瓜书+南瓜书第3章](pumpkin_learning27/task02.md)
