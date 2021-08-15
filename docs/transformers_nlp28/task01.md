@@ -19,7 +19,7 @@
   3. 机器翻译：将源语言翻译成目标语言
 
 ## 3 Transformer兴起
-- Transformer模型来源：2017年的[Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)论文，提出Transformer模型结构，并在机器翻译任务三取得了SOTA的效果
+- Transformer模型来源：2017年的[Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)论文，提出Transformer模型结构，并在机器翻译任务上取得了SOTA的效果
 - 进展：2018年的论文[BERT: Pre-training of Deep Bidirectional Transformers for
 Language Understanding](https://arxiv.org/pdf/1810.04805.pdf)，使用Transformer模型结构进行大规模语言模型预训练，在多个NLP下游任务中进行微调
 - 改进：2019~2021年期间，将Transformer模型结构和预训练+微调的训练方式相结合，提出一系列Transformer模型结构、训练方法的改进
