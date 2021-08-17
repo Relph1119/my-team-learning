@@ -997,3 +997,7 @@ print(out.shape)
 
     torch.Size([20, 32, 512])
     
+
+## 3 总结
+
+&emsp;&emsp;本次任务，主要从seq2seq模型，到Attention模型，再到Transformer模型，并详细介绍了Transformer的各个组成部分，包括Transformer输入、Encoder编码器、Self-Attention、残差连接、Decoder解码器、最后的线性层和softmax层。根据Transformer原理，详细讲解了Transformer代码。
