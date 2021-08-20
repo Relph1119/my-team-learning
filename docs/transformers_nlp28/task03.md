@@ -41,10 +41,10 @@
 - BERT的使用：
   1. 使用在 Google Colab 上的 BERT FineTuning with Cloud TPUs
   2. 查看仓库代码：
-    - 模型定义：modeling.py（class BertModel）
-    - 微调网络：run_classifier.py，构建了监督模型分类层
-    - 下载预训练模型：BERT Base、BERT Large，以及英语、中文和包括 102 种语言的多语言模型
-    - 关注WordPiece：tokenization.py，单词转换工具
+      - 模型定义：modeling.py（class BertModel）
+      - 微调网络：run_classifier.py，构建了监督模型分类层
+      - 下载预训练模型：BERT Base、BERT Large，以及英语、中文和包括 102 种语言的多语言模型
+      - 关注WordPiece：tokenization.py，单词转换工具
 
 ## 2 GPT
 
@@ -59,9 +59,9 @@
 - 与BERT的不同之处
   1. GPT2使用Transformer的Decoder模块构建
   2. 工作方式（自回归）：
-    - 产生每个token
-    - 将token添加到输入的序列中，形成一个新序列
-    - 将上述新序列作为模型下一个时间步的输入
+      - 产生每个token
+      - 将token添加到输入的序列中，形成一个新序列
+      - 将上述新序列作为模型下一个时间步的输入
 
 - Transformer模块的进化
   1. Encoder模块：接受特定长度的输入，如果不足，填充序列其余部分
@@ -71,19 +71,19 @@
   1. 能力：能够处理1024个token，每个token沿着自己的路径经过所有的Decoder模块
   2. 训练方法：生成无条件样本、生成交互式条件样本、生成单词
   3. 训练过程：
-    - 并行处理token，生成一个向量
-    - 根据模型的词汇表计算一个分数
-    - 选择概率最高的词作为输出
-    - 把上述输出作为下一次的输入序列，进行下一个预测
+      - 并行处理token，生成一个向量
+      - 根据模型的词汇表计算一个分数
+      - 选择概率最高的词作为输出
+      - 把上述输出作为下一次的输入序列，进行下一个预测
 
 - GPT2详解
   1. 查找第一个token \<s\>的embedding向量：在嵌入矩阵中查找输入单词对应的embedding向量
   2. 位置编码：指示单词在序列中的顺序
   3. token流向顺序：
-    - 首先通过Self Attention层
-    - 通过神经网络层
-    - 第一个模块处理token，得到一个结果向量
-    - 将结果向量发送到下一个模块
+      - 首先通过Self Attention层
+      - 通过神经网络层
+      - 第一个模块处理token，得到一个结果向量
+      - 将结果向量发送到下一个模块
   4. Self-Attention过程：得到输出向量
   5. 模型输出：将上述输出项目乘以嵌入矩阵，得到输出的分数矩阵（单词概率矩阵）
   6. 选取top_k（设置40），即让模型考虑得分最高的40个词
@@ -92,9 +92,9 @@
 - Self-Attention回顾
   1. 作用：在处理某个词之前，将模型对这个词的相关词和关联词的理解融合起来，通过对句子片段中每个词的相关性打分，并进行标识向量加权求和
   2. 过程：
-    - 主要组成部分：Query（当前单词标识，用于对其他所有单词进行评分）、Key（句子中所有单词的标签）、Value（实际的单词表示）
-    - 将Query向量与每个单词的Key向量相乘，产生一个分数（点积+Softmax）
-    - 每个Value向量乘以上述分数，求和之后得到Self-Attention的输出
+      - 主要组成部分：Query（当前单词标识，用于对其他所有单词进行评分）、Key（句子中所有单词的标签）、Value（实际的单词表示）
+      - 将Query向量与每个单词的Key向量相乘，产生一个分数（点积+Softmax）
+      - 每个Value向量乘以上述分数，求和之后得到Self-Attention的输出
 
 ### 2.2 可视化Self-Attention
 
@@ -107,16 +107,16 @@
   1. 与上述流程的区别在于第2步，屏蔽当前token之后的词，将这些设置的评分设置为0
   2. 在第2步中，加上一个上三角形的attention mask，将要屏蔽的元素设置为负无穷大
   3. 具体流程：
-    - 1) Create q, k, v：将输入乘以第一个权重矩阵，创建Query、Key、Value矩阵
-    - 1.5) split attention heads： 将一个长向量变成矩阵
-    - 2) Score：进行评分
-    - 3) Sum：将每个Value向量乘以对应分数，求和得到输出Z
-    - 3.5) Merge attention heads：将输出Z进行合并，连接成一个向量
-    - 4) Project：使用第二个权重矩阵进行结果映射
+      - 1) Create q, k, v：将输入乘以第一个权重矩阵，创建Query、Key、Value矩阵
+      - 1.5) split attention heads： 将一个长向量变成矩阵
+      - 2) Score：进行评分
+      - 3) Sum：将每个Value向量乘以对应分数，求和得到输出Z
+      - 3.5) Merge attention heads：将输出Z进行合并，连接成一个向量
+      - 4) Project：使用第二个权重矩阵进行结果映射
   4. 全连接神经网络
-    - 作用：用于处理Self-Attention层的输出
-    - 第1层：模型大小的4倍
-    - 第2层：把第1层的结果映射回模型的维度
+      - 作用：用于处理Self-Attention层的输出
+      - 第1层：模型大小的4倍
+      - 第2层：把第1层的结果映射回模型的维度
 
 ### 2.3 Transformer的Decoder应用
 
