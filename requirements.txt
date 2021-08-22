@@ -25,14 +25,17 @@ colorama=0.4.4=pyhd3eb1b0_0
 cryptography=3.4.7=py37h71e12ea_0
 cudatoolkit=11.1.1=heb2d755_7
 cycler=0.10.0=py37_0
+dataclasses=0.8=pyhc8e2a94_3
 decorator=4.4.2=py_0
 defusedxml=0.7.1=pyhd3eb1b0_0
 entrypoints=0.3=py37_0
+filelock=3.0.12=pyh9f0ad1d_0
 freetype=2.10.4=h546665d_1
 google-auth=1.32.0=pyhd3eb1b0_0
 google-auth-oauthlib=0.4.1=py_2
 googledrivedownloader=0.4=pyhd3deb0d_1
 grpcio=1.35.0=py37hc60d5dd_0
+huggingface_hub=0.0.15=pyhd8ed1ab_0
 icu=58.2=ha925a31_3
 idna=2.10=pyh9f0ad1d_0
 importlib-metadata=3.10.0=py37haa95532_0
@@ -41,6 +44,7 @@ intel-openmp=2021.2.0=h57928b3_616
 ipykernel=5.3.4=py37h5ca1d4c_0
 ipython=7.22.0=py37hd4e2768_0
 ipython_genutils=0.2.0=pyhd3eb1b0_1
+ipywidgets=7.6.3=pyhd3deb0d_0
 jedi=0.17.0=py37_0
 jinja2=3.0.1=pyhd8ed1ab_0
 joblib=1.0.1=pyhd8ed1ab_0
@@ -54,6 +58,7 @@ jupyter_highlight_selected_word=0.2.0=py37h03978a9_1002
 jupyter_latex_envs=1.4.6=pyhd8ed1ab_1002
 jupyter_nbextensions_configurator=0.4.1=py37h03978a9_2
 jupyterlab_pygments=0.1.2=py_0
+jupyterlab_widgets=1.0.0=pyhd8ed1ab_1
 kiwisolver=1.3.1=py37hd77b12b_0
 libblas=3.9.0=9_mkl
 libboost=1.67.0=hd9e427e_4
@@ -97,7 +102,7 @@ numpy=1.21.0=py37hcbcd69c_0
 oauthlib=3.0.0=py37_0
 ogb=1.3.1=pyhd8ed1ab_0
 olefile=0.46=pyh9f0ad1d_1
-openssl=1.1.1k=h8ffe710_0
+openssl=1.1.1k=h8ffe710_1
 outdated=0.2.0=py_0
 packaging=20.9=pyhd3eb1b0_0
 pandas=1.2.5=py37h90003fb_0
@@ -140,9 +145,11 @@ pyyaml=5.4.1=py37hcc03f2d_0
 pyzmq=20.0.0=py37hd77b12b_1
 qt=5.9.7=vc14h73c81de_0
 rdkit=2020.09.1.0=py37h3d1ada6_1
+regex=2021.8.21=py37hcc03f2d_0
 requests=2.25.1=pyhd3deb0d_0
 requests-oauthlib=1.3.0=py_0
 rsa=4.7.2=pyhd3eb1b0_1
+sacremoses=0.0.43=pyh9f0ad1d_0
 scikit-learn=0.24.2=py37h8ded0a9_0
 scipy=1.7.0=py37h924764e_0
 seaborn=0.11.1=pyhd3eb1b0_0
@@ -159,12 +166,14 @@ terminado=0.9.4=py37haa95532_0
 testpath=0.5.0=pyhd3eb1b0_0
 threadpoolctl=2.1.0=pyh5ca1d4c_0
 tk=8.6.10=h8ffe710_1
+tokenizers=0.10.1=py37h537c2b9_0
 toml=0.10.2=pyhd3eb1b0_0
 torchaudio=0.9.0=py37
 torchvision=0.10.0=py37_cu111
 tornado=6.1=py37h2bbff1b_0
 tqdm=4.61.1=pyhd8ed1ab_0
 traitlets=5.0.5=pyhd3eb1b0_0
+transformers=4.9.2=pyhd8ed1ab_0
 typing-extensions=3.10.0.0=hd3eb1b0_0
 typing_extensions=3.10.0.0=pyh06a4308_0
 urllib3=1.26.6=pyhd8ed1ab_0
@@ -174,6 +183,7 @@ wcwidth=0.2.5=py_0
 webencodings=0.5.1=py37_1
 werkzeug=1.0.1=pyhd3eb1b0_0
 wheel=0.36.2=pyhd3eb1b0_0
+widgetsnbextension=3.5.1=py37h03978a9_4
 win_inet_pton=1.1.0=py37h03978a9_2
 wincertstore=0.2=py37_0
 winpty=0.4.3=4
