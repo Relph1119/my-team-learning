@@ -104,6 +104,11 @@ conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch -c cond
 conda install pytorch-geometric -c rusty1s -c conda-forge
 ```
 
+### ray\[tune\]安装
+```shell
+conda install ray-tune -c conda-forge
+```
+
 ### Conda批量导出环境中所有组件
 ```shell
 conda list -e > requirements.txt
