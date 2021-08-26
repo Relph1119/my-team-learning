@@ -93,6 +93,10 @@ conda install --yes --file requirements.txt
 set HTTPS_PROXY=http://127.0.0.1:19180
 set HTTP_PROXY=http://127.0.0.1:19180
 ```
+设置代理之后，启动Jupyter Notebook
+```shell
+jupyter notebook
+```
 
 ### Neo4j安装
 - [Windows10下安装Neo4j参考文档](https://blog.csdn.net/lihuaqinqwe/article/details/80314895)  
