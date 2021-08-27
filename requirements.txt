@@ -160,6 +160,7 @@ pickleshare=0.7.5=pyhd3eb1b0_1003
 pillow=8.2.0=py37h4fa10fc_0
 pip=21.1.3=py37haa95532_0
 pixman=0.40.0=he774522_0
+portalocker=2.3.1=py37h03978a9_0
 prettytable=2.1.0=pyhd8ed1ab_0
 prometheus_client=0.11.0=pyhd3eb1b0_0
 prompt-toolkit=3.0.17=pyh06a4308_0
@@ -207,11 +208,14 @@ regex=2021.8.21=py37hcc03f2d_0
 requests=2.25.1=pyhd3deb0d_0
 requests-oauthlib=1.3.0=py_0
 rsa=4.7.2=pyhd3eb1b0_1
+sacrebleu=1.5.1=pyhd8ed1ab_0
 sacremoses=0.0.43=pyh9f0ad1d_0
 scikit-learn=0.24.2=py37h8ded0a9_0
 scipy=1.7.0=py37h924764e_0
 seaborn=0.11.1=pyhd3eb1b0_0
 send2trash=1.5.0=pyhd3eb1b0_1
+sentencepiece=0.1.95=py37h8c56517_0
+seqeval=1.2.2=pyhd3deb0d_0
 setproctitle=1.1.10=py37hcc03f2d_1004
 setuptools=52.0.0=py37haa95532_0
 sip=4.19.8=py37h6538335_0
@@ -238,6 +242,7 @@ tornado=6.1=py37h2bbff1b_0
 tqdm=4.49.0=pyh9f0ad1d_0
 traitlets=5.0.5=pyhd3eb1b0_0
 transformers=4.9.2=pyhd8ed1ab_0
+typing=3.10.0.0=pyhd8ed1ab_0
 typing-extensions=3.10.0.0=hd3eb1b0_0
 typing_extensions=3.10.0.0=pyh06a4308_0
 urllib3=1.26.6=pyhd8ed1ab_0
