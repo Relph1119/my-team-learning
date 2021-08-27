@@ -371,4 +371,4 @@ trainer.train()
 ## 4 总结
 
 &emsp;&emsp;本次任务，主要介绍了用Helsinki-NLP/opus-mt-en-ro模型解决机器翻译任务的方法及步骤，步骤主要分为加载数据、数据预处理、微调预训练模型。在加载数据阶段中，使用WMT数据集；在数据预处理阶段中，对tokenizer分词器的建模，使用as_target_tokenizer控制target对应的特殊token，并完成数据集中所有样本的预处理；在微调预训练模型阶段，使用Seq2SeqTrainingArguments对模型参数进行设置，并构建Seq2SeqTrainer训练器，进行模型训练和评估。  
-&emsp;&emsp;其中在数据集下载时，需要使用外网方式建立代理；sacrebleu需要安装1.5.1版本；本次任务中的模型训练，笔者使用的是3080  GPU显卡，需要训练模型长达1小时。
+&emsp;&emsp;其中在数据集下载时，需要使用外网方式建立代理；sacrebleu需要安装1.5.1版本；本次任务中的模型训练，笔者使用的是3070  GPU显卡，需要训练模型长达1小时。
