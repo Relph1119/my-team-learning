@@ -5,6 +5,12 @@
 在线阅读地址：https://relph1119.github.io/my-team-learning
 
 ## 目录
+- 第29期数据可视化
+    - Task01 Matplotlib初相识
+    - Task02 艺术画笔见乾坤
+    - Task03 布局格式定方圆
+    - Task04 文字图例尽眉目
+    - Task05 样式色彩秀芳华
 - 第28期基于Transformers的自然语言处理
     - Task01 学习概览
     - Task02 学习Attention和Transformer
@@ -77,6 +83,8 @@
 【6】[第23/24/25期组队学习-集成学习](https://github.com/datawhalechina/team-learning-data-mining/tree/master/EnsembleLearning)  
 【7】[第26期组队学习-图神经网络](https://github.com/datawhalechina/team-learning-nlp/tree/master/GNN)    
 【8】[第27期组队学习-吃瓜教程](https://www.bilibili.com/video/BV1Mh411e7VU)  
+【9】[第28期组队学习-基于Transformers的自然语言处理](https://github.com/datawhalechina/learn-nlp-with-transformers)
+【10】[第29期组队学习-Matplotlib可视化](https://github.com/datawhalechina/fantastic-matplotlib)  
 
 ## 环境安装
 ### Python版本
