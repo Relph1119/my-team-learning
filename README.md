@@ -30,6 +30,7 @@ notebook-----------------------------------JupyterNotebook格式笔记
 |   +---my_homework------------------------我的笔记  
 +---pumpkin_learning27---------------------第27期吃瓜课程（西瓜书+南瓜书）
 +---transformers_nlp28---------------------第28期基于Transformers的自然语言处理
++---matplotlib_learning29------------------第29期数据可视化
 QASystemOnMedicalGraph---------------------基于医疗领域知识图谱的问答系统源码
 requirements.txt---------------------------运行环境依赖包
 </pre>
