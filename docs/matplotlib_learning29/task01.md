@@ -51,7 +51,7 @@ ax.plot([1, 2, 3, 4], [1, 4, 2, 3])
 
 
 
-    [<matplotlib.lines.Line2D at 0x1f2a3b8cc88>]
+    [<matplotlib.lines.Line2D at 0x2488dcc0688>]
 
 
 
@@ -70,7 +70,7 @@ plt.plot([1, 2, 3, 4], [1, 4, 2, 3])
 
 
 
-    [<matplotlib.lines.Line2D at 0x1f2a3bfe288>]
+    [<matplotlib.lines.Line2D at 0x2488ddd3f88>]
 
 
 
@@ -107,7 +107,7 @@ ax.legend()
 
 
 
-    <matplotlib.legend.Legend at 0x1f2a0416588>
+    <matplotlib.legend.Legend at 0x2488de7de08>
 
 
 
@@ -140,7 +140,7 @@ plt.legend()
 
 
 
-    <matplotlib.legend.Legend at 0x1f2a3d1bc08>
+    <matplotlib.legend.Legend at 0x2488defbb48>
 
 
 
@@ -149,3 +149,7 @@ plt.legend()
 ![png](images/task01/output_16_1.png)
     
 
+
+## 3 总结
+
+&emsp;&emsp;本次任务，主要对Matplotlib进行了基本介绍，Matplotlib是一个Python 2D绘图库，用于绘制各种静态、动态和交互式的图表，通过Figure展示，总共有4个图层用于控制不同的绘图元素，通过各种命令方法处理图表的每个元素，从而达到数据可视化的最终效果。
