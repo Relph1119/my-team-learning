@@ -89,7 +89,7 @@ plt.plot([1, 2, 3, 4], [1, 4, 2, 3])
 # 构成直线的数据
 x = np.linspace(0, 2, 100)
 
-# 显示创建figure和axes
+# 显式创建figure和axes
 fig, ax = plt.subplots()
 # 绘制折线图
 ax.plot(x, x, label='linear')  
