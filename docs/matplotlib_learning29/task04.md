@@ -105,19 +105,19 @@
 
 plt.legend(loc='upper center') 等同于plt.legend(loc=9)
 
-| |  |  |
-| --- | --- | ------ |
-|  0: ‘best'  
-1: ‘upper right'  
-2: ‘upper left'  
-3: ‘lower left' |   
-4: ‘lower right'  
-5: ‘right'  
-6: ‘center left'                                           |    
-7: ‘center right'  
-8: ‘lower center'  
-9: ‘upper center'  
-10: ‘center' |  
+|  |
+| --- |
+| 0: ‘best' |
+| 1: ‘upper right' |  
+| 2: ‘upper left' |  
+| 3: ‘lower left' |   
+| 4: ‘lower right' | 
+| 5: ‘right' | 
+| 6: ‘center left' |                                          |    
+| 7: ‘center right' | 
+| 8: ‘lower center'  |
+| 9: ‘upper center'  |
+| 10: ‘center' |  
 
 2. 设置图例字体大小  
 fontsize : int or float or {‘xx-small’, ‘x-small’, ‘small’, ‘medium’, ‘large’, ‘x-large’, ‘xx-large’}
