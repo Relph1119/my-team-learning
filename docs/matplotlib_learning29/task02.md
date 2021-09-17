@@ -45,23 +45,23 @@
 - Rectangle（矩形）：
   1. hist（直方图）：  
     常用参数如下：
-    - **x**：数据集，最终的直方图将对数据集进行统计
-    - **bins**：统计的区间分布
-    - **range**：tuple, 显示的区间，range在没有给出bins时生效
-    - **density**：bool，默认为false，显示的是频数统计结果，为True则显示频率统计结果，这里需要注意，频率统计结果=区间数目/(总数*区间宽度)，和normed效果一致，官方推荐使用density
-    - **histtype**：可选{'bar', 'barstacked', 'step', 'stepfilled'}之一，默认为bar，推荐使用默认配置，step使用的是梯状，stepfilled则会对梯状内部进行填充，效果与bar类似
-    - **align**：可选{'left', 'mid', 'right'}之一，默认为'mid'，控制柱状图的水平分布，left或者right，会有部分空白区域，推荐使用默认
-    - **log**：bool，默认False,即y坐标轴是否选择指数刻度
-    - **stacked**：bool，默认为False，是否为堆积状图
+      - **x**：数据集，最终的直方图将对数据集进行统计
+      - **bins**：统计的区间分布
+      - **range**：tuple, 显示的区间，range在没有给出bins时生效
+      - **density**：bool，默认为false，显示的是频数统计结果，为True则显示频率统计结果，这里需要注意，频率统计结果=区间数目/(总数*区间宽度)，和normed效果一致，官方推荐使用density
+      - **histtype**：可选{'bar', 'barstacked', 'step', 'stepfilled'}之一，默认为bar，推荐使用默认配置，step使用的是梯状，stepfilled则会对梯状内部进行填充，效果与bar类似
+      - **align**：可选{'left', 'mid', 'right'}之一，默认为'mid'，控制柱状图的水平分布，left或者right，会有部分空白区域，推荐使用默认
+      - **log**：bool，默认False,即y坐标轴是否选择指数刻度
+      - **stacked**：bool，默认为False，是否为堆积状图
   2. bar（条形图）：  
     常用参数如下：
-    - **left**：x轴的位置序列，一般采用range函数产生一个序列，但是有时候可以是字符串
-    - **height**：y轴的数值序列，也就是柱形图的高度，一般就是我们需要展示的数据
-    - **alpha**：透明度，值越小越透明  
-    - **width**：为柱形图的宽度，一般这是为0.8即可；  
-    - **color或facecolor**：柱形图填充的颜色；  
-    - **edgecolor**：图形边缘颜色   
-    - **label**：解释每个图像代表的含义，这个参数是为legend()函数做铺垫的，表示该次bar的标签
+      - **left**：x轴的位置序列，一般采用range函数产生一个序列，但是有时候可以是字符串
+      - **height**：y轴的数值序列，也就是柱形图的高度，一般就是我们需要展示的数据
+      - **alpha**：透明度，值越小越透明  
+      - **width**：为柱形图的宽度，一般这是为0.8即可；  
+      - **color或facecolor**：柱形图填充的颜色；  
+      - **edgecolor**：图形边缘颜色   
+      - **label**：解释每个图像代表的含义，这个参数是为legend()函数做铺垫的，表示该次bar的标签
 
 - Polygon（多边形）：  
   - 类：`matplotlib.patches.Polygon`  
@@ -72,11 +72,11 @@
   2. 构造函数：`class matplotlib.patches.Wedge(center, r, theta1, theta2, width=None, **kwargs) `
   3. 说明：以坐标$(x,y)$为中心，半径为$r$，从$\theta_1$扫到$\theta_2$(单位是度)的契形
   4. `matplotlib.pyplot.pie`（饼图）的常用参数：
-    - **x**：契型的形状，一维数组。
-    - **explode**：如果不是等于None，则是一个len(x)数组，它指定用于偏移每个楔形块的半径的分数。  
-    - **labels**：用于指定每个契型块的标记，取值是列表或为None。  
-    - **colors**：饼图循环使用的颜色序列。如果取值为None，将使用当前活动循环中的颜色。  
-    - **startangle**：饼状图开始的绘制的角度。 
+      - **x**：契型的形状，一维数组。
+      - **explode**：如果不是等于None，则是一个len(x)数组，它指定用于偏移每个楔形块的半径的分数。  
+      - **labels**：用于指定每个契型块的标记，取值是列表或为None。  
+      - **colors**：饼图循环使用的颜色序列。如果取值为None，将使用当前活动循环中的颜色。  
+      - **startangle**：饼状图开始的绘制的角度。 
 
 #### 1.2.3 collections（对象集合）
 
@@ -84,7 +84,7 @@
 - scatter（散点图）构造函数：
 > Axes.scatter(self, x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax=None, alpha=None, linewidths=None, verts=<deprecated parameter>, edgecolors=None, *, plotnonfinite=False, data=None, **kwargs)
 - scatter（散点图）常用参数：
-    - **x**：数据点x轴的位置  
+    - **x**：数据点x轴的位置
     - **y**：数据点y轴的位置  
     - **s**：尺寸大小  
     - **c**：可以是单个颜色格式的字符串，也可以是一系列颜色  

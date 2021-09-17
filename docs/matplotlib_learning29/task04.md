@@ -101,8 +101,7 @@
 
 常用的几个参数：
 
-1. 设置图列位置
-
+1. 设置图列位置  
 plt.legend(loc='upper center') 等同于plt.legend(loc=9)
 
 |  |
