@@ -45,7 +45,8 @@ requirements.txt---------------------------运行环境依赖包
 【7】[第26期组队学习-图神经网络](https://github.com/datawhalechina/team-learning-nlp/tree/master/GNN)  
 【8】[第27期组队学习-吃瓜教程](https://www.bilibili.com/video/BV1Mh411e7VU)  
 【9】[第28期组队学习-基于Transformers的自然语言处理](https://github.com/datawhalechina/learn-nlp-with-transformers)  
-【10】[第29期组队学习-Matplotlib可视化](https://github.com/datawhalechina/fantastic-matplotlib)  
+【10】[第29期组队学习-Matplotlib可视化](https://github.com/datawhalechina/fantastic-matplotlib)    
+【11】[Matplotlib 50题从入门到精通](https://www.heywhale.com/mw/notebook/5ec2336f693a730037a4415c)  
 
 ## 环境安装
 ### Python版本
