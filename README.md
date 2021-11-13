@@ -32,6 +32,7 @@ notebook-----------------------------------JupyterNotebook格式笔记
 +---transformers_nlp28---------------------第28期基于Transformers的自然语言处理
 +---matplotlib_learning29------------------第29期数据可视化
 +---tree_ensemble30------------------------第30期树模型与集成学习
++---unusual_deep_learning31----------------第31期水很深的深度学习
 QASystemOnMedicalGraph---------------------基于医疗领域知识图谱的问答系统源码
 requirements.txt---------------------------运行环境依赖包
 </pre>
@@ -49,6 +50,7 @@ requirements.txt---------------------------运行环境依赖包
 【10】[第29期组队学习-Matplotlib可视化](https://github.com/datawhalechina/fantastic-matplotlib)    
 【11】[Matplotlib 50题从入门到精通](https://www.heywhale.com/mw/notebook/5ec2336f693a730037a4415c)  
 【12】[树模型与集成学习](https://datawhalechina.github.io/machine-learning-toy-code/)  
+【13】[水很深的深度学习](https://datawhalechina.github.io/unusual-deep-learning)  
 
 ## 环境安装
 ### Python版本
@@ -94,4 +96,9 @@ conda install ray-tune -c conda-forge
 ### Conda批量导出环境中所有组件
 ```shell
 conda list -e > requirements.txt
+```
+
+### 本地启动docsify
+```shell
+docsify serve ./docs
 ```

@@ -5,15 +5,14 @@
 在线阅读地址：https://relph1119.github.io/my-team-learning
 
 ## 目录
-- 第30期树模型与集成学习
+-  第31期水很深的深度学习
+    - Task01 绪论与深度学习概述、数学基础 
+    - Task02 机器学习基础
+    - Task03 前馈神经网络
+    - Task04 卷积神经网络CNN
+    - Task05 循环神经网络RNN
+- 第30期树模型与集成学习（未完成）
     - Task01 决策树（上）
-    - Task02 决策树（下）
-    - Task03 集成模式
-    - Task04 并行集成的树模型
-    - Task05 自适应提升法
-    - Task06 梯度提升树（上）
-    - Task07 梯度提升树（下）
-    - Task08 综合练习
 - 第29期数据可视化
     - Task01 Matplotlib初相识
     - Task02 艺术画笔见乾坤
@@ -141,6 +140,11 @@ conda install ray-tune -c conda-forge
 ### Conda批量导出环境中所有组件
 ```shell
 conda list -e > requirements.txt
+```
+
+### 本地启动docsify
+```shell
+docsify serve ./docs
 ```
 
 ## 关注我们

@@ -1,13 +1,12 @@
 * [目录](README.md)
-    * 第30期树模型与集成学习
+    * 第31期水很深的深度学习
+        * [Task01 绪论与深度学习概述、数学基础](unusual_deep_learning31/task01.md)
+        * [Task02 机器学习基础](unusual_deep_learning31/task02.md)
+        * [Task03 前馈神经网络](unusual_deep_learning31/task03.md)
+        * [Task04 卷积神经网络CNN](unusual_deep_learning31/task04.md)
+        * [Task05 循环神经网络RNN](unusual_deep_learning31/task05.md)
+    * 第30期树模型与集成学习（未完成）
         * [Task01 决策树（上）](tree_ensemble30/task01.md)
-        * [Task02 决策树（下）](tree_ensemble30/task02.md)
-        * [Task03 集成模式](tree_ensemble30/task03.md)
-        * [Task04 并行集成的树模型](tree_ensemble30/task04.md)
-        * [Task05 自适应提升法](tree_ensemble30/task05.md)
-        * [Task06 梯度提升树（上）](tree_ensemble30/task06.md)
-        * [Task07 梯度提升树（下）](tree_ensemble30/task07.md)
-        * [Task08 综合练习](tree_ensemble30/task08.md)
     * 第29期数据可视化
         * [Task01 Matplotlib初相识](matplotlib_learning29/task01.md)
         * [Task02 艺术画笔见乾坤](matplotlib_learning29/task02.md)
