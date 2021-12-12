@@ -52,7 +52,6 @@ requirements.txt---------------------------运行环境依赖包
 【12】[第30期组队学习-树模型与集成学习](https://datawhalechina.github.io/machine-learning-toy-code/)  
 【13】[第31期组队学习-水很深的深度学习](https://datawhalechina.github.io/unusual-deep-learning)  
 【14】[第32期组队学习-推荐系统](https://github.com/datawhalechina/fun-rec)  
-【14】[第32期组队学习-深入理解计算机系统](https://github.com/datawhalechina/team-learning-program/tree/master/ComputerSystems)  
 
 ## 环境安装
 ### Python版本
