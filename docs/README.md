@@ -89,12 +89,15 @@
 【4】[KnowledgeGraph_Basic](https://github.com/datawhalechina/team-learning-nlp/tree/master/KnowledgeGraph_Basic)  
 【5】[基于医疗领域知识图谱的问答系统](https://github.com/zhihao-chen/QASystemOnMedicalGraph)  
 【6】[第23/24/25期组队学习-集成学习](https://github.com/datawhalechina/team-learning-data-mining/tree/master/EnsembleLearning)  
-【7】[第26期组队学习-图神经网络](https://github.com/datawhalechina/team-learning-nlp/tree/master/GNN)    
+【7】[第26期组队学习-图神经网络](https://github.com/datawhalechina/team-learning-nlp/tree/master/GNN)  
 【8】[第27期组队学习-吃瓜教程](https://www.bilibili.com/video/BV1Mh411e7VU)  
 【9】[第28期组队学习-基于Transformers的自然语言处理](https://github.com/datawhalechina/learn-nlp-with-transformers)  
-【10】[第29期组队学习-Matplotlib可视化](https://github.com/datawhalechina/fantastic-matplotlib)  
+【10】[第29期组队学习-Matplotlib可视化](https://github.com/datawhalechina/fantastic-matplotlib)    
 【11】[Matplotlib 50题从入门到精通](https://www.heywhale.com/mw/notebook/5ec2336f693a730037a4415c)  
-【12】[树模型与集成学习](https://datawhalechina.github.io/machine-learning-toy-code/)  
+【12】[第30期组队学习-树模型与集成学习](https://datawhalechina.github.io/machine-learning-toy-code/)  
+【13】[第31期组队学习-水很深的深度学习](https://datawhalechina.github.io/unusual-deep-learning)  
+【14】[第32期组队学习-推荐系统](https://github.com/datawhalechina/fun-rec)  
+【14】[第32期组队学习-深入理解计算机系统](https://github.com/datawhalechina/team-learning-program/tree/master/ComputerSystems)  
 
 ## 环境安装
 ### Python版本

@@ -1,4 +1,17 @@
 * [目录](README.md)
+    * 第32期推荐系统
+        * [Task01 熟悉新闻推荐系统基本流程](recommender_system32/task01.md)
+        * [Task02 数据库的基本使用](recommender_system32/task02.md)
+        * [Task03 离线物料系统的构建](recommender_system32/task03.md)
+        * [Task04 前后端基础及交互](recommender_system32/task04.md)
+        * [Task05 推荐流程的构建](recommender_system32/task05.md)
+    * 第32期深入理解计算机系统
+        * [Task01 计算机系统漫游](csapp32/task01.md)
+        * [Task02 信息的表示和处理](csapp32/task02.md)
+        * [Task03 程序的机器级表示](csapp32/task03.md)
+        * [Task04 处理器体系架构](csapp32/task04.md)
+        * [Task05 优化程序性能](csapp32/task05.md)
+        * [Task06 存储器层次结构](csapp32/task06.md)
     * 第31期水很深的深度学习
         * [Task01 绪论与深度学习概述、数学基础](unusual_deep_learning31/task01.md)
         * [Task02 机器学习基础](unusual_deep_learning31/task02.md)
