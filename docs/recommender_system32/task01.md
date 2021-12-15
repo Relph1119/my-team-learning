@@ -2,7 +2,7 @@
 
 ![新闻推荐系统功能图](images/news-rec-sys-function-diagram.png)
 
-&emsp;&emsp;根据新闻推荐系统功能图，主要分为`Online`（在线）和`Offline`（离线，也称为线下）两个的部分，`Online`
+&emsp;&emsp;根据新闻推荐系统功能图，主要分为`Online`（在线）和`Offline`（离线，也称为线下）两个的部分。
 
 ## 1 功能介绍
 ### 1.1 `Offline`离线部分
