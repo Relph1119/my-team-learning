@@ -108,16 +108,15 @@ SELECT <列名1>, <列名2>, <列名3>, ...
 
 ### 2.5 插入及更新数据
 - 插入数据：使用`INSERT INTO`语句，向表中插入数据
-```sql
--- 往表中插入一行数据
-INSERT INTO <表名> (字段1, 字段2, 字段3, ...) VALUES (值1, 值2, 值3, ...);
-
--- 往表中插入多行数据
-INSERT INTO <表名> (字段1, 字段2, 字段3, ...) VALUES 
-    (值1, 值2, 值3, ...),
-    (值1, 值2, 值3, ...),
-    ...;
-```
+  ```sql
+  -- 往表中插入一行数据
+  INSERT INTO <表名> (字段1, 字段2, 字段3, ...) VALUES (值1, 值2, 值3, ...);
+  -- 往表中插入多行数据
+  INSERT INTO <表名> (字段1, 字段2, 字段3, ...) VALUES 
+      (值1, 值2, 值3, ...),
+      (值1, 值2, 值3, ...),
+      ...;
+  ```
 
 - 删除数据：使用`DELETE`语句，结合`WHERE`条件语句，筛选要删除的数据
 ```sql
@@ -191,7 +190,6 @@ db.collection.drop()
 - 插入文档：使用`insert()`或`save()`方法向集合中插入文档
 ```js
 db.collection.insertOne(document)
-
 db.COLLECTION_NAME.insert(document)
 ```
 

@@ -62,7 +62,7 @@ scrapy.cfg------------------------------------项目配置文件
 代码位于`materials/material_process/news_protrait.py`
 - `update_new_items()`方法：添加新物料到物料库（`FeatureProtrail`集合）
 - `update_dynamic_feature_protrail()`方法：获取Redis中的用户行为（又称“新闻动态画像”），更新物料库中的点赞（`likes`）、收藏（`collections`）和阅读次数（`read_num`）字段的值
-- `update_redis_mongo_protrail_data()`方法：删除在`RedisPortrail`集合中的数据（该集合存放前一天的物料库数据，作为当天Redis中的新闻数据备份），把最新的物料库数据存入该集合中，去掉一些不用给前端展示的字段内容（类似于DO->PO）
+- `update_redis_mongo_protrail_data()`方法：删除在`RedisPortrail`集合中的数据（该集合存放前一天的物料库数据，作为当天Redis中的新闻数据备份），把最新的物料库数据存入该集合中，去掉一些不用给前端展示的字段内容（类似于DO->VO）
 
 ### 3.3 将更新之后的物料添加到Redis中
 - 使用方法：`news_detail_to_redis()`方法，代码位于`materials/material_process/news_to_redis.py`
