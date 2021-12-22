@@ -66,7 +66,7 @@ scrapy.cfg------------------------------------项目配置文件
 
 ### 3.3 将更新之后的物料添加到Redis中
 - 使用方法：`news_detail_to_redis()`方法，代码位于`materials/material_process/news_to_redis.py`
-- 具体代码逻辑：删除前一天Redis[0]中的内容，将新闻静态数据（`news_id`、`title`、`ctime`、`content`、`cate`、`url`）存入Redis[1]中，将新闻动态画像（`likes`、`collections`、`read_num`）存入Redis[2]中，具体格式如下：
+- 具体代码逻辑：删除所有Redis中的内容，将新闻静态数据（`news_id`、`title`、`ctime`、`content`、`cate`、`url`）存入Redis[1]中，将新闻动态画像（`likes`、`collections`、`read_num`）存入Redis[2]中，具体格式如下：
 ```python
 # 当天新闻静态数据（static_news_detail:新闻ID :{新闻ID、标题、发布时间、新闻内容、类别、URL链接}）
 static_news_info_db_num = 1
