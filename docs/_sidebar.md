@@ -1,4 +1,6 @@
 * [目录](README.md)
+    * 第35期深入浅出PyTorch
+        * [Task01 PyTorch简介与基础知识](pytorch_learning35/task01.md)
     * 第32期推荐系统
         * [Task01 熟悉新闻推荐系统基本流程](recommender_system32/task01.md)
         * [Task02 数据库的基本使用](recommender_system32/task02.md)

@@ -5,6 +5,12 @@
 在线阅读地址：https://relph1119.github.io/my-team-learning
 
 ## 目录
+- 第32期推荐系统 
+    - Task01 熟悉新闻推荐系统基本流程
+    - Task02 数据库的基本使用 
+    - Task03 离线物料系统的构建
+    - Task04 前后端基础及交互
+    - Task05 推荐流程的构建
 -  第31期水很深的深度学习
     - Task01 绪论与深度学习概述、数学基础 
     - Task02 机器学习基础
@@ -97,6 +103,7 @@
 【12】[第30期组队学习-树模型与集成学习](https://datawhalechina.github.io/machine-learning-toy-code/)  
 【13】[第31期组队学习-水很深的深度学习](https://datawhalechina.github.io/unusual-deep-learning)  
 【14】[第32期组队学习-推荐系统](https://github.com/datawhalechina/fun-rec)  
+【15】[第35期组队学习-深入浅出Pytorch](https://github.com/datawhalechina/thorough-pytorch)  
 
 ## 环境安装
 ### Python版本

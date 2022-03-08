@@ -33,6 +33,8 @@ notebook-----------------------------------JupyterNotebook格式笔记
 +---matplotlib_learning29------------------第29期数据可视化
 +---tree_ensemble30------------------------第30期树模型与集成学习
 +---unusual_deep_learning31----------------第31期水很深的深度学习
++---recommender_system32-------------------第32期推荐系统
++---pytorch_learning35---------------------第35期深入浅出Pytorch
 QASystemOnMedicalGraph---------------------基于医疗领域知识图谱的问答系统源码
 requirements.txt---------------------------运行环境依赖包
 </pre>
@@ -52,6 +54,7 @@ requirements.txt---------------------------运行环境依赖包
 【12】[第30期组队学习-树模型与集成学习](https://datawhalechina.github.io/machine-learning-toy-code/)  
 【13】[第31期组队学习-水很深的深度学习](https://datawhalechina.github.io/unusual-deep-learning)  
 【14】[第32期组队学习-推荐系统](https://github.com/datawhalechina/fun-rec)  
+【15】[第35期组队学习-深入浅出Pytorch](https://github.com/datawhalechina/thorough-pytorch)  
 
 ## 环境安装
 ### Python版本
