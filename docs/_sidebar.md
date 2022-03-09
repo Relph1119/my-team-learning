@@ -3,6 +3,7 @@
         * [Task01 PyTorch简介与基础知识](pytorch_learning35/task01.md)
         * [Task02 PyTorch主要组成模块](pytorch_learning35/task02.md)
         * [Task03 基础实战（FashionMNIST时装分类）](pytorch_learning35/task03.md)
+        * [Task04 PyTorch模型定义](pytorch_learning35/task04.md)
     * 第32期推荐系统
         * [Task01 熟悉新闻推荐系统基本流程](recommender_system32/task01.md)
         * [Task02 数据库的基本使用](recommender_system32/task02.md)
