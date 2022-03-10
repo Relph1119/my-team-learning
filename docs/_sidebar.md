@@ -6,6 +6,7 @@
         * [Task04 PyTorch模型定义](pytorch_learning35/task04.md)
         * [Task05 PyTorch进阶训练技巧](pytorch_learning35/task05.md)
         * [Task06 PyTorch可视化](pytorch_learning35/task06.md)
+        * [Task07 PyTorch生态简介](pytorch_learning35/task07.md)
     * 第32期推荐系统
         * [Task01 熟悉新闻推荐系统基本流程](recommender_system32/task01.md)
         * [Task02 数据库的基本使用](recommender_system32/task02.md)
