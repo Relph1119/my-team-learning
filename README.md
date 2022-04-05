@@ -1,5 +1,5 @@
 # 我的组队学习
-&emsp;&emsp;记录我参加的Datawhale组队学习，包括笔记和习题解答。
+记录我参加的Datawhale组队学习，包括学习笔记和习题解答。
 
 ## 在线阅读地址
 在线阅读地址：https://relph1119.github.io/my-team-learning

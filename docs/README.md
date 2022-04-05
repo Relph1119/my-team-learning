@@ -1,10 +1,18 @@
 # 我的组队学习 {docsify-ignore-all}
-记录我参加的Datawhale组队学习，包括笔记和习题解答。
+记录我参加的Datawhale组队学习，包括学习笔记和习题解答。
 
 ## 在线阅读地址
 在线阅读地址：https://relph1119.github.io/my-team-learning
 
 ## 目录
+- 第35期深入浅出PyTorch 
+    - Task01 PyTorch简介与基础知识
+    - Task02 PyTorch主要组成模块
+    - Task03 基础实战（FashionMNIST时装分类）
+    - Task04 PyTorch模型定义
+    - Task05 PyTorch进阶训练技巧
+    - Task06 PyTorch可视化
+    - Task07 PyTorch生态简介
 - 第32期推荐系统 
     - Task01 熟悉新闻推荐系统基本流程
     - Task02 数据库的基本使用 
