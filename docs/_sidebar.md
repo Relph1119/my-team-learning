@@ -1,4 +1,11 @@
 * [目录](README.md)
+    * 第37期李宏毅机器学习
+        * [Task01：机器学习介绍](lee_ml37/task01.md)
+        * [Task02：回归](lee_ml37/task02.md)
+        * [Task03：误差和梯度下降](lee_ml37/task03.md)
+        * [Task04：深度学习介绍和反向传播机制](lee_ml37/task04.md)
+        * [Task05：网络设计的技巧](lee_ml37/task05.md)
+        * [Task06：卷积神经网络](lee_ml37/task06.md)
     * 第35期深入浅出PyTorch
         * [Task01 PyTorch简介与基础知识](pytorch_learning35/task01.md)
         * [Task02 PyTorch主要组成模块](pytorch_learning35/task02.md)

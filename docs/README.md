@@ -5,6 +5,14 @@
 在线阅读地址：https://relph1119.github.io/my-team-learning
 
 ## 目录
+- 第37期李宏毅机器学习
+    - Task01：机器学习介绍
+    - Task02：回归
+    - Task03：误差和梯度下降
+    - Task04：深度学习介绍和反向传播机制
+    - Task05：网络设计的技巧
+    - Task06：卷积神经网络
+    - Task07：总结
 - 第35期深入浅出PyTorch 
     - Task01 PyTorch简介与基础知识
     - Task02 PyTorch主要组成模块
@@ -110,6 +118,7 @@
 【11】[第31期组队学习-水很深的深度学习](https://datawhalechina.github.io/unusual-deep-learning)  
 【12】[第32期组队学习-推荐系统](https://github.com/datawhalechina/fun-rec)  
 【13】[第35期组队学习-深入浅出Pytorch](https://github.com/datawhalechina/thorough-pytorch)  
+【14】[第37期组队学习-李宏毅机器学习](https://github.com/datawhalechina/leeml-notes)  
 
 ## 环境安装
 ### Python版本
