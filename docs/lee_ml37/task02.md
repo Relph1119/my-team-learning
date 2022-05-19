@@ -97,8 +97,8 @@ for i in range(len(x)):
 # linear regression
 b = -120
 w = -4
-lr = 1
-iteration = 1000000
+lr = 0.000005
+iteration = 1400000
 
 b_history = [b]
 w_history = [w]
@@ -111,26 +111,27 @@ start = time.time()
 
 # 梯度下降
 for i in range(iteration):
-    b_grad = 0.0
-    w_grad = 0.0
-    for n in range(len(x_data)):
-        b_grad= b_grad - 2.0 * (y_data[n] - n - w*x_data[n]) * 1.0
-        w_grad= w_grad - 2.0 * (y_data[n] - n - w*x_data[n]) * x_data[n]
-    
-    lr_b = lr_b+b_grad**2
-    lr_w = lr_w+w_grad**2
+    m = float(len(x_d))
+    y_hat = w * x_d  +b
+    loss = np.dot(y_d - y_hat, y_d - y_hat) / m
+    grad_b = -2.0 * np.sum(y_d - y_hat) / m
+    grad_w = -2.0 * np.dot(y_d - y_hat, x_d) / m
     
     # 参数更新
-    b -= lr / np.sqrt(lr_b) * b_grad
-    w -= lr / np.sqrt(lr_w) * w_grad
+    b -= lr * grad_b
+    w -= lr * grad_w
 
     b_history.append(b)
     w_history.append(w)
+    
 
 # 计算梯度下降时间    
 end = time.time()
 print("大约需要时间：",end-start)
 ```
+
+    大约需要时间： 13.718209743499756
+    
 
 
 ```python
