@@ -36,6 +36,7 @@ notebook-----------------------------------JupyterNotebook格式笔记
 +---recommender_system32-------------------第32期推荐系统
 +---pytorch_learning35---------------------第35期深入浅出Pytorch
 +---lee_ml37-------------------------------第37期李宏毅机器学习
++---pytorch_rechub_learning38--------------第38期使用PyTorch复现推荐模型
 QASystemOnMedicalGraph---------------------基于医疗领域知识图谱的问答系统源码
 requirements.txt---------------------------运行环境依赖包
 </pre>
@@ -55,15 +56,16 @@ requirements.txt---------------------------运行环境依赖包
 【12】[第32期组队学习-推荐系统](https://github.com/datawhalechina/fun-rec)  
 【13】[第35期组队学习-深入浅出Pytorch](https://github.com/datawhalechina/thorough-pytorch)  
 【14】[第37期组队学习-李宏毅机器学习](https://github.com/datawhalechina/leeml-notes)  
+【15】[第38期组队学习-使用PyTorch复现推荐模型](https://www.wolai.com/rechub/2qjdg3DPy1179e1vpcHZQC)  
 
 ## 环境安装
 ### Python版本
-Mini-Conda Python 3.8 Windows环境
+Python 3.8 Windows环境
 
-### Notebook运行环境配置
+### 运行环境配置
 安装相关的依赖包
 ```shell
-conda install --yes --file requirements.txt
+pip install -r requirements.txt
 ```
 
 ### 设置Jupyter Notebook代理
@@ -83,7 +85,7 @@ jupyter notebook
 ### pytorch安装
 执行以下命令安装pytorch
 ```shell
-conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch -c conda-forge
+pip install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch -c conda-forge
 ```
 
 ### pytorch geometric安装
@@ -99,7 +101,7 @@ conda install ray-tune -c conda-forge
 
 ### Conda批量导出环境中所有组件
 ```shell
-conda list -e > requirements.txt
+pip freeze > requirements.txt
 ```
 
 ### 本地启动docsify

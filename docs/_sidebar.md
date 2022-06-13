@@ -1,4 +1,9 @@
 * [目录](README.md)
+    * 第38期使用PyTorch复现推荐模型
+        * [Task01：熟悉Torch-RecHub框架设计与使用方法](pytorch_rechub_learning38/task01.md)
+        * [Task02：精排模型：DeepFM、DIN](pytorch_rechub_learning38/task02.md)
+        * [Task03：召回模型：YoutubeDNN、DSSM](pytorch_rechub_learning38/task03.md)
+        * [Task04：多任务模型：ESMM、MMOE](pytorch_rechub_learning38/task04.md)
     * 第37期李宏毅机器学习
         * [Task01：机器学习介绍](lee_ml37/task01.md)
         * [Task02：回归](lee_ml37/task02.md)
