@@ -5,6 +5,9 @@
 在线阅读地址：https://relph1119.github.io/my-team-learning
 
 ## 目录
+- 第39期Intel带你初识视觉识别
+    - Task01 初识人工智能及视觉应用
+    - Task02 了解Openvino工具套件如何应用在AI领域 
 - 第38期使用PyTorch复现推荐模型
     - Task01：熟悉Torch-RecHub框架设计与使用方法
     - Task02：精排模型：DeepFM、DIN
