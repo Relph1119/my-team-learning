@@ -1,7 +1,7 @@
 * [目录](README.md)
     * 第39期Intel带你初识视觉识别
-        * [Task01 我们为什么需要人工智能](inter_openvino_cv_learning39/task01.md)
-        * [Task02 什么是计算机视觉？如何使用计算机来处理视频？](inter_openvino_cv_learning39/task02.md)
+        * [Task01 初识人工智能及视觉应用](inter_openvino_beginer_learning39/task01.md)
+        * [Task02 了解Openvino工具套件如何应用在AI领域](inter_openvino_beginer_learning39/task02.md)
     * 第38期使用PyTorch复现推荐模型
         * [Task01：熟悉Torch-RecHub框架设计与使用方法](pytorch_rechub_learning38/task01.md)
         * [Task02：精排模型：DeepFM、DIN](pytorch_rechub_learning38/task02.md)
