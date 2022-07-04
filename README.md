@@ -23,7 +23,7 @@ notebook-----------------------------------JupyterNotebook格式笔记
 +---pytorch_learning35---------------------第35期深入浅出Pytorch
 +---lee_ml37-------------------------------第37期李宏毅机器学习
 +---pytorch_rechub_learning38--------------第38期使用PyTorch复现推荐模型
-+---inter_openvino_beginer_learning39-----------第39期Intel带你初识视觉识别
++---intel_openvino_beginer_learning39-----------第39期Intel带你初识视觉识别
 QASystemOnMedicalGraph---------------------基于医疗领域知识图谱的问答系统源码
 requirements.txt---------------------------运行环境依赖包
 </pre>
