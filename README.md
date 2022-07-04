@@ -23,6 +23,7 @@ notebook-----------------------------------JupyterNotebook格式笔记
 +---pytorch_learning35---------------------第35期深入浅出Pytorch
 +---lee_ml37-------------------------------第37期李宏毅机器学习
 +---pytorch_rechub_learning38--------------第38期使用PyTorch复现推荐模型
++---inter_openvino_cv_learning39-----------第39期Intel带你初识视觉识别
 QASystemOnMedicalGraph---------------------基于医疗领域知识图谱的问答系统源码
 requirements.txt---------------------------运行环境依赖包
 </pre>
@@ -43,6 +44,7 @@ requirements.txt---------------------------运行环境依赖包
 【13】[第35期组队学习-深入浅出Pytorch](https://github.com/datawhalechina/thorough-pytorch)  
 【14】[第37期组队学习-李宏毅机器学习](https://github.com/datawhalechina/leeml-notes)  
 【15】[第38期组队学习-使用PyTorch复现推荐模型](https://www.wolai.com/rechub/2qjdg3DPy1179e1vpcHZQC)  
+【16】[OpenVINO for CV Applications(Beginner Level)](https://vxr.h5.xeknow.com/s/3Eg4J8)  
 
 ## 环境安装
 ### Python版本

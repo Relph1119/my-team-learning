@@ -5,6 +5,11 @@
 在线阅读地址：https://relph1119.github.io/my-team-learning
 
 ## 目录
+- 第38期使用PyTorch复现推荐模型
+    - Task01：熟悉Torch-RecHub框架设计与使用方法
+    - Task02：精排模型：DeepFM、DIN
+    - Task03：召回模型：YoutubeDNN、DSSM
+    - Task04：多任务模型：ESMM、MMOE
 - 第37期李宏毅机器学习
     - Task01：机器学习介绍
     - Task02：回归
@@ -119,6 +124,8 @@
 【12】[第32期组队学习-推荐系统](https://github.com/datawhalechina/fun-rec)  
 【13】[第35期组队学习-深入浅出Pytorch](https://github.com/datawhalechina/thorough-pytorch)  
 【14】[第37期组队学习-李宏毅机器学习](https://github.com/datawhalechina/leeml-notes)  
+【15】[第38期组队学习-使用PyTorch复现推荐模型](https://www.wolai.com/rechub/2qjdg3DPy1179e1vpcHZQC)  
+【16】[OpenVINO for CV Applications(Beginner Level)](https://vxr.h5.xeknow.com/s/3Eg4J8)  
 
 ## 环境安装
 ### Python版本

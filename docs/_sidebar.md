@@ -1,4 +1,6 @@
 * [目录](README.md)
+    * 第39期Intel带你初识视觉识别
+        * [Task01 我们为什么需要人工智能](inter_openvino_cv_learning39/task01.md)
     * 第38期使用PyTorch复现推荐模型
         * [Task01：熟悉Torch-RecHub框架设计与使用方法](pytorch_rechub_learning38/task01.md)
         * [Task02：精排模型：DeepFM、DIN](pytorch_rechub_learning38/task02.md)
