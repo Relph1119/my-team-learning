@@ -87,11 +87,6 @@ conda install pytorch-geometric -c rusty1s -c conda-forge
 conda install ray-tune -c conda-forge
 ```
 
-### Conda批量导出环境中所有组件
-```shell
-pip freeze > requirements.txt
-```
-
 ### 本地启动docsify
 ```shell
 docsify serve ./docs

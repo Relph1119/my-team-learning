@@ -1,7 +1,9 @@
 * [目录](README.md)
     * 第39期Intel带你初识视觉识别
-        * [Task01 初识人工智能及视觉应用](intel_openvino_beginer_learning39/task01.md)
-        * [Task02 了解Openvino工具套件如何应用在AI领域](intel_openvino_beginer_learning39/task02.md)
+        * [Task01 初识人工智能视觉应用及OpenVINO工具套件](intel_openvino_learning39/task01.md)
+        * [Task02 学习如何使用OpenVINO](intel_openvino_learning39/task02.md)
+        * [Task03 深度学习及推理引擎](intel_openvino_learning39/task03.md)
+        * [Task04 视频处理及课程总结](intel_openvino_learning39/task04.md)
     * 第38期使用PyTorch复现推荐模型
         * [Task01：熟悉Torch-RecHub框架设计与使用方法](pytorch_rechub_learning38/task01.md)
         * [Task02：精排模型：DeepFM、DIN](pytorch_rechub_learning38/task02.md)
