@@ -1,4 +1,6 @@
 * [目录](README.md)
+    * 第40期如何用Intel OpenVINO工具包构建AI应用
+        * [OpenVINO高级课程](openvino300_learning40/OpenVINO300.md)
     * 第39期Intel带你初识视觉识别
         * [Task01 初识人工智能视觉应用及OpenVINO工具套件](intel_openvino_learning39/task01.md)
         * [Task02 学习如何使用OpenVINO](intel_openvino_learning39/task02.md)

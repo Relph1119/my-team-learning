@@ -131,6 +131,7 @@
 【14】[第37期组队学习-李宏毅机器学习](https://github.com/datawhalechina/leeml-notes)  
 【15】[第38期组队学习-使用PyTorch复现推荐模型](https://www.wolai.com/rechub/2qjdg3DPy1179e1vpcHZQC)  
 【16】[OpenVINO for CV Applications(Beginner Level)](https://vxr.h5.xeknow.com/s/3Eg4J8)  
+【17】[OV300 for CV Applications Advanced Level](https://vxr.h5.xeknow.com/s/204VNE)  
 
 ## 环境安装
 ### Python版本
