@@ -1,6 +1,10 @@
 * [目录](README.md)
     * 第40期如何用Intel OpenVINO工具包构建AI应用
-        * [OpenVINO高级课程](openvino300_learning40/OpenVINO300.md)
+        * [Task01 OpenVINO核心组件资源和开发流程](intel_openvino_advanced_learning40/task01.md)
+        * [Task02 OpenVINO异构系统编程、视频加速处理](intel_openvino_advanced_learning40/task02.md)
+        * [Task03 AI推理中的推理性能](intel_openvino_advanced_learning40/task03.md)
+        * [Task04 音频处理、人体姿势识别](intel_openvino_advanced_learning40/task04.md)
+        * [Task05 实现AI应用的音视频处理、课程总结](intel_openvino_advanced_learning40/task05.md)
     * 第39期Intel带你初识视觉识别
         * [Task01 初识人工智能视觉应用及OpenVINO工具套件](intel_openvino_learning39/task01.md)
         * [Task02 学习如何使用OpenVINO](intel_openvino_learning39/task02.md)
