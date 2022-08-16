@@ -1,4 +1,9 @@
 * [目录](README.md)
+    * 第40期共读《计算之魂》
+        * [Task01 算法的规范化和量化度量、大数和数量级的概念](soul_of_calculation40/task01.md)
+        * [Task02 怎样寻找最好的算法](soul_of_calculation40/task02.md)
+        * [Task03 直观的排序算法和有效的排序算法](soul_of_calculation40/task03.md)
+        * [Task04 更好的排序算法](soul_of_calculation40/task04.md)
     * 第40期如何用Intel OpenVINO工具包构建AI应用
         * [Task01 OpenVINO核心组件资源和开发流程](intel_openvino_advanced_learning40/task01.md)
         * [Task02 OpenVINO异构系统编程、视频加速处理](intel_openvino_advanced_learning40/task02.md)
