@@ -12,6 +12,7 @@
 def get_max_matrix(matrix):
     n = len(matrix)
     m = len(matrix[0])
+    # 一列的和，组成的数组
     b = [0] * m
     max_sum = -float('inf')
     best_r1, best_c1 = 0, 0
@@ -37,7 +38,7 @@ def get_max_matrix(matrix):
 
                 if sub_sum > max_sum:
                     max_sum = sub_sum
-                    # 更新值
+                    # 更新对角点的坐标
                     r1 = best_r1
                     c1 = best_c1
                     r2 = j

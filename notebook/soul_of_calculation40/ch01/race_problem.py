@@ -25,31 +25,36 @@ def get_top3(nums: list, track_num):
             groups.append(sorted(nums_index[track_num * i: track_num * i + track_num]))
         else:
             groups.append(sorted(nums_index[track_num * i:]))
-
     # 将每个队伍的第一名比赛一次(race_speed, number, group_no)
     no1_race = [(*g[0], i) for i, g in enumerate(groups)]
     no1_race.sort()
     count += 1
 
     # 取出前3个，然后加上后面两组的第2名
-    A1 = no1_race[0]
+    N1 = no1_race[0]
+    A2 = groups[no1_race[0][2]][1]
     B1 = no1_race[1]
     C1 = no1_race[2]
     B2 = groups[no1_race[1][2]][1]
     C2 = groups[no1_race[2][2]][1]
-    no1_race = sorted([A1, B1, C1, B2, C2])
+    no1_race = sorted([A2, B1, C1, B2, C2])
     count += 1
 
-    return count, [(i[0], i[1]) for i in no1_race]
+    N2, N3 = no1_race[0], no1_race[1]
+
+    return count, [N1, N2, N3]
 
 
 if __name__ == '__main__':
     random.seed(24)
-    nums = [random.randint(1, 25) for _ in range(25)]
+    people_nums = 25
+    nums = [random.randint(1, people_nums) for _ in range(people_nums)]
     print("The speed of all players are", nums)
     track_num = 5
     print("The number of track is", track_num)
     count, top3 = get_top3(nums, track_num)
     print("The minimum of counts is {} times".format(count))
-    print("The speed of Top3 is", [i[0] for i in top3[:3]])
-    print("The number of Top3 players is", [i[1] for i in top3[:3]])
+    print("The speed of Top3 is", [i[0] for i in top3])
+    print("The number of Top3 players is", [i[1] for i in top3])
+
+    assert [i[0] for i in top3] == sorted(nums)[:3]

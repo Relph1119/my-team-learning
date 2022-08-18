@@ -51,34 +51,37 @@ def get_top3(nums: list, track_num):
             groups.append(sorted(nums_index[track_num * i: track_num * i + track_num]))
         else:
             groups.append(sorted(nums_index[track_num * i:]))
-
     # 将每个队伍的第一名比赛一次(race_speed, number, group_no)
     no1_race = [(*g[0], i) for i, g in enumerate(groups)]
     no1_race.sort()
     count += 1
 
     # 取出前3个，然后加上后面两组的第2名
-    A1 = no1_race[0]
+    N1 = no1_race[0]
+    A2 = groups[no1_race[0][2]][1]
     B1 = no1_race[1]
     C1 = no1_race[2]
     B2 = groups[no1_race[1][2]][1]
     C2 = groups[no1_race[2][2]][1]
-    no1_race = sorted([A1, B1, C1, B2, C2])
+    no1_race = sorted([A2, B1, C1, B2, C2])
     count += 1
 
-    return count, [(i[0], i[1]) for i in no1_race]
+    N2, N3 = no1_race[0], no1_race[1]
+
+    return count, [N1, N2, N3]
 
 
 if __name__ == '__main__':
     random.seed(24)
-    nums = [random.randint(1, 25) for _ in range(25)]
+    people_nums = 25
+    nums = [random.randint(1, people_nums) for _ in range(people_nums)]
     print("The speed of all players are", nums)
     track_num = 5
     print("The number of track is", track_num)
     count, top3 = get_top3(nums, track_num)
     print("The minimum of counts is {} times".format(count))
-    print("The speed of Top3 is", [i[0] for i in top3[:3]])
-    print("The number of Top3 players is", [i[1] for i in top3[:3]])
+    print("The speed of Top3 is", [i[0] for i in top3])
+    print("The number of Top3 players is", [i[1] for i in top3])
 ```
 执行结果如下：
 ```
@@ -91,7 +94,7 @@ The number of Top3 players is [18, 24, 10]
 
 ### 3.2 Q2：区间排序
 
-&emsp;&emsp;如果有$N$个区间$[l_1, r_1] , [l_2, r_2], \cdots, [l_N,r_N]$，只要满足下面的条件，我们就说这些区间是有序的：存在$xi \in [l_i,r_i]$，其中$i = 1, 2, \cdots, N$。
+&emsp;&emsp;如果有$N$个区间$[l_1, r_1] , [l_2, r_2], \cdots, [l_N,r_N]$，只要满足下面的条件，我们就说这些区间是有序的：存在$x_i \in [l_i,r_i]$，其中$i = 1, 2, \cdots, N$。
 
 &emsp;&emsp;比如，$[1, 4]$、$[2, 3]$和$[1.5, 2.5]$是有序的，因为我们可以从这三个区间中选择1.1、2.1和2.2三个数。同时$[2, 3]$、$[1, 4]$和$[1.5, 2.5]$也是有序的，因为我们可以选择2.1、2.2和2.4。但是$[1, 2]$、$[2.7, 3.5]$和$[1.5, 2.5]$不是有序的。
 
