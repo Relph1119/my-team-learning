@@ -25,6 +25,7 @@ notebook-----------------------------------JupyterNotebook格式笔记
 +---pytorch_rechub_learning38--------------第38期使用PyTorch复现推荐模型
 +---intel_openvino_learning39------第39期Intel带你初识视觉识别
 +---intel_openvino_advanced_learning40-----第40期Intel OpenVINO高级课程
++---Interpretable_machine_learning44-------第44期可解释性机器学习
 QASystemOnMedicalGraph---------------------基于医疗领域知识图谱的问答系统源码
 requirements.txt---------------------------运行环境依赖包
 </pre>
@@ -47,6 +48,7 @@ requirements.txt---------------------------运行环境依赖包
 【15】[第38期组队学习-使用PyTorch复现推荐模型](https://www.wolai.com/rechub/2qjdg3DPy1179e1vpcHZQC)  
 【16】[OpenVINO for CV Applications(Beginner Level)](https://vxr.h5.xeknow.com/s/3Eg4J8)  
 【17】[OV300 for CV Applications Advanced Level](https://vxr.h5.xeknow.com/s/204VNE)  
+【18】[可解释性机器学习-同济子豪兄](https://datawhaler.feishu.cn/docx/OTROd2zCIoZlLyxjhSKclxKNnDe)  
 
 ## 环境安装
 ### Python版本

@@ -5,6 +5,25 @@
 在线阅读地址：https://relph1119.github.io/my-team-learning
 
 ## 目录
+- 第44期可解释机器学习
+  - Task01 预备知识学习 
+  - Task02 【算法】ZFNet 
+  - Task03 【算法】CAM 
+  - Task04 【算法】Grad-CAM 
+  - Task05 【代码实战】CAM、Captum 
+  - Task06 【算法】LIME 
+  - Task07 【代码实战】LIME、shap 
+- 第40期共读《计算之魂》
+  - Task01 算法的规范化和量化度量、大数和数量级的概念
+  - Task02 怎样寻找最好的算法
+  - Task03 直观的排序算法和有效的排序算法
+  - Task04 更好的排序算法
+- 第40期如何用Intel OpenVINO工具包构建AI应用
+  - Task01 OpenVINO核心组件资源和开发流程
+  - Task02 OpenVINO异构系统编程、视频加速处理
+  - Task03 AI推理中的推理性能
+  - Task04 音频处理、人体姿势识别
+  - Task05 实现AI应用的音视频处理、课程总结
 - 第39期Intel带你初识视觉识别
     - Task01 初识人工智能视觉应用及OpenVINO工具套件
     - Task02 学习如何使用OpenVINO
@@ -132,6 +151,7 @@
 【15】[第38期组队学习-使用PyTorch复现推荐模型](https://www.wolai.com/rechub/2qjdg3DPy1179e1vpcHZQC)  
 【16】[OpenVINO for CV Applications(Beginner Level)](https://vxr.h5.xeknow.com/s/3Eg4J8)  
 【17】[OV300 for CV Applications Advanced Level](https://vxr.h5.xeknow.com/s/204VNE)  
+【18】[可解释性机器学习-同济子豪兄](https://datawhaler.feishu.cn/docx/OTROd2zCIoZlLyxjhSKclxKNnDe)  
 
 ## 环境安装
 ### Python版本
