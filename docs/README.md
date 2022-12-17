@@ -180,7 +180,7 @@ jupyter notebook
 ### pytorch安装
 执行以下命令安装pytorch
 ```shell
-conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch -c conda-forge
+pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu117
 ```
 
 ### pytorch geometric安装
