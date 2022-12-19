@@ -6,7 +6,7 @@
         * [Task04 【算法】Grad-CAM](Interpretable_machine_learning44/task04.md) 
         * [Task05 【代码实战】CAM、Captum](Interpretable_machine_learning44/task05/task05.md) 
         * [Task06 【算法】LIME](Interpretable_machine_learning44/task06.md) 
-        * [Task07 【代码实战】LIME、shap](Interpretable_machine_learning44/task07.md) 
+        * [Task07 【代码实战】LIME、shap](Interpretable_machine_learning44/task07/task07.md) 
     * 第40期共读《计算之魂》
         * [Task01 算法的规范化和量化度量、大数和数量级的概念](soul_of_calculation40/task01.md)
         * [Task02 怎样寻找最好的算法](soul_of_calculation40/task02.md)
