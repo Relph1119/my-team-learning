@@ -8,24 +8,25 @@
 <pre>
 docs---------------------------------------学习笔记
 notebook-----------------------------------JupyterNotebook格式笔记
-+---pandas20-------------------------------第20期Pandas学习
-+---knowledge_graph_basic21----------------第21期自然语言处理实践（知识图谱）
-+---ensemble_learning23--------------------第23期集成学习
-+---ensemble_learning24--------------------第24期集成学习
-+---ensemble_learning25--------------------第25期集成学习
-+---gnn_learning26-------------------------第26期图神经网络  
-+---pumpkin_learning27---------------------第27期吃瓜课程（西瓜书+南瓜书）
-+---transformers_nlp28---------------------第28期基于Transformers的自然语言处理
-+---matplotlib_learning29------------------第29期数据可视化
-+---tree_ensemble30------------------------第30期树模型与集成学习
-+---unusual_deep_learning31----------------第31期水很深的深度学习
-+---recommender_system32-------------------第32期推荐系统
-+---pytorch_learning35---------------------第35期深入浅出Pytorch
-+---lee_ml37-------------------------------第37期李宏毅机器学习
-+---pytorch_rechub_learning38--------------第38期使用PyTorch复现推荐模型
-+---intel_openvino_learning39------第39期Intel带你初识视觉识别
-+---intel_openvino_advanced_learning40-----第40期Intel OpenVINO高级课程
-+---Interpretable_machine_learning44-------第44期可解释性机器学习
++---pandas20---------------------------------第20期Pandas学习
++---knowledge_graph_basic21------------------第21期自然语言处理实践（知识图谱）
++---ensemble_learning23----------------------第23期集成学习
++---ensemble_learning24----------------------第24期集成学习
++---ensemble_learning25----------------------第25期集成学习
++---gnn_learning26---------------------------第26期图神经网络  
++---pumpkin_learning27-----------------------第27期吃瓜课程（西瓜书+南瓜书）
++---transformers_nlp28-----------------------第28期基于Transformers的自然语言处理
++---matplotlib_learning29--------------------第29期数据可视化
++---tree_ensemble30--------------------------第30期树模型与集成学习
++---unusual_deep_learning31------------------第31期水很深的深度学习
++---recommender_system32---------------------第32期推荐系统
++---pytorch_learning35-----------------------第35期深入浅出Pytorch
++---lee_ml37---------------------------------第37期李宏毅机器学习
++---pytorch_rechub_learning38----------------第38期使用PyTorch复现推荐模型
++---intel_openvino_learning39----------------第39期Intel带你初识视觉识别
++---intel_openvino_advanced_learning40-------第40期Intel OpenVINO高级课程
++---Interpretable_machine_learning44---------第44期可解释性机器学习
++---cs224w_learning46------------------------第46期CS224W图机器学习
 QASystemOnMedicalGraph---------------------基于医疗领域知识图谱的问答系统源码
 requirements.txt---------------------------运行环境依赖包
 </pre>
@@ -49,6 +50,7 @@ requirements.txt---------------------------运行环境依赖包
 【16】[OpenVINO for CV Applications(Beginner Level)](https://vxr.h5.xeknow.com/s/3Eg4J8)  
 【17】[OV300 for CV Applications Advanced Level](https://vxr.h5.xeknow.com/s/204VNE)  
 【18】[可解释性机器学习-同济子豪兄](https://datawhaler.feishu.cn/docx/OTROd2zCIoZlLyxjhSKclxKNnDe)  
+【19】[CS224W图机器学习-同济子豪兄](https://github.com/TommyZihao/zihao_course/tree/main/CS224W)  
 
 ## 环境安装
 ### Python版本
