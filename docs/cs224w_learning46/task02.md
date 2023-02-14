@@ -86,7 +86,7 @@
 
 - Strongly connected directed graph：有向图中，任意两个节点可以互相到达
 - Weakly connected directed graph：忽略方向之后，如果任意两个节点能互相到达
-- Strongly connected compoinents(SCCs)：强连通性
+- Strongly connected compoinents(SCCs)：强连通域
 - In-component：节点指向SCC
 - Out-component：节点指出SCC
 
