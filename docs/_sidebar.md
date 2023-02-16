@@ -4,7 +4,9 @@
         * [Task02 图的基本表示和特征工程](cs224w_learning46/task02.md)
         * [Task03 NetworkX工具包实战](cs224w_learning46/task03.md)
         * [Task04 图嵌入表示学习](cs224w_learning46/task04.md)
-        * [Task05 DeepWalk、Node2Vec论文精读](cs224w_learning46/task05.md)
+        * Task05 DeepWalk、Node2Vec论文精读
+            * [DeepWalk论文精读](cs224w_learning46/task05/task05-deepwalk.md)
+            * [Node2Vec论文精读](cs224w_learning46/task05/task05-node2vec.md)
         * [Task06 PageRank](cs224w_learning46/task06.md)
         * [Task07 标签传播与节点分类](cs224w_learning46/task07.md)
     * 第44期可解释机器学习
