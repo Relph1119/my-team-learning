@@ -439,7 +439,7 @@ plt.show()
 
 
     
-![png](../images/task05/output_68_0.png)
+![png](../images/task05/deepwalk/output_68_0.png)
     
 
 
@@ -478,7 +478,7 @@ plt.show()
 
 
     
-![png](../images/task05/output_71_0.png)
+![png](../images/task05/deepwalk/output_71_0.png)
     
 
 
@@ -506,7 +506,7 @@ plt.show()
 
 
     
-![png](../images/task05/output_74_0.png)
+![png](../images/task05/deepwalk/output_74_0.png)
     
 
 
