@@ -1,0 +1,496 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#"
+     xml:base="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#apprentice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#apprentice">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#master"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:label>徒弟</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#brother -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#brother">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#brothers_and_sisters"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#male"/>
+        <rdfs:label>兄弟</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#brother_of_the_father -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#brother_of_the_father">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#relative"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#male"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#elder_brother"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#father"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#younger_brother"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#father"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label>叔</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#brother_of_the_mother -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#brother_of_the_mother">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#relative"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#male"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#elder_brother"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#mother"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#younger_brother"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#mother"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label>舅</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#brothers_and_sisters -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#brothers_and_sisters">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#family"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#son"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#father"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#son"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#mother"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#father"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#father"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#mother"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#mother"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label>兄弟姐妹</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#concubine -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#concubine">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#family"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#husband"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#female"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#male"/>
+        <rdfs:label>妾</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#elder_brother -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#elder_brother">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#brother"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#male"/>
+        <rdfs:label>兄</rdfs:label>
+        <rdfs:label>哥哥</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#elder_brother_with_the_same_master -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#elder_brother_with_the_same_master">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#fellow_brothers"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#male"/>
+        <rdfs:label>师兄</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#elder_sister -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#elder_sister">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#sister"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#female"/>
+        <rdfs:label>姐</rdfs:label>
+        <rdfs:label>姐姐</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#elder_sworn_brother -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#elder_sworn_brother">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#friend"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#male"/>
+        <rdfs:label>义兄</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#family -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#family">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#relative"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <rdfs:label>家人</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#father -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#father">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#family"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#male"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#father"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#brothers_and_sisters"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#husband"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#mother"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label>父</rdfs:label>
+        <rdfs:label>父亲</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#fellow_brothers -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#fellow_brothers">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#fellow_brothers_and_sisters"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#male"/>
+        <rdfs:label>师兄弟</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#fellow_brothers_and_sisters -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#fellow_brothers_and_sisters">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#apprentice"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#master"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#master"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#master"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label>师兄弟姐妹</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#friend -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#friend">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <rdfs:label>朋友</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#husband -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#husband">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#family"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#male"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#female"/>
+        <rdfs:label>夫</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#master -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#master">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#master"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#fellow_brothers_and_sisters"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label>师傅</rdfs:label>
+        <rdfs:label>师父</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#minister -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#minister">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#servitor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:label>臣</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#mother -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#mother">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#family"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#female"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#mother"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#brothers_and_sisters"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label>母</rdfs:label>
+        <rdfs:label>母亲</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#mount -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#mount">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#servitor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:label>坐骑</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#past_life -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#past_life">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:label>前世</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#relative -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#relative">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <rdfs:label>亲属</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#servant -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#servant">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#servitor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:label>仆人</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#servitor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#servitor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:label>奴仆</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#sister -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#sister">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#brothers_and_sisters"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#female"/>
+        <rdfs:label>姐妹</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#son -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#son">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#family"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#male"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#son"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#concubine"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#son"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#husband"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#son"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#wife"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label>儿</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#wife -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#wife">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#family"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#husband"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#female"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#male"/>
+        <rdfs:label>妻</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#younger_brother -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#younger_brother">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#brother"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#male"/>
+        <rdfs:label>弟</rdfs:label>
+        <rdfs:label>弟弟</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#younger_brother_with_the_same_master -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#younger_brother_with_the_same_master">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#fellow_brothers"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#male"/>
+        <rdfs:label>师弟</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#younger_sister -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#younger_sister">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#sister"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#female"/>
+        <rdfs:label>妹</rdfs:label>
+        <rdfs:label>妹妹</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#younger_sworn_brother -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#younger_sworn_brother">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#friend"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#male"/>
+        <rdfs:label>义弟</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#female -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#female">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#male"/>
+        <rdfs:label>女</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#male -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shen-pc/ontologies/2018/3/untitled-ontology-53#male">
+        <rdfs:label>男</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+
