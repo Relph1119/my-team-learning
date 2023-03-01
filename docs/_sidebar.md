@@ -9,6 +9,7 @@
             * [Node2Vec论文精读](cs224w_learning46/task05/task05-node2vec.md)
         * [Task06 PageRank](cs224w_learning46/task06.md)
         * [Task07 标签传播与节点分类](cs224w_learning46/task07.md)
+        * [Task08 图神经网络基础](cs224w_learning46/task08.md)
     * 第44期可解释机器学习
         * [Task01 预备知识学习](Interpretable_machine_learning44/task01.md) 
         * [Task02 【算法】ZFNet](Interpretable_machine_learning44/task02.md) 
