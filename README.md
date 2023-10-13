@@ -27,6 +27,7 @@ notebook-----------------------------------JupyterNotebook格式笔记
 +---intel_openvino_advanced_learning40-------第40期Intel OpenVINO高级课程
 +---Interpretable_machine_learning44---------第44期可解释性机器学习
 +---cs224w_learning46------------------------第46期CS224W图机器学习
++---diffusion_model_learning51---------------第51期扩散模型从原理到实战
 QASystemOnMedicalGraph---------------------基于医疗领域知识图谱的问答系统源码
 requirements.txt---------------------------运行环境依赖包
 </pre>
