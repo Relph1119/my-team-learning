@@ -5,6 +5,11 @@
 在线阅读地址：https://relph1119.github.io/my-team-learning
 
 ## 目录
+- 第51期扩散模型从原理到实战
+    - Task01 扩散模型库入门与零基础实战
+    - Task02 微调与引导
+    - Task03 Stable Diffusion原理与实战
+    - Task04 DDIM反转与音频扩散模型
 - 第46期CS224W图机器学习
     - Task01 图机器学习导论
     - Task02 图的基本表示和特征工程
@@ -217,6 +222,3 @@ conda list -e > requirements.txt
 ```shell
 docsify serve ./docs
 ```
-
-## 关注我们
-<div align=center><img src="res/qrcode.jpeg" width="250" height="270" alt="Datawhale，一个专注于AI领域的学习圈子。初衷是for the learner，和学习者一起成长。目前加入学习社群的人数已经数千人，组织了机器学习，深度学习，数据分析，数据挖掘，爬虫，编程，统计学，Mysql，数据竞赛等多个领域的内容学习，微信搜索公众号Datawhale可以加入我们。"></div>
