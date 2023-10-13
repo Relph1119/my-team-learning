@@ -52,6 +52,7 @@ requirements.txt---------------------------运行环境依赖包
 【17】[OV300 for CV Applications Advanced Level](https://vxr.h5.xeknow.com/s/204VNE)  
 【18】[可解释性机器学习-同济子豪兄](https://datawhaler.feishu.cn/docx/OTROd2zCIoZlLyxjhSKclxKNnDe)  
 【19】[CS224W图机器学习-同济子豪兄](https://github.com/TommyZihao/zihao_course/tree/main/CS224W)  
+【20】[Hugging Face Diffusion Models](https://github.com/huggingface/diffusion-models-class)  
 
 ## 环境安装
 ### Python版本
