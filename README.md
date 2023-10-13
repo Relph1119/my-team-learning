@@ -81,7 +81,7 @@ jupyter notebook
 ### pytorch安装
 执行以下命令安装pytorch
 ```shell
-pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu117
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 ```
 
 ### pytorch geometric安装
