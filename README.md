@@ -56,7 +56,7 @@ requirements.txt---------------------------运行环境依赖包
 
 ## 环境安装
 ### Python版本
-Python 3.8 Windows环境
+Python 3.10 Windows环境
 
 ### 运行环境配置
 安装相关的依赖包
@@ -81,7 +81,7 @@ jupyter notebook
 ### pytorch安装
 执行以下命令安装pytorch
 ```shell
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 ```
 
 ### pytorch geometric安装
