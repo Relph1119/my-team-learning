@@ -3,3 +3,9 @@ numpy
 pandas
 jupyter_nbextensions_configurator
 diffusers
+datasets
+transformers
+accelerate
+ftfy
+pyarrow
+ipywidgets
