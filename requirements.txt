@@ -11,3 +11,4 @@ pyarrow
 ipywidgets
 wandb
 open-clip-torch
+scipy

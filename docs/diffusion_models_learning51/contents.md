@@ -1,5 +1,16 @@
 # 第51期《扩散模型从原理到实战》学习笔记
 
+本次任务需要提前配置代理
+## 设置Jupyter Notebook代理
+```shell
+set HTTPS_PROXY=http://127.0.0.1:19180
+set HTTP_PROXY=http://127.0.0.1:19180
+```
+设置代理之后，启动Jupyter Notebook
+```shell
+jupyter notebook
+```
+
 ## Task01 扩散模型库入门与零基础实战
 
 本次任务，主要了解了扩散模型的基本原理（前向过程、反向过程、优化目标），并学习了Hugging Face核心功能的使用，根据教程从零搭建了扩散模型，并将BasicUNet和UNet2Model两个模型预测结果进行对比。
@@ -19,8 +30,10 @@
 
 ## Task03 Stable Diffusion原理与实战
 
+本次任务，主要介绍了Stable Diffusion文本条件隐式扩散模型，包括隐式扩散、文本条件生成的概念，结合Stable Diffusion默认使用的管线，使用提示语句生成图片，还介绍了其他管线，比如Img2Img、Depth2Img，这两个管线的生成效果也非常优秀。
+
 个人笔记如下：
-- [第6章 Stable Diffusion](diffusion_models_learning51/ch06.md)
+- [第6章 Stable Diffusion](diffusion_models_learning51/ch06/ch06.md)
 
 ## Task04 DDIM反转与音频扩散模型
 
