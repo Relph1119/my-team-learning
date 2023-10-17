@@ -9,3 +9,5 @@ accelerate
 ftfy
 pyarrow
 ipywidgets
+wandb
+open-clip-torch

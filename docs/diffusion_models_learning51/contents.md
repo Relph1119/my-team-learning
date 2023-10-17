@@ -11,9 +11,11 @@
 
 ## Task02 微调与引导
 
+本次任务，主要基于Diffusers库，了解Diffusers核心API（管线、模型和调度器），通过蝴蝶图像生成的代码实战，学习扩散模型从定义、训练到图像生成一系列的实战内容；并了解微调和引导这两个技术，通过CLIP引导可以用文字描述控制一个没有条件约束的扩散模型的生成过程。
+
 个人笔记如下：
-- [第4章 Diffusers实战](diffusion_models_learning51/ch04.md) 
-- [第5章 微调和引导](diffusion_models_learning51/ch05.md) 
+- [第4章 Diffusers实战](diffusion_models_learning51/ch04/ch04.md) 
+- [第5章 微调和引导](diffusion_models_learning51/ch05/ch05.md) 
 
 ## Task03 Stable Diffusion原理与实战
 
