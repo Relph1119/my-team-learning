@@ -6,7 +6,7 @@
         * [第4章 Diffusers实战](diffusion_models_learning51/ch04/ch04.md) 
         * [第5章 微调和引导](diffusion_models_learning51/ch05/ch05.md) 
         * [第6章 Stable Diffusion](diffusion_models_learning51/ch06/ch06.md) 
-        * [第7章 DDIM反转](diffusion_models_learning51/ch07.md) 
+        * [第7章 DDIM反转](diffusion_models_learning51/ch07/ch07.md) 
         * [第8章 音频扩散模型](diffusion_models_learning51/ch08.md) 
     * 第46期CS224W图机器学习
         * [Task01 图机器学习导论](cs224w_learning46/task01.md)

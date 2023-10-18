@@ -12,3 +12,6 @@ ipywidgets
 wandb
 open-clip-torch
 scipy
+xformers
+opencv-contrib-python
+controlnet_aux
