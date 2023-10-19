@@ -15,3 +15,4 @@ scipy
 xformers
 opencv-contrib-python
 controlnet_aux
+librosa

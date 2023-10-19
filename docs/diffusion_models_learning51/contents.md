@@ -37,6 +37,8 @@ jupyter notebook
 
 ## Task04 DDIM反转与音频扩散模型
 
+本次任务，主要介绍了DDIM反转中采样的工作原理，反转其实就是在时间步上朝着相反的方向移动，向噪声更多的方向移动，通过反转得到原始图像。使用ControlNet结合prompt，可以生成很棒的图片。还介绍了音频扩散模型，使用Audio Diffusion结合prompt提示的风格，可以生成类似风格的频谱和音频。
+
 个人笔记如下：
 - [第7章 DDIM反转](diffusion_models_learning51/ch07/ch07.md) 
-- [第8章 音频扩散模型](diffusion_models_learning51/ch08.md) 
+- [第8章 音频扩散模型](diffusion_models_learning51/ch08/ch08.md) 
