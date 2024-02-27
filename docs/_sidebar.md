@@ -1,4 +1,6 @@
 * [目录](README.md)
+    *  第55期多智能体实战
+        * [Task01 MetaGPT环境配置](metagpt_learning55/task01.md)
     * [第51期扩散模型从原理到实战](diffusion_models_learning51/contents.md)
         * [第1章 扩散模型简介](diffusion_models_learning51/ch01.md) 
         * [第2章 Hugging Face简介](diffusion_models_learning51/ch02.md) 

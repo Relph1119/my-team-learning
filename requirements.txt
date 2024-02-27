@@ -16,3 +16,7 @@ xformers
 opencv-contrib-python
 controlnet_aux
 librosa
+metagpt==0.6.6
+langchain==0.1.6
+langchain-community==0.0.19
+langchain-core==0.1.23
