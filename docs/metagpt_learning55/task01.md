@@ -174,7 +174,3 @@ await main()
     2024-02-27 15:05:23.340 | INFO     | metagpt.utils.cost_manager:update_cost:48 - Total running cost: $0.003 | Max budget: $10.000 | Current cost: $0.000, prompt_tokens: 2450, completion_tokens: 223
     
 
-
-```python
-
-```
