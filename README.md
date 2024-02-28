@@ -28,6 +28,7 @@ notebook-----------------------------------JupyterNotebook格式笔记
 +---Interpretable_machine_learning44---------第44期可解释性机器学习
 +---cs224w_learning46------------------------第46期CS224W图机器学习
 +---diffusion_model_learning51---------------第51期扩散模型从原理到实战
++---metagpt_learning55-----------------------第55期多智能体实战
 QASystemOnMedicalGraph---------------------基于医疗领域知识图谱的问答系统源码
 requirements.txt---------------------------运行环境依赖包
 </pre>
@@ -53,6 +54,8 @@ requirements.txt---------------------------运行环境依赖包
 【18】[可解释性机器学习-同济子豪兄](https://datawhaler.feishu.cn/docx/OTROd2zCIoZlLyxjhSKclxKNnDe)  
 【19】[CS224W图机器学习-同济子豪兄](https://github.com/TommyZihao/zihao_course/tree/main/CS224W)  
 【20】[Hugging Face Diffusion Models](https://github.com/huggingface/diffusion-models-class)  
+【21】[基于MetaGPT0.6.6版本的多智能体实战教程](https://deepwisdom.feishu.cn/wiki/MLILw0EdRiyiYRkJLgOcskyAnUh)  
+【22】[MetaGPT开源项目仓库](https://github.com/geekan/MetaGPT/)  
 
 ## 环境安装
 ### Python版本

@@ -5,6 +5,12 @@
 在线阅读地址：https://relph1119.github.io/my-team-learning
 
 ## 目录
+- 第55期多智能体实战
+    - Task01 MetaGPT环境配置
+    - Task02 智能体综述及多智能体框架介绍
+    - Task03 单智能体开发
+    - Task04 复现OSS-订阅智能体
+    - Task05 多智能体开发
 - 第51期扩散模型从原理到实战
     - Task01 扩散模型库入门与零基础实战
     - Task02 微调与引导
