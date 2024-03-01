@@ -1,11 +1,10 @@
 #!/usr/bin/env python
 # encoding: utf-8
 """
-@author: HuRuiFeng
 @file: oss_watcher.py
 @time: 2024/3/1 15:35
 @project: my-team-learning
-@desc: 
+@desc: 从GitHub Trending中获取开源项目并分析，并具备订阅功能。
 """
 import asyncio
 import os
