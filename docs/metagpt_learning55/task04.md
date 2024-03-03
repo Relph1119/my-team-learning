@@ -99,7 +99,6 @@ ensuring users discover repositories aligned with their interests.
 ---
 # Format Example
 
-```
 # [Title]
 
 ## Today's Trends
@@ -115,7 +114,6 @@ The top popular projects are Project1 and Project2.
 ## Highlights of the List
 1. [Project1](https://github/xx/project1): [provide specific reasons why this project is recommended].
 ...
-```
 
 ---
 # Github Trending
