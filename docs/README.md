@@ -177,6 +177,9 @@
 【18】[可解释性机器学习-同济子豪兄](https://datawhaler.feishu.cn/docx/OTROd2zCIoZlLyxjhSKclxKNnDe)  
 【19】[CS224W图机器学习-同济子豪兄](https://github.com/TommyZihao/zihao_course/tree/main/CS224W)  
 【20】[Hugging Face Diffusion Models](https://github.com/huggingface/diffusion-models-class)  
+【21】[基于MetaGPT0.6.6版本的多智能体实战教程](https://deepwisdom.feishu.cn/wiki/MLILw0EdRiyiYRkJLgOcskyAnUh)  
+【22】[MetaGPT开源项目仓库](https://github.com/geekan/MetaGPT/)  
+【23】[Happy-LLM](https://github.com/datawhalechina/happy-llm.git)
 
 ## 环境安装
 ### Python版本

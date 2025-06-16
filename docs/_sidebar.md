@@ -1,4 +1,12 @@
 * [目录](README.md)
+    *  2025年6月HappyLLM学习
+        * [Task01 NLP基础概念](happyllm_learning202506/task01.md)
+        * [Task02 Transformer架构](happyllm_learning202506/task02.md)
+        * [Task03 预训练语言模型](happyllm_learning202506/task03.md)
+        * [Task04 大语言模型](happyllm_learning202506/task04.md)
+        * [Task05 动手搭建大模型](happyllm_learning202506/task05.md)
+        * [Task06 大模型训练流程实践](happyllm_learning202506/task06.md)
+        * [Task07 大模型应用](happyllm_learning202506/task07.md)
     *  第55期多智能体实战
         * [Task01 MetaGPT环境配置](metagpt_learning55/task01.md)
         * [Task02 智能体综述及多智能体框架介绍](metagpt_learning55/task02.md)

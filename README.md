@@ -19,7 +19,7 @@ notebook-----------------------------------JupyterNotebook格式笔记
 +---matplotlib_learning29--------------------第29期数据可视化
 +---tree_ensemble30--------------------------第30期树模型与集成学习
 +---unusual_deep_learning31------------------第31期水很深的深度学习
-+---recommender_system32---------------------第32期推荐系统
++---recommender_system32---------------------第32期推荐系统 
 +---pytorch_learning35-----------------------第35期深入浅出Pytorch
 +---lee_ml37---------------------------------第37期李宏毅机器学习
 +---pytorch_rechub_learning38----------------第38期使用PyTorch复现推荐模型
@@ -29,6 +29,7 @@ notebook-----------------------------------JupyterNotebook格式笔记
 +---cs224w_learning46------------------------第46期CS224W图机器学习
 +---diffusion_model_learning51---------------第51期扩散模型从原理到实战
 +---metagpt_learning55-----------------------第55期多智能体实战
++---happyllm_learning202506------------------2025年06月Happy-LLM学习
 QASystemOnMedicalGraph---------------------基于医疗领域知识图谱的问答系统源码
 requirements.txt---------------------------运行环境依赖包
 </pre>
@@ -56,6 +57,7 @@ requirements.txt---------------------------运行环境依赖包
 【20】[Hugging Face Diffusion Models](https://github.com/huggingface/diffusion-models-class)  
 【21】[基于MetaGPT0.6.6版本的多智能体实战教程](https://deepwisdom.feishu.cn/wiki/MLILw0EdRiyiYRkJLgOcskyAnUh)  
 【22】[MetaGPT开源项目仓库](https://github.com/geekan/MetaGPT/)  
+【23】[Happy-LLM](https://github.com/datawhalechina/happy-llm.git)
 
 ## 环境安装
 ### Python版本
