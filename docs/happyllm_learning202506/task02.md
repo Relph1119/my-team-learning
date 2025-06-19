@@ -180,9 +180,8 @@ class MLP(nn.Module):
 
     def forward(self, x):
         # 前向传播函数
-        # 首先，输入x通过第一层线性变换和RELU激活函数
-        # 然后，结果乘以输入x通过第三层线性变换的结果
-        # 最后，通过第二层线性变换和dropout层
+        # 输入x通过第一层线性变换和RELU激活函数
+        # 通过第二层线性变换和dropout层
         return self.dropout(self.w2(F.relu(self.w1(x))))
 ```
 

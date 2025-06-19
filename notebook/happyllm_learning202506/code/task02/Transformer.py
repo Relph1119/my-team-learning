@@ -5,7 +5,7 @@
 @file: attention.py
 @time: 2025/6/16 22:08
 @project: my-team-learning
-@desc: 
+@desc: 实现Transformer模型
 """
 import math
 from dataclasses import dataclass
