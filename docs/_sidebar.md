@@ -4,8 +4,6 @@
         * [Task02 Transformer架构](happyllm_learning202506/task02.md)
         * [Task03 预训练语言模型](happyllm_learning202506/task03.md)
         * [Task04 大语言模型](happyllm_learning202506/task04.md)
-        * [Task05 动手搭建大模型](happyllm_learning202506/task05.md)
-        * [Task06 大模型训练流程实践](happyllm_learning202506/task06.md)
         * [Task07 大模型应用](happyllm_learning202506/task07.md)
     *  第55期多智能体实战
         * [Task01 MetaGPT环境配置](metagpt_learning55/task01.md)
